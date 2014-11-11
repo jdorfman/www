@@ -1,0 +1,54 @@
+
+/*= OVERWRITE BROWSER STYLING FOR MOBILE VIEW
+---------------------------------------------------------------------------------------------- */
+
+body 
+{
+	font-size: 13px;
+}
+
+.sidebar
+{
+	background: none;
+	border-right: 0;
+	.box-shadow( none );
+	position: static;
+	width: 100%;
+}
+
+.cover
+{
+	> div
+	{
+		display: block;
+		position: static;
+
+		&:first-child
+		{
+			height: 200px;
+		}
+	}
+}
+
+.cover-avatar 
+{
+	left: 0;
+	margin-left: 30px;
+}
+
+.cover-image
+{
+	.box-shadow( none );
+	position: relative;
+	height: 200px;
+}
+
+.cover-author
+{
+	text-align: left;
+
+	h1, h2
+	{
+		margin: 10px 0 10px 165px;
+	}
+}

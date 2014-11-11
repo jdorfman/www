@@ -1,0 +1,60 @@
+@media (max-width: 767px) {
+  /*= OVERWRITE BOOTSTRAP STYLING
+  ---------------------------------------------------------------------------------------------- */
+  body {
+    padding: 0 !important;
+  }
+  /*= OVERWRITE BROWSER STYLING FOR MOBILE VIEW
+  ---------------------------------------------------------------------------------------------- */
+  body {
+    font-size: 13px;
+  }
+
+	.social-icon {
+	  font-size: 0;
+	  margin-top: 40px;
+	  margin-left: 45px;
+	}
+
+  .sidebar {
+    background: none;
+    border-right: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    position: static;
+    width: 100%;
+  }
+  .cover > div {
+    display: block;
+    position: static;
+  }
+  .cover > div:first-child {
+    height: 200px;
+  }
+  .cover-avatar {
+    left: 0;
+    margin-left: 30px;
+  }
+  .cover-image {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    position: relative;
+    height: 200px;
+  }
+  .cover-author {
+    text-align: left;
+  }
+  .cover-author h1,
+  .cover-author h2 {
+    margin: 10px 0 10px 165px;
+  }
+  .list-expertise li b {
+    display: block;
+    float: none;
+    text-align: left;
+    margin: 0 0 10px 0;
+    width: auto;
+  }
+}

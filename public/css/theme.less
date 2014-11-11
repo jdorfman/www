@@ -1,0 +1,657 @@
+/*= THEME STYLESHEET
+ *
+ *  Theme    :   Portfo
+ *  Author   :   Ikram Hakimi @ikramhakimi
+ *  About    :   Another responsive portfolio theme built with bootstrap.
+ * 
+---------------------------------------------------------------------------------------------- */
+
+@import "mixins.less";
+
+@font_size	: 14px;
+
+body
+{
+	font-size: @font_size;
+	font-family: Arial, sans-serif;
+	background: #fff;
+	color: #777;
+}
+h1, h2, h3, h4, h5, h6
+{
+	color: #666;
+	font-family: Arial,sans-serif;
+	margin-top: 0;
+
+	small
+	{
+		font-size: 12px;
+		margin: 0 0 0 5px;
+	}
+}
+h1 { font-size: 28px; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; }
+h4 { font-size: 16px; }
+h5 { font-size: @font_size; }
+h6 { font-size: 11px; }
+strong, b
+{
+	color: #555;
+}
+a
+{
+	&:hover,
+	&:focus
+	{
+		outline: none;
+	}
+}
+small,
+.small
+{
+	font-size: 12px;
+}
+pre,
+code
+{
+	padding: 1px 2px;
+	font-weight: bold;
+	font-size: 12px;
+}
+blockquote 
+{
+	border-left: 3px solid #dcdddf;
+
+	p 
+	{
+		font-size: 14px;
+	}
+
+	small::before
+	{
+		content: "# ";
+	}
+}
+.lead
+{
+	font-size: 16px;
+	line-height: 22px;
+}
+
+
+
+
+/*= BOOTSTRAP: FORM & INPUT ELEMENTS
+---------------------------------------------------------------------------------------------- */
+
+@icon_rgba			: rgba(0, 0, 0, 0.3);
+@icon_shadow		: 0 0 1px #eee, 0 0 0 #000, 0 0 1px #fff;
+@icon_dark_rgba		: rgba(0, 0, 0, 0.4);
+@icon_dark_shadow	: 0 0 1px #ccc, 0 0 0 #000, 0 0 1px #fff;
+
+.icon_shade( @icon_rgba, @icon_shadow )
+{
+	color: @icon_rgba;
+	text-shadow: @icon_shadow;
+}
+
+.icon_size( @size )
+{
+	font-size: @size;
+	line-height: @size;
+	height: @size;
+}
+
+
+.shaded
+{
+	.icon_shade( @icon_rgba, @icon_shadow );
+}
+
+
+
+
+
+/*= BOOTSTRAP: FORM & INPUT ELEMENTS
+---------------------------------------------------------------------------------------------- */
+
+@input_radius	: 2px;
+
+
+form
+{
+	margin: 0;
+}
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input,
+label, input, button, select, textarea
+{
+	.border-radius( @input_radius );
+	.box-shadow(none);
+	border-color: #ccc;
+	font-size: @font_size;
+}
+.input-append input, 
+.input-prepend input, 
+.input-append select, 
+.input-prepend select, 
+.input-append .uneditable-input, 
+.input-prepend .uneditable-input,
+
+{
+	.border-radius( 0 @input_radius @input_radius 0 );
+}
+.input-append input, 
+.input-append select, 
+.input-append .uneditable-input,
+.input-prepend .add-on:first-child, 
+.input-prepend .btn:first-child
+{
+	.border-radius( @input_radius 0 0 @input_radius );
+}
+.input-append .add-on, 
+.input-prepend .add-on, 
+.input-append .btn, 
+.input-prepend .btn, 
+.input-append .btn-group > .dropdown-toggle, 
+.input-prepend .btn-group > .dropdown-toggle
+{
+	.border-radius( 0 );
+}
+.input-append .add-on:last-child, 
+.input-append .btn:last-child, 
+.input-append .btn-group:last-child > .dropdown-toggle
+{
+	.border-radius( 0 @input_radius @input_radius 0 );
+}
+.input-transparent
+{
+	border: 0 !important;
+	background: none !important;
+	box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+}
+
+.radio.inline, 
+.checkbox.inline
+{
+	white-space: nowrap;
+}
+
+
+
+
+
+/*= BOOTSTRAP: PROGRESS BAR
+---------------------------------------------------------------------------------------------- */
+
+.progress
+{
+	.border-radius( 3px );
+	.box-shadow( 0 1px 0 rgba(255,255,255,0.8), inset 0 1px 2px rgba(0,0,0,0.3) );
+
+	.bar
+	{
+		.border-radius( 2px );
+		.box-shadow( 0 -1px 0 rgba(0, 0, 0, 0.15) inset, 0 1px 0 rgba(255, 255, 255, 0.35) inset );
+		border: 1px solid #0070a8;
+	}
+
+	&.tight
+	{
+		height: 10px;
+	}
+
+	&.stacked
+	{
+		.bar 
+		{
+			.border-radius( 0 );
+
+			+ .bar 
+			{
+				margin-left: -1px;
+			}
+
+			&:first-child
+			{
+				.border-radius( 2px 0 0 2px );
+			}
+
+			&:last-child
+			{
+				.border-radius( 0 2px 2px 0 );
+			}
+		}
+	}
+}
+
+.progress .bar-success,
+.progress-success .bar
+{
+	border-color: #438e43;
+}
+
+.progress .bar-warning,
+.progress-warning .bar
+{
+	border-color: #c97600;
+}
+
+.progress .bar-danger,
+.progress-danger .bar
+{
+	border-color: #a62821;
+}
+
+
+
+
+
+/*= THEME: FORM & INPUT ELEMENTS
+---------------------------------------------------------------------------------------------- */
+
+.btn
+{
+	.border-radius(3px);
+	.box-shadow( none );
+	font-family: Arial, sans-serif;
+	font-size: @font_size;
+	text-shadow: none;
+
+	&:focus
+	{
+		outline: none;
+	}
+}
+
+.btn-primary
+{
+	border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.35);
+	.box-shadow( 0 1px 0 rgba( 255, 255, 255, 0.2 ) inset );
+}
+
+
+
+
+
+/* MAIN CONTENT
+-------------------------------------------------- */
+
+.container
+{
+	margin-left: 0;
+}
+
+.sidebar
+{
+	background: #f0f0f0;
+	.box-shadow( -2px 0px 2px rgba( 0, 0, 0, 0.1) inset );
+	border-right: 1px solid #bbb;
+	height: 100%;
+	position: fixed;
+}
+
+.content
+{
+	padding-bottom: 150px;
+
+	section
+	{
+		padding: 50px 30px 50px;
+	}
+
+	.section-head
+	{
+		text-transform: uppercase;
+		color: #111;
+		font-size: 20px;
+		line-height: 30px;
+		height: 30px;
+		padding: 25px 0 5px;
+		font-weight: normal;
+		position: relative;
+
+		> b 
+		{
+			background: #c00;
+			display: inline-block;
+			height: 3px;
+			width: 30px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+}
+
+
+
+
+
+/* SOCIAL ICONS
+-------------------------------------------------- */
+.nav 
+{
+	padding: 50px 30px 50px;
+
+	li 
+	{
+		display: inline-block;
+		float: left;
+
+		+ li 
+		{
+			margin-left: 30px;
+		}
+
+		&.active > a 
+		{
+			background: #eee;
+		}
+
+		&:last-child
+		{
+			margin-left: 0;
+		}
+
+		> a 
+		{
+			.border-radius( 3px );
+			color: #666;
+			height: 20px;
+			line-height: 20px;
+			padding: 5px 10px;
+			text-align: center;
+			white-space: nowrap;
+
+			> b 
+			{
+				color: inherit;
+			}
+		}
+
+		b, 
+		i 
+		{
+			display: inline-block;
+		}
+
+		[class^="icon-"], 
+		[class*=" icon-"]
+		{
+			font-size: 14px;
+			width: 20px;
+			height: 20px;
+			margin: 0 5px 0 0;
+			position: relative;
+			top: -1px;
+		}
+	}	
+}
+
+
+
+
+
+/* COVER
+-------------------------------------------------- */
+
+@cover_image_height		: 65%;
+
+.cover
+{
+	display: table;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	border-spacing: 0;
+
+	> div
+	{
+		display: table-row;
+		position: relative;
+
+		&:first-child
+		{
+			height: @cover_image_height;
+		}
+	}
+}
+.cover-image
+{
+	background-image: url(../images/samples/cover4.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.box-shadow( -2px 0px 2px rgba( 0, 0, 0, 0.1) inset );
+	position: absolute;
+	height: @cover_image_height;
+	width: 100%;
+}
+
+.cover-avatar 
+{
+	background: #fff;
+	.border-radius( 50% );
+	.box-shadow( 0 1px 0 rgba( 0, 0, 0, 0.15 ) );
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin: 0 0 -53px -53px;
+	padding: 6px;
+
+	img 
+	{
+		.border-radius( 50% );
+	}
+}
+
+.cover-author
+{
+	text-align: center;
+	padding-top: 5px;
+
+	h1 
+	{
+		font-size: 32px;
+		font-weight: normal;
+		line-height: 34px;
+		margin: 70px 0 10px;
+		letter-spacing: -1px;
+	}
+
+	h2 
+	{
+		color: #888;
+		font: 14px/20px Arial, sans-serif;
+	}
+}
+
+
+
+
+/* DEFINITION LIST
+-------------------------------------------------- */
+
+dl 
+{
+	margin: 0;
+	padding: 0;
+
+	&.timeline
+	{
+		dt, dd 
+		{
+			margin-top: 20px;
+		}
+
+		dt 
+		{
+			font-weight: normal;
+			text-align: left;
+			width: 120px;
+		}
+
+		dd 
+		{
+			margin-left: 0;
+			overflow: hidden;
+		}
+	}
+}
+
+
+
+
+/* LIST EXPERIENCE
+-------------------------------------------------- */
+
+.list-media
+{
+	overflow: hidden;
+
+	li 
+	{
+		margin-top: 20px;
+
+		+ li 
+		{
+			padding-top: 20px;
+		}
+	}
+
+	p 
+	{
+		margin: 0;
+	}
+
+	.media-avatar 
+	{
+		background: #eee;
+		.border-radius(35px);
+		border: 1px solid #ddd;
+		margin-right: 30px;
+		height: 70px;
+		width: 70px;		
+	}
+
+	.company
+	{
+		margin: 5px 0 0;
+		font-size: 15px;
+		line-height: inherit;
+	}
+
+	.brief
+	{
+		margin: 5px 0;
+	}
+}
+
+
+
+
+
+/* LIST EXPERTISE
+-------------------------------------------------- */
+
+.list-expertise
+{
+	border: 1px solid #e5e5e5;
+	.border-radius(2px);
+	margin-top: 30px;
+
+	li 
+	{
+		
+		overflow: hidden;
+		padding: 15px;
+
+		+ li 
+		{
+			border-top: 1px solid #e5e5e5;
+		}
+
+		b 
+		{
+			float: left;
+			text-align: right;
+			margin: 0 20px 0 0;
+			width: 130px;
+		}
+
+		.progress
+		{
+			overflow: hidden;
+			margin: 5px 0 0;
+		}
+	}
+}
+
+
+
+
+/* SOCIAL ICONS
+-------------------------------------------------- */
+
+.portfolio
+{
+	.project 
+	{
+		padding: 40px 0 0;
+	}
+
+	.project-thumb 
+	{
+		img 
+		{
+			.border-radius( 3px );
+		}
+	}
+
+	.project-title
+	{
+		font-size: 16px;
+		line-height: 20px;
+		margin: 0;
+	}
+
+	.project-category
+	{
+		font-size: 12px;
+	}
+}
+
+
+
+
+
+/* SOCIAL ICONS
+-------------------------------------------------- */
+
+.social-icon
+{
+	font-size: 0;
+	margin-top: 40px;
+
+	a 
+	{
+		color: #999;
+		display: inline-block;
+		font-size: 40px;
+		text-decoration: none !important;
+
+		&:hover
+		{
+			color: #666;
+		}
+
+		+ a 
+		{
+			margin-left: 10px;
+		}
+	}
+}

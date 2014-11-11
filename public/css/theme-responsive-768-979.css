@@ -1,0 +1,7 @@
+@media (max-width: 979px) {
+  /*= OVERWRITE BOOTSTRAP STYLING
+  ---------------------------------------------------------------------------------------------- */
+  body {
+    padding: 0 !important;
+  }
+}

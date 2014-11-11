@@ -1,0 +1,167 @@
+/*
+ Author: Ivo Culic - ifkas
+ Author URI: http://www.tajfa.com
+ Item Name: Rondo - rounded social icon font
+ Item URI: http://www.tajfa.com/projects/rondo
+ Purpose: --||--
+ Version: 1.0
+*/
+
+/* USE FROM HERE */
+
+@font-face {
+	font-family: 'rondo';
+	src: url('fonts/rondo/rondo.eot?#') format('eot'),
+		url('fonts/rondo/rondo.svg#rondo') format('svg'),
+		url('fonts/rondo/rondo.woff') format('woff'),
+		url('fonts/rondo/rondo.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'rondo';
+	content: attr(data-icon);
+	speak: none;
+	/* Enable Ligatures */
+	-webkit-font-feature-settings:"liga","dlig";-moz-font-feature-settings:"liga=1, dlig=1";-moz-font-feature-settings:"liga","dlig";-ms-font-feature-settings:"liga","dlig";-o-font-feature-settings:"liga","dlig";
+	font-feature-settings:"liga","dlig";
+	text-rendering:optimizeLegibility;
+	}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="social-"]:before, [class*=" social-"]:before {
+	font-family: 'rondo';
+	font-style: normal;
+	speak: none;
+	/* Enable Ligatures */
+	-webkit-font-feature-settings:"liga","dlig";-moz-font-feature-settings:"liga=1, dlig=1";-moz-font-feature-settings:"liga","dlig";-ms-font-feature-settings:"liga","dlig";-o-font-feature-settings:"liga","dlig";
+	font-feature-settings:"liga","dlig";
+	text-rendering:optimizeLegibility;
+	}
+
+/* Icons */
+
+.social-youtube:before {
+	content: "\79\6f\75\74\75\62\65";
+}
+.social-yahoo:before {
+	content: "\79\61\68\6f\6f";
+}
+.social-xing:before {
+	content: "\78\69\6e\67";
+}
+.social-wordpress:before {
+	content: "\77\6f\72\64\70\72\65\73\73";
+}
+.social-windows:before {
+	content: "\77\69\6e\64\6f\77\73";
+}
+.social-vimeo:before {
+	content: "\76\69\6d\65\6f";
+}
+.social-twitter:before {
+	content: "\74\77\69\74\74\65\72";
+}
+.social-tumblr:before {
+	content: "\74\75\6d\62\6c\72";
+}
+.social-stumbleupon:before {
+	content: "\73\74\75\6d\62\6c\65\75\70\6f\6e";
+}
+.social-stackoverflow:before {
+	content: "\73\74\61\63\6b\6f\76\65\72\66\6c\6f\77";
+}
+.social-soundcloud:before {
+	content: "\73\6f\75\6e\64\63\6c\6f\75\64";
+}
+.social-skype:before {
+	content: "\73\6b\79\70\65";
+}
+.social-sharethis:before {
+	content: "\73\68\61\72\65\74\68\69\73";
+}
+.social-rss:before {
+	content: "\72\73\73";
+}
+.social-reddit:before {
+	content: "\72\65\64\64\69\74";
+}
+.social-posterious:before {
+	content: "\70\6f\73\74\65\72\69\6f\75\73";
+}
+.social-pinterest:before {
+	content: "\70\69\6e\74\65\72\65\73\74";
+}
+.social-picasa:before {
+	content: "\70\69\63\61\73\61";
+}
+.social-myspace:before {
+	content: "\6d\79\73\70\61\63\65";
+}
+.social-linkedin:before {
+	content: "\6c\69\6e\6b\65\64\69\6e";
+}
+.social-lastfm:before {
+	content: "\6c\61\73\74\66\6d";
+}
+.social-instagram:before {
+	content: "\69\6e\73\74\61\67\72\61\6d";
+}
+.social-googleplus:before {
+	content: "\67\6f\6f\67\6c\65\70\6c\75\73";
+}
+.social-github:before {
+	content: "\67\69\74\68\75\62";
+}
+.social-forrst:before {
+	content: "\66\6f\72\72\73\74";
+}
+.social-flickr:before {
+	content: "\66\6c\69\63\6b\72";
+}
+.social-facebook:before {
+	content: "\66\61\63\65\62\6f\6f\6b";
+}
+.social-email:before {
+	content: "\65\6d\61\69\6c";
+}
+.social-dribbble:before {
+	content: "\64\72\69\62\62\62\6c\65";
+}
+.social-deviantart:before {
+	content: "\64\65\76\69\61\6e\74\61\72\74";
+}
+.social-delicious:before {
+	content: "\64\65\6c\69\63\69\6f\75\73";
+}
+.social-creattica:before {
+	content: "\63\72\65\61\74\74\69\63\61";
+}
+.social-coroflot:before {
+	content: "\63\6f\72\6f\66\6c\6f\74";
+}
+.social-cargo:before {
+	content: "\63\61\72\67\6f";
+}
+.social-blogger:before {
+	content: "\62\6c\6f\67\67\65\72";
+}
+.social-behance:before {
+	content: "\62\65\68\61\6e\63\65";
+}
+.social-apple:before {
+	content: "\61\70\70\6c\65";
+}
+.social-android:before {
+	content: "\61\6e\64\72\6f\69\64";
+}
+.social-amazon:before {
+	content: "\61\6d\61\7a\6f\6e";
+}
+.social-px:before {
+	content: "\66\69\76\65\68\75\6e\64\72\65\64";
+}
+
+/* EOF */

@@ -1,0 +1,583 @@
+/*= THEME STYLESHEET
+ *
+ *  Theme    :   Portfo
+ *  Author   :   Ikram Hakimi @ikramhakimi
+ *  About    :   Another responsive portfolio theme built with bootstrap.
+ * 
+---------------------------------------------------------------------------------------------- */
+body {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #777;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #666;
+  font-family: Arial, sans-serif;
+  margin-top: 0;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-size: 12px;
+  margin: 0 0 0 5px;
+}
+h1 {
+  font-size: 28px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 20px;
+}
+h4 {
+  font-size: 16px;
+}
+h5 {
+  font-size: 14px;
+}
+h6 {
+  font-size: 11px;
+}
+strong,
+b {
+  color: #555;
+}
+a:hover,
+a:focus {
+  outline: none;
+}
+small,
+.small {
+  font-size: 12px;
+}
+pre,
+code {
+  padding: 1px 2px;
+  font-weight: bold;
+  font-size: 12px;
+}
+blockquote {
+  border-left: 3px solid #dcdddf;
+}
+blockquote p {
+  font-size: 14px;
+}
+blockquote small::before {
+  content: "# ";
+}
+.lead {
+  font-size: 16px;
+  line-height: 22px;
+}
+/*= BOOTSTRAP: FORM & INPUT ELEMENTS
+---------------------------------------------------------------------------------------------- */
+.shaded {
+  color: rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 1px #eeeeee, 0 0 0 #000000, 0 0 1px #ffffff;
+}
+/*= BOOTSTRAP: FORM & INPUT ELEMENTS
+---------------------------------------------------------------------------------------------- */
+form {
+  margin: 0;
+}
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input,
+label,
+input,
+button,
+select,
+textarea {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-color: #ccc;
+  font-size: 14px;
+}
+.input-append input,
+.input-prepend input,
+.input-append select,
+.input-prepend select,
+.input-append .uneditable-input,
+.input-prepend .uneditable-input {
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+.input-append input,
+.input-append select,
+.input-append .uneditable-input,
+.input-prepend .add-on:first-child,
+.input-prepend .btn:first-child {
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+}
+.input-append .add-on,
+.input-prepend .add-on,
+.input-append .btn,
+.input-prepend .btn,
+.input-append .btn-group > .dropdown-toggle,
+.input-prepend .btn-group > .dropdown-toggle {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.input-append .add-on:last-child,
+.input-append .btn:last-child,
+.input-append .btn-group:last-child > .dropdown-toggle {
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+.input-transparent {
+  border: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+.radio.inline,
+.checkbox.inline {
+  white-space: nowrap;
+}
+/*= BOOTSTRAP: PROGRESS BAR
+---------------------------------------------------------------------------------------------- */
+.progress {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.progress .bar {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset, 0 1px 0 rgba(255, 255, 255, 0.35) inset;
+  -moz-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset, 0 1px 0 rgba(255, 255, 255, 0.35) inset;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset, 0 1px 0 rgba(255, 255, 255, 0.35) inset;
+  border: 1px solid #0070a8;
+}
+.progress.tight {
+  height: 10px;
+}
+.progress.stacked .bar {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.progress.stacked .bar + .bar {
+  margin-left: -1px;
+}
+.progress.stacked .bar:first-child {
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+}
+.progress.stacked .bar:last-child {
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+.progress .bar-success,
+.progress-success .bar {
+  border-color: #438e43;
+}
+.progress .bar-warning,
+.progress-warning .bar {
+  border-color: #c97600;
+}
+.progress .bar-danger,
+.progress-danger .bar {
+  border-color: #a62821;
+}
+/*= THEME: FORM & INPUT ELEMENTS
+---------------------------------------------------------------------------------------------- */
+.btn {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-shadow: none;
+}
+.btn:focus {
+  outline: none;
+}
+.btn-primary {
+  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+}
+/* MAIN CONTENT
+-------------------------------------------------- */
+.container {
+  margin-left: 0;
+}
+.sidebar {
+  background: #f0f0f0;
+  -webkit-box-shadow: -2px 0px 2px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: -2px 0px 2px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: -2px 0px 2px rgba(0, 0, 0, 0.1) inset;
+  border-right: 1px solid #bbb;
+  height: 100%;
+  position: fixed;
+}
+.content {
+  padding-bottom: 15px;
+}
+.content section {
+  padding: 15px 30px 0px;
+}
+.content .section-head {
+  text-transform: uppercase;
+  color: #111;
+  font-size: 20px;
+  line-height: 30px;
+  height: 30px;
+  padding: 25px 0 5px;
+  font-weight: normal;
+  position: relative;
+}
+.content .section-head > b {
+  background: #71aa5c;
+  display: inline-block;
+  height: 3px;
+  width: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* SOCIAL ICONS
+-------------------------------------------------- */
+.nav {
+  padding: 50px 30px 50px;
+}
+.nav li {
+  display: inline-block;
+  float: left;
+}
+.nav li + li {
+  margin-left: 30px;
+}
+.nav li.active > a {
+  background: #eee;
+}
+.nav li:last-child {
+  margin-left: 0;
+}
+.nav li > a {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #666;
+  height: 20px;
+  line-height: 20px;
+  padding: 5px 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+.nav li > a > b {
+  color: inherit;
+}
+.nav li b,
+.nav li i {
+  display: inline-block;
+}
+.nav li [class^="icon-"],
+.nav li [class*=" icon-"] {
+  font-size: 14px;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px 0 0;
+  position: relative;
+  top: -1px;
+}
+/* COVER
+-------------------------------------------------- */
+.cover {
+  display: table;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-spacing: 0;
+}
+.cover > div {
+  display: table-row;
+  position: relative;
+}
+.cover > div:first-child {
+  height: 65%;
+}
+.cover-image {
+  background-image: url(../images/samples/cover4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: -2px 0px 2px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: -2px 0px 2px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: -2px 0px 2px rgba(0, 0, 0, 0.1) inset;
+  position: absolute;
+  height: 65%;
+  width: 100%;
+}
+.cover-avatar {
+  background: #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0 0 -53px -53px;
+  padding: 6px;
+  cursor: move;
+}
+
+.json {
+	background-color: #FFF;
+	border: 0px;
+	color: #71aa5c;
+	white-space: nowrap;
+	padding: 0px 0px;
+}
+
+.cover-avatar img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.cover-author {
+  text-align: center;
+  padding-top: 5px;
+}
+.cover-author h1 {
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 15px;
+  margin: 70px 0 10px;
+  letter-spacing: -1px;
+}
+.cover-author h2 {
+  color: #888;
+  font: 14px/20px Arial, sans-serif;
+}
+/* DEFINITION LIST
+-------------------------------------------------- */
+dl {
+  margin: 0;
+  padding: 0;
+}
+dl.timeline dt,
+dl.timeline dd {
+  margin-top: 20px;
+}
+dl.timeline dt {
+  font-weight: normal;
+  text-align: left;
+  width: 120px;
+}
+dl.timeline dd {
+  margin-left: 0;
+  overflow: hidden;
+}
+/* LIST EXPERIENCE
+-------------------------------------------------- */
+.list-media {
+  overflow: hidden;
+}
+.list-media li {
+  margin-top: 20px;
+}
+.list-media li + li {
+  padding-top: 20px;
+}
+.list-media p {
+  margin: 0;
+}
+.list-media .media-avatar {
+  background: #eee;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  border: 1px solid #ddd;
+  margin-right: 30px;
+  height: 70px;
+  width: 70px;
+}
+.list-media .company {
+  margin: 5px 0 0;
+  font-size: 15px;
+  line-height: inherit;
+}
+.list-media .brief {
+  margin: 5px 0;
+}
+/* LIST EXPERTISE
+-------------------------------------------------- */
+.list-expertise {
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  margin-top: 30px;
+}
+.list-expertise li {
+  overflow: hidden;
+  padding: 15px;
+}
+.list-expertise li + li {
+  border-top: 1px solid #e5e5e5;
+}
+.list-expertise li b {
+  float: left;
+  text-align: right;
+  margin: 0 20px 0 0;
+  width: 130px;
+}
+.list-expertise li .progress {
+  overflow: hidden;
+  margin: 5px 0 0;
+}
+/* SOCIAL ICONS
+-------------------------------------------------- */
+.portfolio .project {
+  padding: 40px 0 0;
+}
+.portfolio .project-thumb img {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.portfolio .project-title {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+}
+.portfolio .project-category {
+  font-size: 12px;
+}
+/* SOCIAL ICONS
+-------------------------------------------------- */
+.social-icon {
+  font-size: 0;
+  margin-top: 40px;
+}
+.social-icon a {
+  color: #999;
+  display: inline-block;
+  font-size: 40px;
+  text-decoration: none !important;
+}
+.social-icon a:hover {
+  color: #666;
+}
+.social-icon a + a {
+  margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+  /*= OVERWRITE BOOTSTRAP STYLING
+  ---------------------------------------------------------------------------------------------- */
+  body {
+    padding: 0 !important;
+  }
+  /*= OVERWRITE BROWSER STYLING FOR MOBILE VIEW
+  ---------------------------------------------------------------------------------------------- */
+  body {
+    font-size: 13px;
+  }
+
+	.social-icon {
+	  font-size: 0;
+	  margin-top: 40px;
+	  margin-left: 85px;
+	}
+
+  .sidebar {
+    background: none;
+    border-right: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    position: static;
+    width: 100%;
+  }
+  .cover > div {
+    display: block;
+    position: static;
+  }
+  .cover > div:first-child {
+    height: 200px;
+  }
+  .cover-avatar {
+    left: 0;
+    margin-left: 30px;
+  }
+  .cover-image {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    position: relative;
+    height: 200px;
+  }
+  .cover-author {
+    text-align: left;
+  }
+  .cover-author h1,
+  .cover-author h2 {
+    margin: 10px 0 10px 165px;
+  }
+  .list-expertise li b {
+    display: block;
+    float: none;
+    text-align: left;
+    margin: 0 0 10px 0;
+    width: auto;
+  }
+}
+
+@media (max-width: 979px) {
+  /*= OVERWRITE BOOTSTRAP STYLING
+  ---------------------------------------------------------------------------------------------- */
+  body {
+    padding: 0 !important;
+  }
+}
