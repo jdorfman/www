@@ -1,0 +1,430 @@
+#wrapper {
+	overflow: hidden;
+	-webkit-font-smoothing: antialiased;
+}
+
+.area {
+	max-width: 1142px;
+	margin: 0 auto;
+	@extend %clearfix;
+	padding: 0 15px;
+}
+
+a {
+	transition: all .3s ease;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.bg-stretch {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	img {
+		max-width: none;
+	}
+}
+.visual {
+	position: relative;
+	height: 778px;
+	overflow: hidden;
+
+	@include breakpoint($tablet) {
+		height: 600px;
+	}
+
+	img {
+		vertical-align: top;
+		width: 100%;
+		height: auto;
+	}
+
+	.area {
+		max-width: 1000px;
+	}
+
+	.text-holder {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		transform:translateY(-50%);
+
+		p {
+			margin: 0 0 10px;
+		}
+	}
+
+	h1 {
+		font-size: 62px;
+		line-height: 65px;
+		font-weight: 800;
+		color: #e8e8e8;
+		margin: 0 0 37px;
+		position: relative;
+		padding: 0 0 37px;
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 66px;
+			height: 2px;
+			background: #272727;
+		}
+
+		@include breakpoint($tablet) {
+			font-size: 30px;
+			line-height: 35px;
+			margin: 0 0 10px;
+			padding: 0 0 10px;
+		}
+
+		span {
+			display: block;
+			font-weight: 400;
+			font-family: $secondory-font-family;
+		}
+	}
+
+	strong {
+		color: $orange;
+		font-size: 30px;
+		line-height: 32px;
+		font-weight: 300;
+		display: block;
+		padding: 0 0 38px;
+
+		@include breakpoint($tablet) {
+			font-size: 20px;
+			line-height: 25px;
+			padding: 0 0 20px;
+		}
+	}
+
+}
+form {
+	@extend %clearfix;
+	font-family: $three-font-family;
+
+	p {
+		font-family: $base-font-family;
+	}
+
+	input[type="email"] {
+		border:0;
+		width: 363px;
+		height: 53px;
+		border-radius: 3px;
+		box-shadow:inset 1px 1px 3px 2px rgba(0,0,0,.3);
+		color: #b4b4b4;
+		font-size: 18px;
+		line-height: 22px;
+		display: inline-block;
+		padding: 10px 18px;
+		vertical-align: text-top;
+
+		@include breakpoint($mobile) {
+			width: 100%;
+			display: block;
+		}
+	}
+
+	button[type="submit"] {
+		display: inline-block;
+		vertical-align: text-top;
+		width: 104px;
+		border: 0;
+		font-size: 18px;
+		line-height: 23px;
+		font-family: $three-font-family;
+		color: $white;
+		margin: 0 0 0 4px;
+		border-radius: 3px;
+		transition: all .3s ease;
+		padding: 15px 5px;
+		@include link-background($orange);
+
+		@include breakpoint($mobile) {
+			width: 100%;
+			margin: 6px 0 0;
+			display: block;
+		}
+	}
+}
+
+.text-wrap {
+	background: $white;
+	padding: 89px 0 79px;
+	text-align: center;
+	color: $gray;
+	font-weight: 200;
+	font-size: 30px;
+	line-height: 38px;
+
+	.area {
+		max-width: 1000px;
+	} 
+
+	@include breakpoint($tablet) {
+		padding: 49px 0 39px;
+	}
+
+	@include breakpoint($mobile) {
+		padding: 20px 0;
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	p {
+		@include breakpoint($mobile) {
+			margin: 0;
+		}
+	}
+}
+
+.style1 {
+	background:#212121 -moz-linear-gradient(left,  #212121 0%, #131313 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#212121), color-stop(100%,#131313));
+	background: -webkit-linear-gradient(left,  #212121 0%,#131313 100%);
+	background: linear-gradient(to right,  #212121 0%,#131313 100%);
+}
+
+.style2 {
+	background:#131313 -moz-linear-gradient(left,  #131313 0%, #212121 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#131313), color-stop(100%,#212121));
+	background: -webkit-linear-gradient(left,  #131313 0%,#212121 100%);
+	background: linear-gradient(to right,  #131313 0%,#212121 100%);
+}
+
+.section {
+	position: relative;
+
+	&.style2 {
+		.image {
+			float: right;
+		}
+	}
+	
+	&.style2 {
+		.text-area {
+			padding: 0 0 0 74px;
+
+			@include breakpoint($tablet) {
+				padding: 0 0 0 30px;
+			}
+
+			@include breakpoint($mobile) {
+				padding: 0;
+			}
+		}
+	}
+
+	.area {
+		@include v-align(area, 367px, middle);
+		min-height: 367px;
+
+		@include breakpoint($tablet) {
+			@include v-align(area, 300px, middle);
+			min-height: 300px;
+		}
+
+		@include breakpoint($mobile) {
+			min-height: 100%;
+			@include v-align(area, 100%, middle);
+		}
+		
+	}
+
+	.image {
+		float: left;
+		width: 45%;
+		@include v-align(img, 367px, middle);
+		min-height: 367px;
+
+		@include breakpoint($tablet) {
+			@include v-align(area, 300px, middle);
+			min-height: 300px;
+		}
+
+		@include breakpoint($mobile) {
+			float: none;
+			width: 100%;
+			min-height: 100%;
+			text-align: center;
+			margin: 0 0 20px; 
+			@include v-align(area, 100%, middle);
+		}
+
+		&.video {
+			width: 62%;
+			margin: 0 0 0 -104px;
+
+			@include breakpoint($desktop) {
+				margin: 0 0 20px;
+			}
+
+			@include breakpoint($mobile) {
+				float: none;
+				width: 100%;
+			}
+		}
+
+		&.list {
+			width: 54%;
+
+			@include breakpoint($mobile) {
+				float: none;
+				width: 100%;
+				padding: 20px 0 0;
+			}
+
+			img {
+				display: inline-block;
+				vertical-align: middle;
+				white-space: normal;
+			}
+		}
+
+		img {
+			display: inline-block;
+			vertical-align: bottom;
+			white-space: normal;
+		}
+	}
+
+	.text-area {
+		display: inline-block;
+		vertical-align: middle;
+		white-space: normal;
+		width: 42%;
+		font-size: 16px;
+		padding: 0 0 0 44px;
+		line-height: 18px;
+
+		@include breakpoint($mobile) {
+			display: block;
+			width: 100%;
+			padding: 0;
+		}
+	}
+
+	img {
+		vertical-align:top;
+	}
+
+	// ul {
+	// 	@extend %listreset;
+	// 	font-size: 0;
+	// 	line-height: 0;
+	// 	letter-spacing: -4px;
+	// 	width: 100%;
+
+	// 	li {
+	// 		display: inline-block;
+	// 		vertical-align: middle;
+	// 		padding: 0 25px 0 30px;
+	// 		letter-spacing: 0;
+	// 		font-size: 16px;
+	// 		line-height: 18px;
+
+	// 		@include breakpoint($desktop) {
+	// 			padding: 0 25px 0 0;
+	// 		}
+
+	// 		@include breakpoint($tablet) {
+	// 			width: 25%;
+	// 		}
+
+	// 		@include breakpoint($mobile) {
+	// 			padding: 0 10px;
+	// 			text-align: center;
+	// 		}
+	// 	}
+	// }
+
+	h2 {
+		font-size: 28px;
+		line-height: 28px;
+		color: $orange;
+		font-weight: 600;
+		margin:0 0 16px;
+
+		@include breakpoint($mobile) {
+			font-size: 20px;
+			line-height: 24px;
+			margin:0 0 8px;
+		}
+	}
+
+	h3 {
+		font-size: 20px;
+		line-height: 20px;
+		color: $white;
+		margin:0 0 10px;
+		font-weight: 600;
+
+		@include breakpoint($mobile) {
+			font-size: 18px;
+			line-height: 20px;
+		}
+	}
+}
+
+.contorl-panel {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	height: 762px;
+	font-size: 16px;
+	
+
+	@include breakpoint($mobile) {
+		height: 500px;
+	}
+
+	.text-holder {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform:translateY(-50%);
+		width: 100%;
+	}
+
+	.img {
+		max-width: 750px;
+		margin:0 auto 34px;
+
+		@include breakpoint($mobile) {
+			max-width: 310px;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			vertical-align: top;
+		}
+	}
+
+	.panel-bg {
+		width: 100%;
+		height: auto;
+		vertical-align:top;
+	}
+
+}
+
+
+
+
+
+
+
+
+

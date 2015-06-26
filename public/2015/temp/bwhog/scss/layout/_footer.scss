@@ -1,0 +1,78 @@
+#footer {
+	padding: 60px 0;
+	text-align: center;
+
+	@include breakpoint($mobile) {
+		padding: 20px 0;
+	}
+
+	.by {
+		float: none;
+		font-size: 16px;
+		color: #858585;
+
+		p {
+			margin: 0 0 13px; 
+		}
+
+		a {
+			color: #858585;
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+
+	ul {
+		@extend %listreset;
+		font-size: 0;
+		line-height: 0;
+		letter-spacing: -4px;
+		padding: 0 0 10px;
+
+		li {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 16px;
+			line-height: 18px;
+			padding: 0 8px;
+			letter-spacing: 0;
+			color: #858585;
+			position: relative;
+
+			@include breakpoint($mobile) {
+				display: block;
+				padding: 0 0 5px;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 8px;
+				left: -2px;
+				background: #858585;
+				width: 3px;
+				height: 3px;
+				border-radius:50%; 
+
+				@include breakpoint($mobile) {
+					display: none;
+				}	
+			}
+
+			&:first-child {
+				&:after {
+					display: none;
+				}
+			}
+
+			a {
+				color: $white;
+
+				&:hover {
+					color: $gray;
+				}
+			}
+		}
+	}
+}

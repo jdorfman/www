@@ -1,0 +1,30 @@
+// brand colors (http://name-of-color.com/)
+$black: #000;
+$white: #fff;
+$mountain-mist: #999;
+$gray: #656565;
+$light-gray: #c6c6c6;
+$orange:#ff5b02;
+
+
+// base variables
+$base-text-color: $light-gray;
+$base-background-color: $black;
+$base-link-color: $gray;
+$base-form-text-color: $gray;
+$base-form-placeholder-color: $gray;
+$base-input-border-color: $gray;
+$base-form-button-bg: $black;
+$base-form-button-color: $white;
+
+$base-font-size: 16px;
+$base-line-height: 1.625;
+$base-font-family: 'exo_2', Arial, Helvetica, sans-serif;
+$secondory-font-family: 'exo_2thin', Arial, Helvetica, sans-serif;
+$three-font-family: 'source_sans_pro', Arial, Helvetica, sans-serif;
+$base-text-interval: ($base-font-size * $base-line-height);
+
+$base-min-width: 320px;
+
+// @font-face-serif: 
+// @font-face-sans-serif: 
