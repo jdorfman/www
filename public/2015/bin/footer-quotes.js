@@ -11,7 +11,7 @@ function msg () {
       break
     case 4: document.write('Throw it back!')
       break
-    case 5: document.write("It's Friday, Friday everybody's looking forward to the weekend.")
+    case 5: document.write("It's Friday, Friday, Gotta get down on Friday.")
       break
     case 6: document.write('Remember Saturday morning cartoons? #GoodOlDays')
       break
