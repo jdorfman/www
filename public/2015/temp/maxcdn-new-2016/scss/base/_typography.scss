@@ -1,0 +1,79 @@
+// Typography
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h {
+  font-family: $headings-font-family;
+  font-weight: 300;
+  margin: 0 0 0.5em;
+  color: $headings-color;
+}
+
+h1, .h1 {
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+
+  @include media('<desktop') {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  @include media('<tablet') {
+    font-size: 30px;
+    line-height: 34px;
+  }
+}
+
+h2, .h2 {
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+
+  @include media('<desktop') {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  @include media('<tablet') {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+h3, .h3 {
+  font-size: $h3-font-size;
+}
+
+h4, .h4 {
+  font-size: $h4-font-size;
+}
+
+h5, .h5 {
+  font-size: $h5-font-size;
+}
+
+h6, .h6 {
+  font-size: $h6-font-size;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+img {
+  vertical-align: top;
+}
+
+a {
+  color: $base-link-color;
+  text-decoration: none;
+  transition: opacity $animation-speed ease-in-out, color $animation-speed ease-in-out, background $animation-speed ease-in-out, border $animation-speed ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $light-blue;
+  }
+}

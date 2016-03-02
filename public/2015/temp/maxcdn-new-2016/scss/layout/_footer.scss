@@ -1,0 +1,100 @@
+#footer {
+  padding: 0 0 30px;
+  font-size: 16px;
+  line-height: 20px;
+
+  @include media('<tablet') {
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .holder {
+    @extend %clearfix;
+    background: $white;
+    border-radius: 4px;
+    padding: 22px 21px 18px;
+  }
+
+  .text {
+    display: inline-block;
+    vertical-align: top;
+
+    @include media('<desktop') {
+      display: block;
+      margin: 0 0 2px;
+    }
+  }
+
+  .align-right {
+    @include media('<tablet') {
+      text-align: center;
+    }
+  }
+
+  .align-left {
+    padding: 8px 10px 0 4px;
+
+    @include media('<desktop') {
+      padding: 0 10px 0 0;
+    }
+
+    @include media('<tablet') {
+      padding: 0;
+      margin: 0 0 10px;
+    }
+  }
+}
+
+.contact-list {
+  @extend %listreset;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 0 4px;
+
+  @include media('<desktop') {
+    display: block;
+    margin-left: 0;
+  }
+
+  li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 0 0 8px;
+    margin: 0 0 0 4px;
+    position: relative;
+
+    &:first-child {
+      margin-left: 0;
+      padding-left: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 1px;
+      height: 18px;
+      transform: translateY(-50%);
+      background: $dark-gray;
+
+      @include media('<tablet') {
+        height: 12px;
+      }
+    }
+  }
+
+  a[href^=tel] {
+    color: $base-text-color;
+
+    &:hover {
+      color: $light-blue;
+    }
+  }
+}
