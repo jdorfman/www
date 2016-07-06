@@ -1,4 +1,4 @@
-jdc
+JustinDorfman.com
 ===
 
-personal website
+My personal crappy website including config files and various scripts for my VPS.
