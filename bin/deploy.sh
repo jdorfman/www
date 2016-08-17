@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-cd /var/www/justindorfman.com/html/jdc/public/2015/ && git pull origin master
-/usr/bin/env node ~/purge.js
-
-### K.I.S.S. ###
+cd ~/jdc && git pull origin master
+sudo cp -R ~/jdc/public/2015/ /usr/share/nginx/html/justindorfman.com/
+/usr/bin/nodejs ~/purge.js
