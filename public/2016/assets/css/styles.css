@@ -8,7 +8,7 @@
 */
 /* ======= Base ======= */
 body {
-  font-family: 'Lato', arial, sans-serif;
+  font-family: arial, sans-serif;
   color: #434343;
   background: #32383e;
   font-size: 16px;
@@ -136,7 +136,7 @@ iframe {
 }
 .header .profile-content .desc {
   color: #f5f5f5;
-  font-family: "Lato", arial, sans-serif;
+  font-family: arial, sans-serif;
   font-weight: 400;
   font-size: 24px;
   margin-top: 0;
@@ -370,7 +370,7 @@ iframe {
   color: #ccd1d6;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Lato", arial, sans-serif;
+  font-family: arial, sans-serif;
   position: absolute;
   right: 0;
   top: 0;
@@ -424,7 +424,7 @@ iframe {
   margin-top: 0;
 }
 .education .item .university {
-  font-family: "Lato", arial, sans-serif;
+  font-family: arial, sans-serif;
   font-size: 13px;
   color: #999;
   font-weight: 600;
