@@ -37,13 +37,24 @@ grunt.initConfig({
         'assets/js/main.min.js': ['assets/js/main.js']
       }
     }
+  },
+  imageoptim: {
+  myTask: {
+    options: {
+      jpegMini: false,
+      imageAlpha: true,
+      quitAfter: true
+    },
+    src: ['assets/images']
   }
+}
 });
 
 grunt.loadNpmTasks('grunt-contrib-htmlmin');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-uglify');
+grunt.loadNpmTasks('grunt-imageoptim');
 
 grunt.registerTask('default', ['htmlmin']);
 
