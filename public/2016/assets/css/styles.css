@@ -62,7 +62,7 @@ a.btn:focus {
 a.btn-cta-primary,
 .btn-cta-primary {
   background: #32383e;
-  border: 1px solid 32383e;
+  /*border: 0px solid 32383e;*/
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
@@ -70,7 +70,7 @@ a.btn-cta-primary,
 a.btn-cta-primary:hover,
 .btn-cta-primary:hover {
   background: #49515a;
-  border: 1px solid #080808;
+  /*border: 0px solid #080808;*/
   color: #fff;
 }
 a.btn-cta-secondary,
