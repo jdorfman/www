@@ -56,6 +56,6 @@ grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-imageoptim');
 
-grunt.registerTask('default', ['htmlmin']);
+grunt.registerTask('default', ['htmlmin', 'cssmin', 'uglify']);
 
 };
