@@ -543,3 +543,640 @@ iframe {
     width: 1360px;
   }
 }
+
+/* Github Calendar - https://github.com/IonicaBizau/github-calendar */
+.calendar {
+    width: 750px;
+    font-family: Helvetica, arial;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    min-height: 243px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.calendar-graph text.wday,
+.calendar-graph text.month {
+    font-size: 10px;
+    fill: #aaa;
+}
+
+.contrib-legend {
+    text-align: right;
+    padding: 0 14px 10px 0;
+    display: inline-block;
+    float: right;
+}
+
+.contrib-legend .legend {
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px;
+    position: relative;
+    bottom: -1px;
+    padding: 0;
+}
+
+.contrib-legend .legend li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+.text-small {
+    font-size: 12px;
+    color: #767676;
+}
+
+.calendar-graph {
+    padding: 5px 0 0;
+    height: 126px;
+    text-align: center;
+}
+
+.contrib-column {
+    padding: 15px 0;
+    text-align: center;
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    font-size: 11px;
+}
+
+.contrib-column-first {
+    border-left: 0;
+}
+
+.table-column {
+    display: table-cell;
+    width: 1%;
+    padding-right: 10px;
+    padding-left: 10px;
+    vertical-align: top;
+}
+
+.contrib-number {
+    font-weight: 300;
+    line-height: 1.3em;
+    font-size: 24px;
+    display: block;
+    color: #333;
+}
+
+.calendar img.spinner {
+    width: 70px;
+    margin-top: 50px;
+    min-height: 70px;
+}
+
+.monospace {
+    text-align: center;
+    color: #000;
+    font-family: monospace;
+}
+
+.monospace a {
+    color: #1D75AB;
+    text-decoration: none;
+}
+
+.contrib-footer {
+    font-size: 11px;
+    padding: 0 10px 12px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    height: 26px;
+}
+
+.left.text-muted {
+    float: left;
+    margin-left: 9px;
+    color: #767676;
+}
+.left.text-muted a {
+    color: #4078c0;
+    text-decoration: none;
+}
+.left.text-muted a:hover,
+.monospace a:hover {
+    text-decoration: underline;
+}
+
+/*!
+ * GitHub Activity Stream - v0.1.4 - 10/7/2015
+ * https://github.com/caseyscarborough/github-activity
+ *
+ * Copyright (c) 2015 Casey Scarborough
+ * MIT License
+ * http://opensource.org/licenses/MIT
+ */
+
+ .gha-feed {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  line-height: 1.3;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+}
+
+.gha-feed, .gha-feed h2, .gha-feed h3, .gha-feed p, .gha-feed ul, .gha-feed li {
+  margin: 0;
+  padding: 0;
+}
+
+.gha-feed ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gha-feed li {
+  list-style-type: none;
+  line-height: 1.4;
+}
+
+.gha-feed small{
+  color: #666;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.gha-feed small a {
+  font-weight: normal;
+}
+
+.gha-feed small a .more-commits { font-size: 11px; }
+
+span.gha-time {
+  color: #bbb;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.gha-feed a {
+  color: #4183c4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.gha-feed a:hover {
+  text-decoration: underline;
+}
+
+.gha-feed pre {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 1px 1px 4px #bbb;
+  color: white;
+}
+
+.gha-header {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: calc(100% - 20px);
+  padding: 10px;
+  height: 67px;
+  border-bottom: 1px solid #ddd;
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 0%, #f4f4f4 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f4f4f4)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#f4f4f4 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffffff 0%,#f4f4f4 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffffff 0%,#f4f4f4 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffffff 0%,#f4f4f4 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
+}
+
+.gha-footer {
+  position: absolute;
+  bottom: -1px;
+  left: 1px;
+  padding: 5px;
+  border-top: 1px solid #ddd;
+  height: 16px;
+  width: calc(100% - 15px);
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 0%, #f4f4f4 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f4f4f4)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#f4f4f4 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffffff 0%,#f4f4f4 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffffff 0%,#f4f4f4 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffffff 0%,#f4f4f4 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-9 */
+  color: #495961;
+  font-size: 13px;
+  padding-left: 10px;
+}
+
+.gha-footer a {
+  float: right;
+  color: #495961;
+  padding-right: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.gha-footer a:hover { text-decoration: none; }
+.gha-header a:hover { text-decoration: none; }
+
+.gha-github-icon {
+  display: inline;
+  float: left;
+  padding: 9px 0 0;
+  width: 35px;
+  height: 35px;
+  color: #495961;
+}
+
+.gha-github-icon .octicon {
+  font: normal normal 40px octicons;
+}
+
+.gha-gravatar {
+  display: inline;
+  float: right;
+  margin-right: 10px;
+  padding-right: 20px;
+  max-width: 60px;
+  height: 67px;
+}
+
+.gha-gravatar img {
+  padding: 3px;
+  width: 100%;
+  border: 1px solid #ddd;
+  box-shadow: 1px 1px 3px #ccc;
+}
+
+.gha-activity {
+  clear: both;
+  padding: 10px 0;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.gha-activity.gha-small {
+  margin-top: 5px;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.gha-activity.gha-small a {
+  font-weight: normal;
+}
+
+.gha-activity.gha-small .gha-message {
+  float: left;
+  width: auto;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.gha-activity.gha-small span {
+  font-size: 16px;
+}
+
+.gha-activity.gha-small .gha-time {
+  float: left;
+  margin-top: 6px;
+}
+
+.gha-activity:last-child {
+  padding-bottom: 100px;
+}
+
+.gha-repo {
+  clear: both;
+  padding: 10px 0;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+.gha-activity-icon .octicon{
+  display: inline;
+  float: left;
+  clear: both;
+  margin: 6px auto;
+  width: 50px;
+  color: #bbb;
+  text-align: center;
+  font: normal normal 30px octicons;
+}
+
+.gha-activity-icon .gha-small {
+  font-size: 16px;
+}
+
+.gha-message {
+  display: inline-block;
+  float: left;
+  width: calc(100% - 50px);
+}
+
+.gha-message-commits { font-size: 11px; }
+
+.gha-message-merge {
+  padding: 3px 7px;
+  border-radius: 3px;
+  background: #e8f1f6;
+  color: rgba(0,0,0,0.5);
+  font-size: 12px;
+  line-height: 2.0;
+}
+
+.gha-sha {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+.gha-gravatar-small {
+  float: left;
+  margin-right: 6px;
+  width: 30px;
+}
+
+.gha-gravatar-commit {
+  margin-bottom: -3px;
+  border-radius: 2px;
+}
+
+.gha-gravatar-user { float: left; }
+
+.gha-user-info {
+  display: inline-block;
+  float: left;
+  margin: 0 auto;
+  padding: 6px 10px 5px;
+  color: #495961;
+  font-size: 20px;
+}
+
+.gha-user-info a { color: #495961; }
+.gha-user-info p a { font-weight: 100; }
+
+.gha-without-name {
+  padding-top: 20px;
+  padding-left: 15px;
+}
+
+.gha-info {
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #e4e4c6;
+  border-radius: 4px;
+  background: #ffffde;
+  color: #6d6d4b;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.gha-time {
+  color: #bbb;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.gha-clear { clear: both; }
+.gha-muted { color: #666; }
+.gha-push  { height: 87px; }
+.gha-push-small  { height: 26px; }
+
+/*!
+Octicons
+MIT License
+Copyright (c) 2012-2016 GitHub, Inc.
+*/
+
+@font-face {
+  font-family: 'octicons';
+  src: url('https://cdn.jsdelivr.net/octicons/3.5.0/octicons.eot?#iefix') format('embedded-opentype'),
+       url('https://cdn.jsdelivr.net/octicons/3.5.0/octicons.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/octicons/3.5.0/octicons.ttf') format('truetype'),
+       url('https://cdn.jsdelivr.net/octicons/3.5.0/octicons.svg#octicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+
+.octicon is optimized for 16px.
+.mega-octicon is optimized for 32px but can be used larger.
+
+*/
+.octicon, .mega-octicon {
+  font: normal normal normal 16px/1 octicons;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.mega-octicon { font-size: 32px; }
+
+.octicon-alert:before { content: '\f02d'} /*  */
+.octicon-arrow-down:before { content: '\f03f'} /*  */
+.octicon-arrow-left:before { content: '\f040'} /*  */
+.octicon-arrow-right:before { content: '\f03e'} /*  */
+.octicon-arrow-small-down:before { content: '\f0a0'} /*  */
+.octicon-arrow-small-left:before { content: '\f0a1'} /*  */
+.octicon-arrow-small-right:before { content: '\f071'} /*  */
+.octicon-arrow-small-up:before { content: '\f09f'} /*  */
+.octicon-arrow-up:before { content: '\f03d'} /*  */
+.octicon-microscope:before,
+.octicon-beaker:before { content: '\f0dd'} /*  */
+.octicon-bell:before { content: '\f0de'} /*  */
+.octicon-bold:before { content: '\f0e2'} /*  */
+.octicon-book:before { content: '\f007'} /*  */
+.octicon-bookmark:before { content: '\f07b'} /*  */
+.octicon-briefcase:before { content: '\f0d3'} /*  */
+.octicon-broadcast:before { content: '\f048'} /*  */
+.octicon-browser:before { content: '\f0c5'} /*  */
+.octicon-bug:before { content: '\f091'} /*  */
+.octicon-calendar:before { content: '\f068'} /*  */
+.octicon-check:before { content: '\f03a'} /*  */
+.octicon-checklist:before { content: '\f076'} /*  */
+.octicon-chevron-down:before { content: '\f0a3'} /*  */
+.octicon-chevron-left:before { content: '\f0a4'} /*  */
+.octicon-chevron-right:before { content: '\f078'} /*  */
+.octicon-chevron-up:before { content: '\f0a2'} /*  */
+.octicon-circle-slash:before { content: '\f084'} /*  */
+.octicon-circuit-board:before { content: '\f0d6'} /*  */
+.octicon-clippy:before { content: '\f035'} /*  */
+.octicon-clock:before { content: '\f046'} /*  */
+.octicon-cloud-download:before { content: '\f00b'} /*  */
+.octicon-cloud-upload:before { content: '\f00c'} /*  */
+.octicon-code:before { content: '\f05f'} /*  */
+.octicon-comment-add:before,
+.octicon-comment:before { content: '\f02b'} /*  */
+.octicon-comment-discussion:before { content: '\f04f'} /*  */
+.octicon-credit-card:before { content: '\f045'} /*  */
+.octicon-dash:before { content: '\f0ca'} /*  */
+.octicon-dashboard:before { content: '\f07d'} /*  */
+.octicon-database:before { content: '\f096'} /*  */
+.octicon-clone:before,
+.octicon-desktop-download:before { content: '\f0dc'} /*  */
+.octicon-device-camera:before { content: '\f056'} /*  */
+.octicon-device-camera-video:before { content: '\f057'} /*  */
+.octicon-device-desktop:before { content: '\f27c'} /*  */
+.octicon-device-mobile:before { content: '\f038'} /*  */
+.octicon-diff:before { content: '\f04d'} /*  */
+.octicon-diff-added:before { content: '\f06b'} /*  */
+.octicon-diff-ignored:before { content: '\f099'} /*  */
+.octicon-diff-modified:before { content: '\f06d'} /*  */
+.octicon-diff-removed:before { content: '\f06c'} /*  */
+.octicon-diff-renamed:before { content: '\f06e'} /*  */
+.octicon-ellipsis:before { content: '\f09a'} /*  */
+.octicon-eye-unwatch:before,
+.octicon-eye-watch:before,
+.octicon-eye:before { content: '\f04e'} /*  */
+.octicon-file-binary:before { content: '\f094'} /*  */
+.octicon-file-code:before { content: '\f010'} /*  */
+.octicon-file-directory:before { content: '\f016'} /*  */
+.octicon-file-media:before { content: '\f012'} /*  */
+.octicon-file-pdf:before { content: '\f014'} /*  */
+.octicon-file-submodule:before { content: '\f017'} /*  */
+.octicon-file-symlink-directory:before { content: '\f0b1'} /*  */
+.octicon-file-symlink-file:before { content: '\f0b0'} /*  */
+.octicon-file-text:before { content: '\f011'} /*  */
+.octicon-file-zip:before { content: '\f013'} /*  */
+.octicon-flame:before { content: '\f0d2'} /*  */
+.octicon-fold:before { content: '\f0cc'} /*  */
+.octicon-gear:before { content: '\f02f'} /*  */
+.octicon-gift:before { content: '\f042'} /*  */
+.octicon-gist:before { content: '\f00e'} /*  */
+.octicon-gist-secret:before { content: '\f08c'} /*  */
+.octicon-git-branch-create:before,
+.octicon-git-branch-delete:before,
+.octicon-git-branch:before { content: '\f020'} /*  */
+.octicon-git-commit:before { content: '\f01f'} /*  */
+.octicon-git-compare:before { content: '\f0ac'} /*  */
+.octicon-git-merge:before { content: '\f023'} /*  */
+.octicon-git-pull-request-abandoned:before,
+.octicon-git-pull-request:before { content: '\f009'} /*  */
+.octicon-globe:before { content: '\f0b6'} /*  */
+.octicon-graph:before { content: '\f043'} /*  */
+.octicon-heart:before { content: '\2665'} /* ♥ */
+.octicon-history:before { content: '\f07e'} /*  */
+.octicon-home:before { content: '\f08d'} /*  */
+.octicon-horizontal-rule:before { content: '\f070'} /*  */
+.octicon-hubot:before { content: '\f09d'} /*  */
+.octicon-inbox:before { content: '\f0cf'} /*  */
+.octicon-info:before { content: '\f059'} /*  */
+.octicon-issue-closed:before { content: '\f028'} /*  */
+.octicon-issue-opened:before { content: '\f026'} /*  */
+.octicon-issue-reopened:before { content: '\f027'} /*  */
+.octicon-italic:before { content: '\f0e4'} /*  */
+.octicon-jersey:before { content: '\f019'} /*  */
+.octicon-key:before { content: '\f049'} /*  */
+.octicon-keyboard:before { content: '\f00d'} /*  */
+.octicon-law:before { content: '\f0d8'} /*  */
+.octicon-light-bulb:before { content: '\f000'} /*  */
+.octicon-link:before { content: '\f05c'} /*  */
+.octicon-link-external:before { content: '\f07f'} /*  */
+.octicon-list-ordered:before { content: '\f062'} /*  */
+.octicon-list-unordered:before { content: '\f061'} /*  */
+.octicon-location:before { content: '\f060'} /*  */
+.octicon-gist-private:before,
+.octicon-mirror-private:before,
+.octicon-git-fork-private:before,
+.octicon-lock:before { content: '\f06a'} /*  */
+.octicon-logo-gist:before { content: '\f0ad'} /*  */
+.octicon-logo-github:before { content: '\f092'} /*  */
+.octicon-mail:before { content: '\f03b'} /*  */
+.octicon-mail-read:before { content: '\f03c'} /*  */
+.octicon-mail-reply:before { content: '\f051'} /*  */
+.octicon-mark-github:before { content: '\f00a'} /*  */
+.octicon-markdown:before { content: '\f0c9'} /*  */
+.octicon-megaphone:before { content: '\f077'} /*  */
+.octicon-mention:before { content: '\f0be'} /*  */
+.octicon-milestone:before { content: '\f075'} /*  */
+.octicon-mirror-public:before,
+.octicon-mirror:before { content: '\f024'} /*  */
+.octicon-mortar-board:before { content: '\f0d7'} /*  */
+.octicon-mute:before { content: '\f080'} /*  */
+.octicon-no-newline:before { content: '\f09c'} /*  */
+.octicon-octoface:before { content: '\f008'} /*  */
+.octicon-organization:before { content: '\f037'} /*  */
+.octicon-package:before { content: '\f0c4'} /*  */
+.octicon-paintcan:before { content: '\f0d1'} /*  */
+.octicon-pencil:before { content: '\f058'} /*  */
+.octicon-person-add:before,
+.octicon-person-follow:before,
+.octicon-person:before { content: '\f018'} /*  */
+.octicon-pin:before { content: '\f041'} /*  */
+.octicon-plug:before { content: '\f0d4'} /*  */
+.octicon-repo-create:before,
+.octicon-gist-new:before,
+.octicon-file-directory-create:before,
+.octicon-file-add:before,
+.octicon-plus:before { content: '\f05d'} /*  */
+.octicon-primitive-dot:before { content: '\f052'} /*  */
+.octicon-primitive-square:before { content: '\f053'} /*  */
+.octicon-pulse:before { content: '\f085'} /*  */
+.octicon-question:before { content: '\f02c'} /*  */
+.octicon-quote:before { content: '\f063'} /*  */
+.octicon-radio-tower:before { content: '\f030'} /*  */
+.octicon-repo-delete:before,
+.octicon-repo:before { content: '\f001'} /*  */
+.octicon-repo-clone:before { content: '\f04c'} /*  */
+.octicon-repo-force-push:before { content: '\f04a'} /*  */
+.octicon-gist-fork:before,
+.octicon-repo-forked:before { content: '\f002'} /*  */
+.octicon-repo-pull:before { content: '\f006'} /*  */
+.octicon-repo-push:before { content: '\f005'} /*  */
+.octicon-rocket:before { content: '\f033'} /*  */
+.octicon-rss:before { content: '\f034'} /*  */
+.octicon-ruby:before { content: '\f047'} /*  */
+.octicon-search-save:before,
+.octicon-search:before { content: '\f02e'} /*  */
+.octicon-server:before { content: '\f097'} /*  */
+.octicon-settings:before { content: '\f07c'} /*  */
+.octicon-shield:before { content: '\f0e1'} /*  */
+.octicon-log-in:before,
+.octicon-sign-in:before { content: '\f036'} /*  */
+.octicon-log-out:before,
+.octicon-sign-out:before { content: '\f032'} /*  */
+.octicon-smiley:before { content: '\f0e7'} /*  */
+.octicon-squirrel:before { content: '\f0b2'} /*  */
+.octicon-star-add:before,
+.octicon-star-delete:before,
+.octicon-star:before { content: '\f02a'} /*  */
+.octicon-stop:before { content: '\f08f'} /*  */
+.octicon-repo-sync:before,
+.octicon-sync:before { content: '\f087'} /*  */
+.octicon-tag-remove:before,
+.octicon-tag-add:before,
+.octicon-tag:before { content: '\f015'} /*  */
+.octicon-tasklist:before { content: '\f0e5'} /*  */
+.octicon-telescope:before { content: '\f088'} /*  */
+.octicon-terminal:before { content: '\f0c8'} /*  */
+.octicon-text-size:before { content: '\f0e3'} /*  */
+.octicon-three-bars:before { content: '\f05e'} /*  */
+.octicon-thumbsdown:before { content: '\f0db'} /*  */
+.octicon-thumbsup:before { content: '\f0da'} /*  */
+.octicon-tools:before { content: '\f031'} /*  */
+.octicon-trashcan:before { content: '\f0d0'} /*  */
+.octicon-triangle-down:before { content: '\f05b'} /*  */
+.octicon-triangle-left:before { content: '\f044'} /*  */
+.octicon-triangle-right:before { content: '\f05a'} /*  */
+.octicon-triangle-up:before { content: '\f0aa'} /*  */
+.octicon-unfold:before { content: '\f039'} /*  */
+.octicon-unmute:before { content: '\f0ba'} /*  */
+.octicon-unverified:before { content: '\f0e8'} /*  */
+.octicon-verified:before { content: '\f0e6'} /*  */
+.octicon-versions:before { content: '\f064'} /*  */
+.octicon-watch:before { content: '\f0e0'} /*  */
+.octicon-remove-close:before,
+.octicon-x:before { content: '\f081'} /*  */
+.octicon-zap:before { content: '\26A1'} /* ⚡ */
