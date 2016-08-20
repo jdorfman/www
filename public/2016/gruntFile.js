@@ -10,10 +10,18 @@ grunt.initConfig({
         'index.html': './index.source.html',     // 'destination': 'source'
       }
     },
+  },
+  watch: {
+    html: {
+      files: ['*.source.html'],
+      tasks: ['htmlmin']
+    }
   }
 });
 
 grunt.loadNpmTasks('grunt-contrib-htmlmin');
+grunt.loadNpmTasks('grunt-contrib-watch');
+
 grunt.registerTask('default', ['htmlmin']);
 
 };
