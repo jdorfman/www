@@ -36,7 +36,7 @@ a {
 a:hover {
   text-decoration: underline;
   color: #5f6b77;
-  color: #999999;
+  color: #49515a;
 }
 a:focus {
   text-decoration: none;
@@ -69,8 +69,8 @@ a.btn-cta-primary,
 }
 a.btn-cta-primary:hover,
 .btn-cta-primary:hover {
-  background: #9d9d9d;
-  border: 1px solid #ccc;
+  background: #49515a;
+  border: 1px solid #080808;
   color: #fff;
 }
 a.btn-cta-secondary,
