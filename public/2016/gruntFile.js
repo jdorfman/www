@@ -13,8 +13,8 @@ grunt.initConfig({
   },
   watch: {
     html: {
-      files: ['*.source.html', 'assets/css/styles.css'],
-      tasks: ['htmlmin', 'cssmin']
+      files: ['*.source.html', 'assets/css/styles.css', 'assets/js/main.js'],
+      tasks: ['htmlmin', 'cssmin', 'uglify']
     }
   },
   cssmin: {
@@ -27,12 +27,23 @@ grunt.initConfig({
       ext: '.min.css'
     }]
   }
-}
+},
+  uglify: {
+    my_target: {
+      options: {
+        preserveComments: 'all'
+      },
+      files: {
+        'assets/js/main.min.js': ['assets/js/main.js']
+      }
+    }
+  }
 });
 
 grunt.loadNpmTasks('grunt-contrib-htmlmin');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
+grunt.loadNpmTasks('grunt-contrib-uglify');
 
 grunt.registerTask('default', ['htmlmin']);
 
