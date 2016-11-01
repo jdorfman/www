@@ -13,7 +13,7 @@
     <meta name="author" content="Justin Dorfman">
     <link rel="shortcut icon" href="favicon.ico">
     <!-- Remove Montserrat-->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <!-- Global CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Plugins CSS -->
@@ -69,7 +69,7 @@
                     </div><!--//section-inner-->
                 </section><!--//section-->
 
-               <section class="latest section">
+               <!-- <section class="latest section">
                     <div class="section-inner">
                         <h2 class="heading">Future Talks</h2>
                         <div class="content">
@@ -86,12 +86,12 @@
 
                                 <div class="desc text-left">
                                     <p>Open Source isn’t just a commit, a patch or a pull request. It is about bringing people together of all different skill sets, from different backgrounds, different genders and solving issues as one.</p>
-                                </div><!--//desc-->
+                                </div>
                                 <a class="btn btn-cta-secondary" href="https://allthingsopen.org/talk/open-source-is-people/" target="_blank" rel="noopener noreferrer"> Register Now</a>
-                            </div><!--//item-->
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </section><!--//section-->
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
                 <a name="pasttalks" />
                 <section class="latest section">
                      <div class="section-inner">
@@ -99,6 +99,17 @@
                          <div class="content">
 
                              <hr class="divider" />
+
+                             <div class="item row">
+                                 <a class="col-md-4 col-sm-4 col-xs-12" href="https://allthingsopen.org/talk/open-source-is-people/" target="_blank" rel="noopener noreferrer">
+                                 <img class="img-responsive project-image" src="assets/images/past-talks_ato-2016.jpg" alt="All Things Open 2016" />
+                                 </a>
+                                 <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                     <h3 class="title"><a href="https://allthingsopen.org/talk/open-source-is-people/" target="_blank" rel="noopener noreferrer">All Thing Open 2016 - Raleigh, North Carolina</a></h3>
+                                     <p>A conference exploring open source, open tech, and the open web in the enterprise</p>
+                                     <p><a class="more-link" href="https://allthingsopen.org/talk/open-source-is-people/" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link"></i> Find out more</a></p>
+                                 </div><!--//desc-->
+                             </div><!--//item-->
 
                              <div class="item row">
                                  <a class="col-md-4 col-sm-4 col-xs-12" href="http://opensourcebridge.org/sessions/1695" target="_blank" rel="noopener noreferrer">
@@ -228,7 +239,7 @@
     <footer class="footer">
         <div class="container text-center">
                 <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
-                <small class="copyright">v3.2.0-alpha | © 1985 - 2016<br />Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="noopener noreferrer">Xiaoying Riley</a> for developers</small>
+                <small class="copyright">v3.2.0-alpha.1 | © 1985 - 2016<br />Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="noopener noreferrer">Xiaoying Riley</a> for developers</small>
         </div><!--//container-->
     </footer><!--//footer-->
 
@@ -244,8 +255,6 @@
     <!-- <script src="https://cdn.jsdelivr.net/mustache.js/0.7.2/mustache.js" integrity="sha256-l9JyahnZYUjrrJBs1mt+KUm701RTKuivyTdRTpQP64o=" crossorigin="anonymous"></script> -->
     <!-- <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script> -->
     <!-- custom js -->
-    <!-- <script type="text/javascript" src="assets/js/main.min.js"></script> -->
-    <script>!function(e,t,a,n,c,s,o){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,s=t.createElement(a),o=t.getElementsByTagName(a)[0],s.async=1,s.src=n,o.parentNode.insertBefore(s,o)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-273847-13","auto"),ga("send","pageview");</script>
-    <script>function _gaLt(t){if(ga.hasOwnProperty("loaded")&&1==ga.loaded){for(var e=t.srcElement||t.target;e&&("undefined"==typeof e.tagName||"a"!=e.tagName.toLowerCase()||!e.href);)e=e.parentNode;if(e&&e.href){var a=e.href;if(-1==a.indexOf(location.host)&&!a.match(/^javascript\:/i)){var n=(e.target&&!e.target.match(/^_(self|parent|top)$/i)?e.target:!1,!1),o=function(){n||(n=!0,window.location.href=a)};e.target&&!e.target.match(/^_(self|parent|top)$/i)?ga("send","event","Outgoing Links",a,document.location.pathname+document.location.search):(ga("send","event","Outgoing Links",a,document.location.pathname+document.location.search,{hitCallback:o}),setTimeout(o,1e3),t.preventDefault?t.preventDefault():t.returnValue=!1)}}}}var w=window;w.addEventListener?w.addEventListener("load",function(){document.body.addEventListener("click",_gaLt,!1)},!1):w.attachEvent&&w.attachEvent("onload",function(){document.body.attachEvent("onclick",_gaLt)});</script>
+    <script type="text/javascript" src="assets/js/main.min.js"></script>
 </body>
 </html>
