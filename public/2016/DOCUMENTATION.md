@@ -11,6 +11,7 @@
   * `$ git commit -am "foo"`
   * `$ gr master`
   * `$ git merge branchname`
+  * `$ git push origin master`
 * `$ sdo` (Pane 3)
   * `$ ./deploy`
 
