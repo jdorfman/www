@@ -16,3 +16,6 @@
 
 ### Clean up
 * `$ dab` (remove all branches)
+
+### Troubleshoot
+* `$ npm install`

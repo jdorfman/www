@@ -13,7 +13,7 @@ grunt.initConfig({
   },
   watch: {
     html: {
-      files: ['*.source.html', 'assets/css/styles.css', 'assets/js/main.js'],
+      files: ['*.source.html', 'assets/css/styles-*.css', 'assets/js/main.js'],
       tasks: ['htmlmin', 'cssmin', 'uglify']
     }
   },
