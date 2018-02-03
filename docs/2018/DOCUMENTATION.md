@@ -1,8 +1,8 @@
 # How we do
 
 ### Development
-* `$ ~/github/jdorfman/jdc/public/2016`
-* Open iTerm, split Pane
+* `$ ~/github/jdorfman/docs/2018`
+* Open Hyper, split Pane
 * `$ gr -b branchname`
 * `$ grunt watch` (Pane 1)
   * `$ grunt imageoptim`
@@ -12,8 +12,10 @@
   * `$ gr master`
   * `$ git merge branchname`
   * `$ git push origin master`
-* `$ sdo` (Pane 3)
-  * `$ ./deploy`
+* `node  ~/github/jdorfman/jdc/bin/purge.js` (or: [GitHub hook](http://j.mp/2FjSAAU) or grunt task)
 
 ### Clean up
 * `$ dab` (remove all branches)
+
+### Troubleshoot
+* `$ npm install`
