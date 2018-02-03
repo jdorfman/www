@@ -18,6 +18,7 @@
     "grunt-imageoptim": "^1.4.1"
   },
   "dependencies": {
-    "grunt-reload": "^0.2.0"
+    "grunt-reload": "^0.2.0",
+    "send": "^0.16.1"
   }
 }
