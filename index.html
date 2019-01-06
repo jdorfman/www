@@ -1,3 +1,7 @@
+---
+slug: /
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,25 +82,9 @@
             <div class="other-skills">
                 <h3 class="subtitle">Things he talks about on/offline</h3>
                 <div class="misc-skills">
-                    <span class="skill-tag"><a href="https://twitter.com/search?l=&q=open%20source%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">Open Source</a></span>
-                    <span class="skill-tag"><a href="https://twitter.com/search?l=&q=sustainer%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">Sustainers</a></span>
-                    <span class="skill-tag"><a href="https://twitter.com/search?l=&q=maintainers%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">Maintainers</a></span>
-                    <span class="skill-tag"><a href="https://twitter.com/search?l=&q=contributors%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">Contributors</a></span>
-                    <span class="skill-tag"><a href="https://twitter.com/search?f=tweets&q=logo%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">Logos</a></span>
-                    <span class="skill-tag"><a href="https://twitter.com/search?f=tweets&q=Marketing%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">Marketing</a></span>
-                    <br>
-                    <span class="skill-tag"><a href="https://twitter.com/search?f=tweets&q=Bootstrap%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">Bootstrap</a></span>
-                    <span class="skill-tag"><a href="https://twitter.com/search?l=&q=sri%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">SRI</a></span>
-                    <span class="skill-tag"><a href="https://twitter.com/search?l=&q=Subresource%20Integrity%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">Subresource Integrity</a></span>
-                    <span class="skill-tag"><a href="https://twitter.com/search?l=&q=cdn%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">CDN</a></span>
-                    <span class="skill-tag"><a href="https://twitter.com/search?f=tweets&q=WebPerf%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">WebPerf</a></span>
-                    <span class="skill-tag"><a href="https://twitter.com/search?f=tweets&q=Datasets%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">JSON Datasets</a></span>
-                    <br>
-                    <span class="skill-tag"><a href="https://twitter.com/search?l=&q=shml%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">SHML</a></span>
-                    <span class="skill-tag"><a href="https://twitter.com/search?l=&q=bash%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">Bash</a></span>
-                    <span class="skill-tag"><a href="https://twitter.com/search?l=&q=moss%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">MOSS</a></span>
-                    <span class="skill-tag"><a href="https://twitter.com/search?l=&q=%23sustainoss%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">#SustainOSS</a></span>
-                    <span class="skill-tag"><a href="https://twitter.com/search?f=tweets&q=Stickers%20from%3Ajdorfman&src=typd" target="_blank" rel="noopener noreferrer">Stickers</a></span>
+                    {%- for interest in site.data.interests -%}
+                        <span class="skill-tag"><a href="{{ interest.url }}" rel="noopener" target="_blank">{{ interest.name }}</a></span>
+                    {%- endfor -%}
                 </div>
             </div><!--//other-skills-->
 
