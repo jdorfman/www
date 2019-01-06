@@ -7,7 +7,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Justin Dorfman | Open Source Sustainer
+title: "Justin Dorfman | Open Source Sustainer"
 # email: your-email@example.comm
 version_number: '3.3.12'
 description: >- # this means to ignore newlines until "baseurl:"
@@ -25,14 +25,19 @@ theme: minima
 plugins:
   - jekyll-feed
 
+compress_html:
+  clippings: all
+  comments:  ["<!-- ", " -->"]
+  endings:   all
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+   # - Gemfile
+   # - Gemfile.lock
+  - node_modules
+   # - vendor/bundle/
+   # - vendor/cache/
+   # - vendor/gems/
+   # - vendor/ruby/
