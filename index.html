@@ -35,61 +35,12 @@ layout: default
 </head>
 
 <body>
-    <header class="header">
-        <div class="top-bar container-fluid">
-            <div class="actions">
-                <a class="btn d-none d-md-inline-block" href="mailto:&#106;&#117;&#115;&#116;&#105;&#110;&#100;&#111;&#114;&#102;&#109;&#097;&#110;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"><i class="fa fa-paper-plane" aria-hidden="true"></i> Contact</a>
-                <!-- <a class="btn" href="#"><i class="fa fa-download" aria-hidden="true"></i> Download My Resume</a> -->
-            </div><!--//actions-->
-            <ul class="social list-inline">
-                <li class="list-inline-item"><a href="https://www.linkedin.com/in/justindorfman" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                <li class="list-inline-item"><a href="https://twitter.com/jdorfman" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li class="list-inline-item"><a href="https://github.com/jdorfman" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-                <li class="list-inline-item"><a href="https://medium.com/@jdorfman" target="_blank" rel="noopener noreferrer"><i class="fa fa-medium" aria-hidden="true"></i></a></li>
-                <li class="list-inline-item"><a href="https://news.ycombinator.com/user?id=jdorfman" target="_blank" rel="noopener noreferrer"><i class="fa fa-hacker-news" aria-hidden="true"></i></a></li>
-            </ul><!--//social-->
-        </div><!--//top-bar-->
 
-        <div class="intro">
-            <div class="container text-center">
-                <img class="profile-image" src="assets/images/profile-late-2018.png" alt="Justin Dorfman">
-                <h1 class="name">Justin Dorfman</h1>
-                <div class="title">Open Source Sustainer</div>
-
-                <div class="profile">
-                    <p>Justin is heavily involved with the FOSS community contributing to Bootstrap, Font Awesome, Grunt, jQuery, Twemoji, Nginx, GNU Bash, and many more. He also serves on the Selection Committee for Mozilla's Open Source Support (MOSS) program, as well as the Open Source Collective's board. He is also a co-founder/organizer of <a href="https://sustainoss.org">Sustain Summit</a>, a one-day event for Open Source Software Sustainers.</p>
-                </div><!--//profile-->
-            </div><!--//container-->
-        </div><!--//intro-->
-
-        <div class="page-nav-space-holder d-none d-md-block">
-            <div id="page-nav-wrapper" class="page-nav-wrapper text-center">
-                <div class="container">
-                    <ul id="page-nav" class="nav page-nav list-inline">
-                        <li class="nav-item"><a class="scrollto nav-link" href="#skills-section">Interests</a></li>
-                        <li class="nav-item"><a class="scrollto nav-link" href="#portfolio-section">Media</a></li>
-                    </ul><!--//page-nav-->
-                </div>
-            </div><!--//page-nav-wrapper-->
-        </div>
-
-    </header><!--//header-->
+{% include header.html %}
 
     <div class="wrapper container">
 
-        <section id="skills-section" class="skills-section section text-center">
-            <h2 class="section-title">Interests</h2>
-
-            <div class="other-skills">
-                <h3 class="subtitle">Things he talks about on/offline</h3>
-                <div class="misc-skills">
-                    {%- for interest in site.data.interests -%}
-                        <span class="skill-tag"><a href="{{ interest.url }}" rel="noopener" target="_blank">{{ interest.name }}</a></span>
-                    {%- endfor -%}
-                </div>
-            </div><!--//other-skills-->
-
-        </section><!--//skills-section-->
+{% include interests.html %}
 
         <section id="portfolio-section" class="portfolio-section section">
             <h2 class="section-title">Media</h2>
