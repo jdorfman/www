@@ -9,118 +9,24 @@
   <!--//filters-->
   <div class="items-wrapper isotope row">
 
-    <!-- 08-30-2018 -->
-    <div class="item podcasts col-lg-3 col-6">
+{%- for media in site.data.portfolio -%}
+    <div class="item {{ media.item }} col-lg-3 col-6">
       <div class="item-inner">
         <figure class="figure">
-          <img class="img-fluid" src="assets/images/podcasts-afk-e5.png" alt="Away from Keyboard – Podcast" />
+          <img class="img-fluid" src="{{ media.img }}" alt="{{ media.alt }}" />
         </figure>
         <div class="content text-left">
-          <h3 class="sub-title"><a href="https://changelog.com/afk/5" target="_blank" rel="noopener noreferrer">Away from Keyboard – Episode #5</a></h3>
-          <div class="meta"><i class="fa fa-map-marker" aria-hidden="true"></i> changelog.com</div>
+          <h3 class="sub-title"><a href="{{ media.url }}" target="_blank" rel="noopener noreferrer">{{ media.title }}</a></h3>
+          <div class="meta"><i class="fa fa-map-marker" aria-hidden="true"></i> {{ media.map }}</div>
           <br>
-          <div class="meta"><i class="fa fa-podcast" aria-hidden="true"></i> <a href="https://changelog.com/afk/5" target="_blank" rel="noopener noreferrer">Listen</a></div>
+          <div class="meta"><i class="fa fa-{{media.icon}}" aria-hidden="true"></i> <a href="{{ media.url }}" target="_blank" rel="noopener noreferrer">{{ media.verb }}</a></div>
         </div>
         <!--//content-->
 
       </div>
       <!--//item-inner-->
     </div>
-    <!--//item-->
-
-    <!-- 02-17-2018 -->
-    <div class="item articles col-lg-3 col-6">
-      <div class="item-inner">
-        <figure class="figure">
-          <img class="img-fluid" src="assets/images/blog/check-your-settings-save-mad-loot.jpg" alt="" />
-        </figure>
-        <div class="content text-left">
-          <h3 class="sub-title"><a href="https://dev.to/jdorfman/check-your-settings-save-mad-loot--imn" target="_blank" rel="noopener noreferrer">Check your settings, save mad loot</a></h3>
-          <div class="meta"><i class="fa fa-map-marker" aria-hidden="true"></i> dev.to</div>
-          <br>
-          <div class="meta"><i class="fa fa-book" aria-hidden="true"></i> <a href="https://dev.to/jdorfman/check-your-settings-save-mad-loot--imn" target="_blank" rel="noopener noreferrer">Read</a></div>
-        </div>
-        <!--//content-->
-
-      </div>
-      <!--//item-inner-->
-    </div>
-    <!--//item-->
-
-    <!-- 12-20-2017 -->
-    <div class="item articles col-lg-3 col-6">
-      <div class="item-inner">
-        <figure class="figure">
-          <img class="img-fluid" src="assets/images/blog/my-year-in-os-sustainability.jpg" alt="" />
-        </figure>
-        <div class="content text-left">
-          <h3 class="sub-title"><a href="https://medium.com/@jdorfman/my-year-in-open-source-sustainability-66c8b01c505f" target="_blank" rel="noopener noreferrer">My year in Open Source Sustainability</a></h3>
-          <div class="meta"><i class="fa fa-map-marker" aria-hidden="true"></i> medium.com</div>
-          <br>
-          <div class="meta"><i class="fa fa-book" aria-hidden="true"></i> <a href="https://medium.com/@jdorfman/my-year-in-open-source-sustainability-66c8b01c505f" target="_blank" rel="noopener noreferrer">Read</a></div>
-        </div>
-        <!--//content-->
-
-      </div>
-      <!--//item-inner-->
-    </div>
-    <!--//item-->
-
-    <!-- 10-20-2017 -->
-    <div class="item articles col-lg-3 col-6">
-      <div class="item-inner">
-        <figure class="figure">
-          <img class="img-fluid" src="assets/images/blog/lets-talk-about-speaking.jpg" alt="" />
-        </figure>
-        <div class="content text-left">
-          <h3 class="sub-title"><a href="https://dev.to/jdorfman/lets-talk-about-speaking-lj" target="_blank" rel="noopener noreferrer">Let's talk about speaking</a></h3>
-          <div class="meta"><i class="fa fa-map-marker" aria-hidden="true"></i> dev.to</div>
-          <br>
-          <div class="meta"><i class="fa fa-book" aria-hidden="true"></i> <a href="https://dev.to/jdorfman/lets-talk-about-speaking-lj" target="_blank" rel="noopener noreferrer">Read</a></div>
-        </div>
-        <!--//content-->
-
-      </div>
-      <!--//item-inner-->
-    </div>
-    <!--//item-->
-
-    <!-- 05-4-2017 -->
-    <div class="item podcasts col-lg-3 col-6">
-      <div class="item-inner">
-        <figure class="figure">
-          <img class="img-fluid" src="assets/images/podcast-changelog-bonus-SustainOpenSource.png" alt="Changelog – Podcast" />
-        </figure>
-        <div class="content text-left">
-          <h3 class="sub-title"><a href="https://changelog.com/podcast/bonus-sustainoss" target="_blank" rel="noopener noreferrer">Changelog - BONUS - Sustain Open Source Software</a></h3>
-          <div class="meta"><i class="fa fa-map-marker" aria-hidden="true"></i> changelog.com</div>
-          <br>
-          <div class="meta"><i class="fa fa-podcast" aria-hidden="true"></i> <a href="https://changelog.com/podcast/bonus-sustainoss" target="_blank" rel="noopener noreferrer">Listen</a></div>
-        </div>
-        <!--//content-->
-
-      </div>
-      <!--//item-inner-->
-    </div>
-    <!--//item-->
-
-    <div class="item talks col-lg-3 col-6">
-      <div class="item-inner">
-        <figure class="figure">
-          <img class="img-fluid" src="assets/images/past-talks_js.la-2017.png" alt="" />
-        </figure>
-        <div class="content text-left">
-          <h3 class="sub-title"><a href="https://js.la/events/2017/" target="_blank" rel="noopener noreferrer">js.la October 2017</a></h3>
-          <div class="meta"><i class="fa fa-map-marker" aria-hidden="true"></i> Santa Monica, CA</div>
-          <br>
-          <div class="meta"><i class="fa fa-youtube-play" aria-hidden="true"></i> <a href="https://www.youtube.com/watch?v=ldk3-dEafVY" target="_blank" rel="noopener noreferrer">Watch</a></div>
-        </div>
-        <!--//content-->
-
-      </div>
-      <!--//item-inner-->
-    </div>
-    <!--//item-->
+{%- endfor -%}
 
     <!-- 05 Apr 2017 -->
 

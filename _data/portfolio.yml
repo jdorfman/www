@@ -1,0 +1,54 @@
+- item: podcasts
+  date: 08-30-2018
+  alt: Away from Keyboard – Podcast
+  title: Away from Keyboard – Episode #5
+  map: changelog.com
+  icon: podcast
+  verb: Listen
+  url: https://changelog.com/afk/5
+  img: assets/images/podcasts-afk-e5.png
+- item: articles
+  date: 02-17-2018
+  alt: Check your S3 settings, save money
+  title: Check your settings, save mad loot
+  map: dev.to
+  icon: book
+  verb: Read
+  url: https://dev.to/jdorfman/check-your-settings-save-mad-loot--imn
+  img: assets/images/blog/check-your-settings-save-mad-loot.jpg
+- item: articles
+  date: 12-20-2017
+  alt: My year in Open Source Sustainability
+  title: My year in Open Source Sustainability
+  map: medium.com
+  icon: book
+  verb: Read
+  url: https://medium.com/@jdorfman/my-year-in-open-source-sustainability-66c8b01c505f
+  img: assets/images/blog/my-year-in-os-sustainability.jpg
+- item: articles
+  date: 10-20-2017
+  alt: Let's talk about speaking
+  title: Let's talk about speaking
+  map: dev.to
+  icon: book
+  verb: Read
+  url: https://dev.to/jdorfman/lets-talk-about-speaking-lj
+  img: assets/images/blog/lets-talk-about-speaking.jpg
+- item: podcasts
+  date: 05-04-2017
+  alt: Changelog Podcast - Sustain Open Source Software
+  title: Changelog - BONUS - Sustain Open Source Software
+  map: changelog.com
+  icon: podcast
+  verb: Listen
+  url: https://changelog.com/podcast/bonus-sustainoss
+  img: assets/images/podcast-changelog-bonus-SustainOpenSource.png
+- item: talks
+  date: 10-26-2017
+  alt: js.la Subresource Integrity Talk October 2017
+  title: js.la October 2017
+  map: Santa Monica, CA
+  icon: youtube-play
+  verb: Watch
+  url: https://www.youtube.com/watch?v=ldk3-dEafVY
+  img: assets/images/past-talks_js.la-2017.png
