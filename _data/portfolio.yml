@@ -98,3 +98,23 @@
   map: hacks.mozilla.org
   icon: book
   verb: Read
+
+- item: talks
+  date: 05/11/2016
+  img: assets/images/past-talks_gh-sat-ams-2016.jpg
+  url: https://www.youtube.com/watch?v=lJVrKhrsHvU
+  alt: GitHub Satellite 2016
+  title: GitHub Satellite 2016
+  map: Amsterdam
+  icon: youtube-play
+  verb: Watch
+
+- item: talks
+  date: 12-13-2016
+  img: assets/images/blog/new-bash-logo.jpg
+  url: https://opensource.com/article/16/12/bash-logo-community
+  alt: New Bash Logo
+  title: How 30k people helped pick the new Bash logo
+  map: opensource.com
+  icon: book
+  verb: Read
