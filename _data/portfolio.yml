@@ -79,3 +79,12 @@
   verb: View
   url: https://speakerdeck.com/jdorfman/open-source-is-people
   img: assets/images/past-talks_all-things-open-2016.jpg
+- item: talks
+  date: 06-22-2016
+  alt: OS Bridge
+  title: OS Bridge 2016
+  map: Portland, OR
+  icon: info-circle
+  verb: info
+  url: http://opensourcebridge.org/sessions/1695
+  img: assets/images/past-talks_os-bridge-2016.jpg
