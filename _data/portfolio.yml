@@ -1,0 +1,135 @@
+- item: podcasts
+  date: 08-30-2018
+  alt: Away from Keyboard – Podcast
+  title: Away from Keyboard – Episode #5
+  map: changelog.com
+  icon: podcast
+  verb: Listen
+  url: https://changelog.com/afk/5
+  img: assets/images/podcasts-afk-e5.png
+- item: articles
+  date: 02-17-2018
+  alt: Check your S3 settings, save money
+  title: Check your settings, save mad loot
+  map: dev.to
+  icon: book
+  verb: Read
+  url: https://dev.to/jdorfman/check-your-settings-save-mad-loot--imn
+  img: assets/images/blog/check-your-settings-save-mad-loot.jpg
+- item: articles
+  date: 12-20-2017
+  alt: My year in Open Source Sustainability
+  title: My year in Open Source Sustainability
+  map: medium.com
+  icon: book
+  verb: Read
+  url: https://medium.com/@jdorfman/my-year-in-open-source-sustainability-66c8b01c505f
+  img: assets/images/blog/my-year-in-os-sustainability.jpg
+- item: articles
+  date: 10-20-2017
+  alt: Let's talk about speaking
+  title: Let's talk about speaking
+  map: dev.to
+  icon: book
+  verb: Read
+  url: https://dev.to/jdorfman/lets-talk-about-speaking-lj
+  img: assets/images/blog/lets-talk-about-speaking.jpg
+- item: podcasts
+  date: 05-04-2017
+  alt: Changelog Podcast - Sustain Open Source Software
+  title: Changelog - BONUS - Sustain Open Source Software
+  map: changelog.com
+  icon: podcast
+  verb: Listen
+  url: https://changelog.com/podcast/bonus-sustainoss
+  img: assets/images/podcast-changelog-bonus-SustainOpenSource.png
+- item: talks
+  date: 10-26-2017
+  alt: js.la Subresource Integrity Talk October 2017
+  title: js.la October 2017
+  map: Santa Monica, CA
+  icon: youtube-play
+  verb: Watch
+  url: https://www.youtube.com/watch?v=ldk3-dEafVY
+  img: assets/images/past-talks_js.la-2017.png
+- item: articles
+  date: 04-05-2017
+  alt: open source sustainer
+  title: Why you should become a sustainer
+  map: Seattle, WA
+  icon: book
+  verb: Read
+  url: https://opensource.com/article/17/4/become-open-source-sustainer
+  img: assets/images/blog/why-become-os-sustainer.jpg
+- item: talks
+  date: 08-11-2017
+  alt: DevRel Summit
+  title: DevRel Summit 2017
+  map: Seattle, WA
+  icon: file-powerpoint-o
+  verb: View
+  url: https://speakerdeck.com/jdorfman/communicating-with-developers-in-the-21st-century
+  img: assets/images/past-talks_devrel-summit-2017.png
+- item: talks
+  date: 10-13-2016
+  alt: All Things Open
+  title: All Things Open 2016
+  map: Raleigh, NC
+  icon: file-powerpoint-o
+  verb: View
+  url: https://speakerdeck.com/jdorfman/open-source-is-people
+  img: assets/images/past-talks_all-things-open-2016.jpg
+- item: talks
+  date: 06-22-2016
+  alt: OS Bridge
+  title: OS Bridge 2016
+  map: Portland, OR
+  icon: info-circle
+  verb: info
+  url: http://opensourcebridge.org/sessions/1695
+  img: assets/images/past-talks_os-bridge-2016.jpg
+- item: articles
+  date: 04-12-2016
+  img: assets/images/blog/SRI-in-your-build-process.jpg
+  url: https://hacks.mozilla.org/2016/04/how-to-implement-sri-into-your-build-process/
+  alt: Subresource Integrity in your build process
+  title: How to implement SRI in your build process
+  map: hacks.mozilla.org
+  icon: book
+  verb: Read
+- item: talks
+  date: 05/11/2016
+  img: assets/images/past-talks_gh-sat-ams-2016.jpg
+  url: https://www.youtube.com/watch?v=lJVrKhrsHvU
+  alt: GitHub Satellite 2016
+  title: GitHub Satellite 2016
+  map: Amsterdam
+  icon: youtube-play
+  verb: Watch
+- item: articles
+  date: 12-13-2016
+  img: assets/images/blog/new-bash-logo.jpg
+  url: https://opensource.com/article/16/12/bash-logo-community
+  alt: New Bash Logo
+  title: How 30k people helped pick the new Bash logo
+  map: opensource.com
+  icon: book
+  verb: Read
+- item: articles
+  date: 05-18-2013
+  img: assets/images/blog/s3-vs-cdn.jpg
+  url: http://jdorfman.posthaven.com/medium-bitcoin-660x493-dot-jpg-cdn-vs-s3
+  alt: S3 is not a CDN
+  title: S3 is not a CDN
+  map: posthaven.com
+  icon: book
+  verb: Read
+- item: talks
+  date: 10/29/2011
+  img: assets/images/past-talks_la-wordcamp-2011.jpg
+  url: https://wordpress.tv/2011/10/29/justin-dorfman-information-architecture/
+  alt: WordCamp LA 2011
+  title: WordCamp LA 2011
+  map: Los Angeles, CA
+  icon: youtube-play
+  verb: Watch
