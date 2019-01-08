@@ -88,7 +88,6 @@
   verb: info
   url: http://opensourcebridge.org/sessions/1695
   img: assets/images/past-talks_os-bridge-2016.jpg
-
 - item: articles
   date: 04-12-2016
   img: assets/images/blog/SRI-in-your-build-process.jpg
@@ -98,7 +97,6 @@
   map: hacks.mozilla.org
   icon: book
   verb: Read
-
 - item: talks
   date: 05/11/2016
   img: assets/images/past-talks_gh-sat-ams-2016.jpg
@@ -108,7 +106,6 @@
   map: Amsterdam
   icon: youtube-play
   verb: Watch
-
 - item: articles
   date: 12-13-2016
   img: assets/images/blog/new-bash-logo.jpg
@@ -118,7 +115,6 @@
   map: opensource.com
   icon: book
   verb: Read
-
 - item: articles
   date: 05-18-2013
   img: assets/images/blog/s3-vs-cdn.jpg
@@ -128,7 +124,6 @@
   map: posthaven.com
   icon: book
   verb: Read
-
 - item: talks
   date: 10/29/2011
   img: assets/images/past-talks_la-wordcamp-2011.jpg
