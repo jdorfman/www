@@ -9,27 +9,34 @@
   <!--//filters-->
   <div class="items-wrapper isotope row">
 
-{%- for media in site.data.portfolio -%}
-    <div class="item {{ media.item }} col-lg-3 col-6">
-      <div class="item-inner">
-        <figure class="figure">
-          <img class="img-fluid" src="{{ media.img }}" alt="{{ media.alt }}" />
-        </figure>
-        <div class="content text-left">
-          <h3 class="sub-title"><a href="{{ media.url }}" target="_blank" rel="noopener noreferrer">{{ media.title }}</a></h3>
-          <div class="meta"><i class="fa fa-map-marker" aria-hidden="true"></i> {{ media.map }}</div>
-          <br>
-          <div class="meta"><i class="fa fa-{{media.icon}}" aria-hidden="true"></i> <a href="{{ media.url }}" target="_blank" rel="noopener noreferrer">{{ media.verb }}</a></div>
+    {%- for media in site.data.portfolio -%}
+      <div class="item {{ media.item }} col-lg-3 col-6">
+        <div class="item-inner">
+          <figure class="figure">
+            <img class="img-fluid" src="{{ media.img }}" alt="{{ media.alt }}"/>
+          </figure>
+          <div class="content text-left">
+            <h3 class="sub-title">
+              <a href="{{ media.url }}" target="_blank" rel="noopener noreferrer">{{ media.title }}</a>
+            </h3>
+            <div class="meta">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              {{ media.map }}</div>
+            <br>
+              <div class="meta">
+                <i class="fa fa-{{media.icon}}" aria-hidden="true"></i>
+                <a href="{{ media.url }}" target="_blank" rel="noopener noreferrer">{{ media.verb }}</a>
+              </div>
+            </div>
+            <!--//content-->
+
+          </div>
+          <!--//item-inner-->
         </div>
-        <!--//content-->
+      {%- endfor -%}
 
-      </div>
-      <!--//item-inner-->
     </div>
-{%- endfor -%}
+    <!--//item-wrapper-->
 
-  </div>
-  <!--//item-wrapper-->
-
-</section>
-<!--//section-->
+  </section>
+  <!--//section-->
