@@ -88,3 +88,13 @@
   verb: info
   url: http://opensourcebridge.org/sessions/1695
   img: assets/images/past-talks_os-bridge-2016.jpg
+
+- item: articles
+  date: 04-12-2016
+  img: assets/images/blog/SRI-in-your-build-process.jpg
+  url: https://hacks.mozilla.org/2016/04/how-to-implement-sri-into-your-build-process/
+  alt: Subresource Integrity in your build process
+  title: How to implement SRI in your build process
+  map: hacks.mozilla.org
+  icon: book
+  verb: Read
