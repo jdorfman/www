@@ -128,3 +128,13 @@
   map: posthaven.com
   icon: book
   verb: Read
+
+- item: talks
+  date: 10/29/2011
+  img: assets/images/past-talks_la-wordcamp-2011.jpg
+  url: https://wordpress.tv/2011/10/29/justin-dorfman-information-architecture/
+  alt: WordCamp LA 2011
+  title: WordCamp LA 2011
+  map: Los Angeles, CA
+  icon: youtube-play
+  verb: Watch
