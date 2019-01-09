@@ -5,66 +5,22 @@ layout: default
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-273847-13"></script>
-    <script>window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-273847-13');
-    </script>
-    <title>{{ site.title }}</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Open Source Sustainer, Maintainer & Contributor">
-    <meta name="author" content="Justin Dorfman">
-    <link rel="shortcut icon" href="favicon.ico">
-    <meta name="theme-color" content="#4CAF50">
-    <meta name="referrer" content="origin">
-    <meta name="robots" content="nofollow">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <!-- Global CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Plugins CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles-4.min.css">
-
-</head>
+{% include head.html %}
 
 <body>
 
-{% include header.html %}
+  {% include header.html %}
 
-    <div class="wrapper container">
+  <div class="wrapper container">
 
-{% include interests.html %}
-{% include portfolio.html %}
+    {% include interests.html %}
+    {% include portfolio.html %}
 
-    </div><!--//wrapper-->
+  </div>
 
-    <footer class="footer text-center">
-        <div class="container">
-            <small class="copyright">v{{ site.version_number }} | © 1985 - {{ site.time | date: '%Y' }} <br>Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="noopener noreferrer">Xiaoying Riley</a> for developers<br>Powered by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub</a> &amp; <a href="https://www.bootstrapcdn.com/" target="_blank" rel="noopener noreferrer">BoostrapCDN</a></small>
-        </div><!--//container-->
-    </footer>
-
-    <!-- Javascript -->
-    <!-- <script type="text/javascript" src="assets/plugins/jquery-3.2.1.min.js"></script> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
-    <!-- <script type="text/javascript" src="assets/plugins/popper.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
-    <!-- <script type="text/javascript" src="assets/plugins/back-to-top.js"></script> -->
-    <!-- <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> -->
-    <!-- <script type="text/javascript" src="assets/plugins/easy-pie-chart/dist/jquery.easypiechart.min.js"></script> -->
-    <!-- <script type="text/javascript" src="assets/plugins/imagesloaded.pkgd.min.js"></script> -->
-    <!-- <script type="text/javascript" src="assets/plugins/isotope.pkgd.min.js"></script> -->
-    <!-- custom js -->
-    <script type="text/javascript" src="assets/js/main.min.js"></script>
+  {% include footer.html %}
 
 </body>
+
 </html>
