@@ -88,6 +88,15 @@
   verb: info
   url: http://opensourcebridge.org/sessions/1695
   img: assets/images/past-talks_os-bridge-2016.jpg
+- item: talks
+  date: 05-19-2016
+  alt: OSCON 2016
+  title: OSCON 2016
+  map: Austin, TX
+  icon: file-youtube-play
+  verb: Watch
+  url: https://www.youtube.com/watch?v=6jiIeTwDKhs
+  img: assets/images/past-talks_oscon-2016.jpg
 - item: articles
   date: 04-12-2016
   img: assets/images/blog/SRI-in-your-build-process.jpg
