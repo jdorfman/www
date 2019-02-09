@@ -1,3 +1,12 @@
+- item: articles
+  date: 02-07-2019
+  alt: Umpires of open source licenses
+  title: Umpires of open source licenses
+  map: opensource.com
+  icon: book
+  verb: Read
+  url: https://opensource.com/article/19/2/umpires-open-source-licenses
+  img: assets/images/blog/umpires-of-open-source-licenses.jpg
 - item: podcasts
   date: 08-30-2018
   alt: Away from Keyboard – Podcast
