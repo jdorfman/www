@@ -107,6 +107,7 @@ a.btn:hover {
 }
 .header a {
   color: #fff;
+  text-decoration: underline;
 }
 .header .top-bar {
   position: relative;
