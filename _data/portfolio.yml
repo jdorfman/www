@@ -1,11 +1,20 @@
 - item: podcasts
+  date: 05-16-2021
+  alt: Committing to Cloud Native – Podcast
+  title: Committing to Cloud Native – co-host
+  map: podcast.curiefense.io
+  icon: podcast
+  verb: Listen
+  url: https://podcast.curiefense.io/hosts/justin-dorfman
+  img: assets/images/podcasts-ctcn.jpg
+- item: podcasts
   date: 01-10-2020
   alt: Sustain – Podcast
   title: Sustain – co-host
-  map: sustain.codefund.fm
+  map: podcast.sustainoss.org
   icon: podcast
   verb: Listen
-  url: https://sustain.codefund.fm/hosts/justin-dorfman
+  url: https://podcast.sustainoss.org/hosts/justin-dorfman
   img: assets/images/podcasts-sustain.png
 - item: articles
   date: 02-07-2019

@@ -14,7 +14,7 @@
   * `$ git push origin master`
 
 ### Clean up
-* `$ dab` (remove all branches)
+* `$ dabm` (remove all branches)
 
 ### Troubleshoot
 * `$ npm install`
