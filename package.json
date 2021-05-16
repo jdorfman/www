@@ -9,7 +9,7 @@
   "author": "Justin Dorfman <justindorfman@gmail.com> (http://www.justindorfman.com/)",
   "license": "ISC",
   "devDependencies": {
-    "grunt": "^1.0.4",
+    "grunt": "^1.3.0",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-cssmin": "^2.2.1",
     "grunt-contrib-htmlmin": "^2.0.0",
