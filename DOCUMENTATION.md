@@ -1,13 +1,14 @@
 # How we do
 
 ### Development
-* `$ ~/github/jdorfman/www`
-* Open Hyper, split Pane
+* `$ cd ~/github/jdorfman/www`
+* Open iTerm, split Pane
 * `$ gr -b branchname`
 * `$ grunt watch` (Pane 1)
   * `$ grunt imageoptim`
-* `$ atom .` (Pane 2)
+* `$ code .` (Pane 2)
   * `$ bundle exec jekyll s`
+  * bump version in `_config.yml`
   * `$ git commit -am "foo"`
   * `$ gr master`
   * `$ git rebase branchname`

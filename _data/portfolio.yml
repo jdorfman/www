@@ -7,6 +7,24 @@
   verb: Listen
   url: https://podcast.curiefense.io/hosts/justin-dorfman
   img: assets/images/podcasts-ctcn.jpg
+- item: articles
+  date: 06-25-2020
+  alt: That time I blew off Tim Berners-Lee
+  title: That time I blew off Tim Berners-Lee
+  map: dev.to
+  icon: book
+  verb: Read
+  url: https://dev.to/jdorfman/that-time-i-blew-off-tim-berners-lee-1hja
+  img: assets/images/blog/time-blew-off-tim-berners-lee.jpg
+- item: articles
+  date: 06-17-2020
+  alt: Why Does Privacy Matter?
+  title: Why Does Privacy Matter?
+  map: dev.to
+  icon: book
+  verb: Read
+  url: https://dev.to/jdorfman/why-does-privacy-matter-4n1j
+  img: assets/images/blog/why-does-privacy-matter.jpg
 - item: podcasts
   date: 01-10-2020
   alt: Sustain – Podcast
