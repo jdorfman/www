@@ -7,6 +7,15 @@
   verb: Listen
   url: https://podcast.curiefense.io/hosts/justin-dorfman
   img: assets/images/podcasts-ctcn.jpg
+- item: podcasts
+  date: 04-21-2021
+  alt: The Kubelist – Podcast
+  title: The Kubelist – Podcast
+  map: heavybit.com
+  icon: podcast
+  verb: Listen
+  url: https://www.heavybit.com/library/podcasts/the-kubelist-podcast/ep-13-curiefense-with-tzury-bar-yochay-and-justin-dorfman-of-reblaze/
+  img: assets/images/the-kubelist-podcast.jpg
 - item: articles
   date: 06-25-2020
   alt: That time I blew off Tim Berners-Lee
