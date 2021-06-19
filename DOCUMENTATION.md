@@ -1,6 +1,7 @@
 # How we do
 
 ### Development
+
 * `$ cd ~/github/jdorfman/www`
 * Open iTerm, split Pane
 * `$ gr -b branchname`
@@ -15,7 +16,9 @@
   * `$ git push origin master`
 
 ### Clean up
+
 * `$ dabm` (remove all branches)
 
 ### Troubleshoot
+
 * `$ npm install`
