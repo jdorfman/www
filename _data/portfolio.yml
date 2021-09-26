@@ -1,4 +1,13 @@
 - item: podcasts
+  date: 09-17-2021
+  alt: 'How to help employees take better care of their mental health in the workplace'
+  title: 'How to help employees take better care of their mental health in the workplace'
+  map: howwesolve.com
+  icon: youtube-play
+  verb: Watch
+  url: https://howwesolve.com/podcast/ep93-mental-health-in-workplace-justin-dorfman/
+  img: assets/images/podcast-howwesolve.png
+- item: podcasts
   date: 06-26-2021
   alt: 'Bait and Switch Open Source Licensing'
   title: 'Bait and Switch Open Source Licensing'
