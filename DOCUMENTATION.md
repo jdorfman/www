@@ -8,7 +8,7 @@
 * `$ grunt watch` (Pane 1)
   * `$ grunt imageoptim`
 * `$ code .` (Pane 2)
-  * `$ bundle exec jekyll s`
+  * `$ bundle exec jekyll serve --livereload`
   * bump version in `_config.yml`
   * `$ git commit -am "foo"`
   * `$ gr master`
