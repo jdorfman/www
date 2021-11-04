@@ -1,3 +1,13 @@
+- item: talks
+  date: 09-21-2021
+  alt: js.la - What Keeps me up at Night - Justin Dorfman
+  title: What Keeps me up at Night · js.la September 2021
+  map: Santa Monica, CA
+  icon: youtube-play
+  verb: Watch
+  url: https://www.youtube.com/watch?v=KTQVBXb0uPM
+  img: assets/images/js-la-2021.png
+
 - item: podcasts
   date: 09-17-2021
   alt: 'How to help employees take better care of their mental health in the workplace'
