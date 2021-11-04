@@ -1,8 +1,18 @@
+- item: podcasts
+  date: 10-11-2021
+  alt: 'how could you become a successful developer, approaching mistakes and contributing to open-source'
+  title: 'Approaching mistakes and contributing to open source'
+  map: juniortosenior.io
+  icon: podcast
+  verb: Listen
+  url: https://juniortosenior.io/64
+  img: assets/images/podcast-jr-to-sr.png
+
 - item: talks
   date: 09-21-2021
   alt: js.la - What Keeps me up at Night - Justin Dorfman
   title: What Keeps me up at Night · js.la September 2021
-  map: Santa Monica, CA
+  map: Los Angeles, CA
   icon: youtube-play
   verb: Watch
   url: https://www.youtube.com/watch?v=KTQVBXb0uPM
