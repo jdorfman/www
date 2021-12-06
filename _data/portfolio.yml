@@ -1,3 +1,13 @@
+- item: talks
+  date: 11-26-2021
+  alt: Cloud Native Guatemala - Keynote
+  title: Kubernetes Community Days Guatemala 2021 · Keynote
+  map: Guatemala
+  icon: youtube-play
+  verb: Watch
+  url: https://youtu.be/Rs8-kAI1SRA?t=2499
+  img: assets/images/past-talks_kcd-gt-2021-keynote.png
+
 - item: podcasts
   date: 10-11-2021
   alt: 'how could you become a successful developer, approaching mistakes and contributing to open-source'
