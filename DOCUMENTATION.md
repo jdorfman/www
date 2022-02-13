@@ -3,10 +3,7 @@
 ### Development
 
 * `$ cd ~/github/jdorfman/www`
-* Open iTerm, split Pane
 * `$ gr -b branchname`
-* `$ grunt watch` (Pane 1)
-  * `$ grunt imageoptim`
 * `$ code .` (Pane 2)
   * `$ bundle exec jekyll serve --livereload`
   * bump version in `_config.yml`
