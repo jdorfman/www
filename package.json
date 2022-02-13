@@ -12,7 +12,6 @@
     "grunt-imageoptim": "^1.4.1"
   },
   "dependencies": {
-    "browser-sync": "^2.27.7",
     "connect": "^3.6.5",
     "send": "^0.16.1"
   }
