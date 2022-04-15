@@ -1,5 +1,5 @@
 title: "Justin Dorfman | Open Source Sustainer"
-version_number: '3.7.1'
+version_number: '3.7.2'
 description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://www.justindorfman.com" # the base hostname & protocol for your site, e.g. http://example.com
