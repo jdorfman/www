@@ -1,4 +1,15 @@
 - item: talks
+  date: 03-29-2022
+  alt: Calling all non-code contributors! - Keynote
+  title: Open Source 101 · Keynote
+  map: USA
+  icon: youtube-play
+  verb: Watch
+  url: https://www.youtube.com/watch?v=xaO1jXzDTlY
+  img: assets/images/past-talks_opensource-101-2022-keynote.png
+
+
+- item: talks
   date: 11-26-2021
   alt: Cloud Native Guatemala - Keynote
   title: Kubernetes Community Days Guatemala 2021 · Keynote
