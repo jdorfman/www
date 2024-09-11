@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "connect": "^3.6.5",
-    "send": "^0.16.1"
+    "send": "^0.19.0"
   }
 }
