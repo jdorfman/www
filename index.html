@@ -13,48 +13,6 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@jdorfman">
   <meta name="twitter:creator" content="@jdorfman">
-  <script>
-    // Theme mode functionality
-    function setTheme(theme) {
-      if (theme === 'system') {
-        const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
-      } else {
-        document.documentElement.setAttribute('data-theme', theme);
-      }
-      localStorage.setItem('theme', theme);
-      updateActiveThemeButton(theme);
-    }
-    
-    function updateActiveThemeButton(theme) {
-      document.querySelectorAll('.theme-toggle button').forEach(button => {
-        button.classList.remove('active');
-        if (button.getAttribute('data-theme') === theme) {
-          button.classList.add('active');
-        }
-      });
-    }
-
-    // Initialize theme
-    function initTheme() {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme) {
-        setTheme(savedTheme);
-      } else {
-        setTheme('system');
-      }
-      
-      // Listen for system theme changes
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        if (localStorage.getItem('theme') === 'system') {
-          setTheme('system');
-        }
-      });
-    }
-    
-    // Run theme initialization after DOM is loaded
-    document.addEventListener('DOMContentLoaded', initTheme);
-  </script>
   <style>
     :root {
       --bg-color: #f8f8f8;
@@ -292,5 +250,47 @@
   <footer>
     <p>Justin Dorfman Manual Page - Last updated May 2025</p>
   </footer>
+  <script>
+    // Theme mode functionality
+    function setTheme(theme) {
+      if (theme === 'system') {
+        const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      localStorage.setItem('theme', theme);
+      updateActiveThemeButton(theme);
+    }
+    
+    function updateActiveThemeButton(theme) {
+      document.querySelectorAll('.theme-toggle button').forEach(button => {
+        button.classList.remove('active');
+        if (button.getAttribute('data-theme') === theme) {
+          button.classList.add('active');
+        }
+      });
+    }
+
+    // Initialize theme
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        setTheme(savedTheme);
+      } else {
+        setTheme('system');
+      }
+      
+      // Listen for system theme changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (localStorage.getItem('theme') === 'system') {
+          setTheme('system');
+        }
+      });
+    }
+    
+    // Run theme initialization after DOM is loaded
+    document.addEventListener('DOMContentLoaded', initTheme);
+  </script>
 </body>
 </html>
