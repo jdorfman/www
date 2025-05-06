@@ -132,12 +132,19 @@
     }
     
     /* Theme toggle styles */
-    .theme-container {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 999;
-    }
+.theme-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+}
+
+/* Hide theme toggle on mobile devices */
+@media (max-width: 768px) {
+  .theme-container {
+    display: none;
+  }
+}
     
     .theme-toggle {
       display: flex;
