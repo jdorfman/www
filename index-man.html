@@ -4,15 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JUSTIN DORFMAN(1) - User Manual</title>
+  <script>
+    // Theme mode functionality
+    function setTheme(theme) {
+      if (theme === 'system') {
+        const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      localStorage.setItem('theme', theme);
+      updateActiveThemeButton(theme);
+    }
+    
+    function updateActiveThemeButton(theme) {
+      document.querySelectorAll('.theme-toggle button').forEach(button => {
+        button.classList.remove('active');
+        if (button.getAttribute('data-theme') === theme) {
+          button.classList.add('active');
+        }
+      });
+    }
+
+    // Initialize theme
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        setTheme(savedTheme);
+      } else {
+        setTheme('system');
+      }
+      
+      // Listen for system theme changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (localStorage.getItem('theme') === 'system') {
+          setTheme('system');
+        }
+      });
+    }
+    
+    // Run theme initialization after DOM is loaded
+    document.addEventListener('DOMContentLoaded', initTheme);
+  </script>
   <style>
+    :root {
+      --bg-color: #f8f8f8;
+      --text-color: #333;
+      --border-color: #333;
+      --pre-bg-color: #eee;
+      --link-color: #333;
+      --toggle-bg: #e2e2e2;
+      --toggle-active: #4a4a4a;
+      --tooltip-bg: #333;
+      --tooltip-text: #fff;
+    }
+    
+    [data-theme="dark"] {
+      --bg-color: #1a1a1a;
+      --text-color: #eee;
+      --border-color: #777;
+      --pre-bg-color: #333;
+      --link-color: #ddd;
+      --toggle-bg: #444;
+      --toggle-active: #ddd;
+      --tooltip-bg: #ddd;
+      --tooltip-text: #333;
+    }
+    
     body {
       font-family: monospace;
       max-width: 80ch;
       margin: 0 auto;
       padding: 1em;
       line-height: 1.5;
-      background-color: #f8f8f8;
-      color: #333;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
     }
     h1, h2, h3 {
       font-family: monospace;
@@ -20,17 +87,17 @@
     }
     h1 {
       text-align: center;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid var(--border-color);
       padding-bottom: 0.5em;
       margin-bottom: 1em;
     }
     pre {
       padding: 0.5em;
-      background-color: #eee;
+      background-color: var(--pre-bg-color);
       overflow-x: auto;
     }
     a {
-      color: #333;
+      color: var(--link-color);
       text-decoration: underline;
     }
     a:hover {
@@ -54,9 +121,67 @@
     .content {
       margin-left: 2em;
     }
+    
+    /* Theme toggle styles */
+    .theme-container {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 999;
+    }
+    
+    .theme-toggle {
+      display: flex;
+      background-color: var(--toggle-bg);
+      border-radius: 30px;
+      padding: 5px;
+      position: relative;
+    }
+    
+    .theme-toggle button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 2px;
+      position: relative;
+      color: var(--text-color);
+    }
+    
+    .theme-toggle button.active {
+      background-color: var(--toggle-active);
+      color: var(--bg-color);
+    }
+    
+    .theme-toggle button:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      font-size: 12px;
+      background: var(--tooltip-bg);
+      color: var(--tooltip-text);
+      padding: 4px 8px;
+      border-radius: 4px;
+      z-index: 1000;
+    }
   </style>
 </head>
 <body>
+  <div class="theme-container">
+    <div class="theme-toggle">
+      <button onclick="setTheme('light')" data-theme="light" data-tooltip="Light mode">☀️</button>
+      <button onclick="setTheme('dark')" data-theme="dark" data-tooltip="Dark mode">🌙</button>
+      <button onclick="setTheme('system')" data-theme="system" data-tooltip="System mode">💻</button>
+    </div>
+  </div>
   <h1>JUSTIN DORFMAN(1) User Manual</h1>
   
   <div class="section">
@@ -91,22 +216,24 @@
     <h3>Talks</h3>
     <dl>
       
+      <dd>Covering your bases with IP Indemnity (USA) · Deep Dive: AI Webinar Series        <a href="https://opensource.org/ai/webinars/covering-your-bases-with-ip-indemnity">Watch</a></dd>
+      
       <dd>Open Source 101 · Keynote (USA) <a href="https://www.youtube.com/watch?v=xaO1jXzDTlY">Watch</a></dd>
 
       
       <dd>Kubernetes Community Days Guatemala · Keynote (Guatemala) <a href="https://youtu.be/Rs8-kAI1SRA?t=2499">Watch</a></dd>
 
       
-      <dd>What Keeps me up at Night · js.la September (Los Angeles, CA) <a href="https://www.youtube.com/watch?v=KTQVBXb0uPM">Watch</a></dd>
+      <dd>What Keeps me up at Night · js.la (Los Angeles, CA) <a href="https://www.youtube.com/watch?v=KTQVBXb0uPM">Watch</a></dd>
 
       
-      <dd>js.la October (Santa Monica, CA) <a href="https://www.youtube.com/watch?v=ldk3-dEafVY">Watch</a></dd>
+      <dd>Let's talk about SRI · js.la (Santa Monica, CA) <a href="https://www.youtube.com/watch?v=ldk3-dEafVY">Watch</a></dd>
 
       
       <dd>DevRel Summit (Seattle, WA) <a href="https://speakerdeck.com/jdorfman/communicating-with-developers-in-the-21st-century">View</a></dd>
 
       
-      <dd>All Things Open (Raleigh, NC) <a href="https://speakerdeck.com/jdorfman/open-source-is-people">View</a></dd>
+      <dd>Open source is people · All Things Open (Raleigh, NC) <a href="https://speakerdeck.com/jdorfman/open-source-is-people">View</a></dd>
 
       
       <dd>OSCON (Austin, TX) <a href="https://www.youtube.com/watch?v=6jiIeTwDKhs">Watch</a></dd>
@@ -115,31 +242,34 @@
     <h3>Podcasts</h3>
     <dl>
       
+      <dd>Sustain (podcast.sustainoss.org) <a href="https://podcast.sustainoss.org/hosts/justin-dorfman">Listen</a></dd>
+      
       <dd>Approaching mistakes and contributing to open source (juniortosenior.io) <a href="https://juniortosenior.io/64">Listen</a></dd>
-
       
       <dd>Bait and Switch Open Source Licensing (digitalanarchist.com) <a href="https://digitalanarchist.com/videos/featured-guests/open-source-reblaze">Watch</a></dd>
 
-      
       <dd>Committing to Cloud Native – co-host (podcast.curiefense.io) <a href="https://web.archive.org/web/20220122121252/https://podcast.curiefense.io/">Listen</a></dd>
 
-      
       <dd>The Kubelist – Podcast (heavybit.com) <a href="https://www.heavybit.com/library/podcasts/the-kubelist-podcast/ep-13-curiefense-with-tzury-bar-yochay-and-justin-dorfman-of-reblaze/">Listen</a></dd>
+
+      <dd>BONUS - Sustain Open Source Software (changelog.com) <a href="https://changelog.com/podcast/bonus-sustainoss">Listen</a></dd>
     </dl>
 
     <h3>Articles</h3>
     <dl>
       
+      <dd>Migrating from Monaco Editor to CodeMirror (sourcegraph.com/blog) <a href="https://sourcegraph.com/blog/migrating-monaco-codemirror">Read</a></dd>
+      
+      <dd>No Secrets! Quickly find sensitive files in your GitHub repo (sourcegraph.com/blog) <a href="https://sourcegraph.com/blog/no-more-secrets">Read</a></dd>
+      
       <dd>Wizards of OSS: Industry perspectives on open source software (venturebeat.com) <a href="https://venturebeat.com/2021/06/18/wizards-of-oss-industry-perspectives-on-open-source-software/">Read</a></dd>
-
       
       <dd>That time I blew off Tim Berners-Lee (dev.to) <a href="https://dev.to/jdorfman/that-time-i-blew-off-tim-berners-lee-1hja">Read</a></dd>
 
-      
-      <dd>Why Does Privacy Matter? (dev.to) <a href="https://dev.to/jdorfman/why-does-privacy-matter-4n1j">Read</a></dd>
-
-      
       <dd>Umpires of open source licenses (opensource.com) <a href="https://opensource.com/article/19/2/umpires-open-source-licenses">Read</a></dd>
+
+      <dd>CDN vs. S3 (opensource.com) <a href="https://jdorfman.posthaven.com/medium-bitcoin-660x493-dot-jpg-cdn-vs-s3">Read</a></dd>
+
     </dl>
   </div>
 
