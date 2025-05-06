@@ -3,49 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JUSTIN DORFMAN(1) - User Manual</title>
-  <script>
-    // Theme mode functionality
-    function setTheme(theme) {
-      if (theme === 'system') {
-        const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
-      } else {
-        document.documentElement.setAttribute('data-theme', theme);
-      }
-      localStorage.setItem('theme', theme);
-      updateActiveThemeButton(theme);
-    }
-    
-    function updateActiveThemeButton(theme) {
-      document.querySelectorAll('.theme-toggle button').forEach(button => {
-        button.classList.remove('active');
-        if (button.getAttribute('data-theme') === theme) {
-          button.classList.add('active');
-        }
-      });
-    }
-
-    // Initialize theme
-    function initTheme() {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme) {
-        setTheme(savedTheme);
-      } else {
-        setTheme('system');
-      }
-      
-      // Listen for system theme changes
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        if (localStorage.getItem('theme') === 'system') {
-          setTheme('system');
-        }
-      });
-    }
-    
-    // Run theme initialization after DOM is loaded
-    document.addEventListener('DOMContentLoaded', initTheme);
-  </script>
+  <title>JUSTIN DORFMAN - Open Source Sustainer & Community Manager</title>
+  <meta name="description" content="Justin Dorfman: Sourcegraph's Open Source Community Manager, SustainOSS co-founder, and OSS contributor to Bootstrap, Font Awesome, jQuery, and more.">
+  <meta name="keywords" content="Justin Dorfman, Open Source, Sourcegraph, SustainOSS, Community Manager, Open Source Collective">
+  <meta property="og:title" content="Justin Dorfman - Open Source Sustainer & Community Manager">
+  <meta property="og:description" content="Sourcegraph's Open Source Community Manager, SustainOSS co-founder, OSS contributor and advocate.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jdorfman.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@jdorfman">
+  <meta name="twitter:creator" content="@jdorfman">
   <style>
     :root {
       --bg-color: #f8f8f8;
@@ -123,12 +90,19 @@
     }
     
     /* Theme toggle styles */
-    .theme-container {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 999;
-    }
+.theme-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+}
+
+/* Hide theme toggle on mobile devices */
+@media (max-width: 768px) {
+  .theme-container {
+    display: none;
+  }
+}
     
     .theme-toggle {
       display: flex;
@@ -276,5 +250,47 @@
   <footer>
     <p>Justin Dorfman Manual Page - Last updated May 2025</p>
   </footer>
+  <script>
+    // Theme mode functionality
+    function setTheme(theme) {
+      if (theme === 'system') {
+        const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+      localStorage.setItem('theme', theme);
+      updateActiveThemeButton(theme);
+    }
+    
+    function updateActiveThemeButton(theme) {
+      document.querySelectorAll('.theme-toggle button').forEach(button => {
+        button.classList.remove('active');
+        if (button.getAttribute('data-theme') === theme) {
+          button.classList.add('active');
+        }
+      });
+    }
+
+    // Initialize theme
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        setTheme(savedTheme);
+      } else {
+        setTheme('system');
+      }
+      
+      // Listen for system theme changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (localStorage.getItem('theme') === 'system') {
+          setTheme('system');
+        }
+      });
+    }
+    
+    // Run theme initialization after DOM is loaded
+    document.addEventListener('DOMContentLoaded', initTheme);
+  </script>
 </body>
 </html>
