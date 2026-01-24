@@ -27,3 +27,6 @@
 - Keep code simple and maintainable
 - Focus on accessibility (semantic HTML, color contrast)
 - Support light/dark mode and system preferences
+
+### Local server
+Always use `npx live-server` to serve the site locally
