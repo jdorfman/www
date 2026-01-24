@@ -96,6 +96,8 @@
     .nav-logo {
       font-family: var(--font-mono);
       font-size: 0.875rem;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .nav-logo-bracket {
@@ -111,9 +113,15 @@
     }
 
     .nav-links {
-      display: flex;
+      display: none;
       align-items: center;
       gap: 2rem;
+    }
+
+    @media (min-width: 640px) {
+      .nav-links {
+        display: flex;
+      }
     }
 
     .nav-link {
