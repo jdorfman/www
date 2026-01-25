@@ -189,6 +189,36 @@
       fill: currentColor;
     }
 
+    /* Download Button */
+    .download-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      padding: 0.625rem 1.25rem;
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--foreground);
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .download-button:hover {
+      background-color: var(--muted);
+      border-color: var(--accent);
+      color: var(--accent);
+      opacity: 1;
+    }
+
+    .download-icon {
+      width: 1rem;
+      height: 1rem;
+      fill: currentColor;
+    }
+
     /* Section Styles */
     .section {
       margin-bottom: 2.5rem;
@@ -465,10 +495,21 @@
       color: var(--muted-foreground);
     }
 
+    /* Last Updated */
+    .last-updated {
+      text-align: center;
+      font-size: 0.8125rem;
+      color: var(--muted-foreground);
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
     /* Print Styles */
     @media print {
       .nav,
-      .footer {
+      .footer,
+      .download-button {
         display: none;
       }
 
@@ -535,6 +576,12 @@
           justindorfman.com
         </a>
       </div>
+      <a href="resume.pdf" download="Justin_Dorfman_Resume.pdf" class="download-button">
+        <svg class="download-icon" viewBox="0 0 24 24">
+          <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+        </svg>
+        Download PDF
+      </a>
     </header>
 
     <!-- Summary -->
@@ -853,14 +900,7 @@
       </div>
     </section>
 
-    <!-- Education -->
-    <section class="section">
-      <h2 class="section-title">Education</h2>
-      <div class="education-item">
-        <h3 class="education-school">El Camino Real High School</h3>
-        <p class="education-details">High School · 1999 - 2003</p>
-      </div>
-    </section>
+    <p class="last-updated">Last updated: January 2025</p>
   </main>
 
   <!-- Footer -->
