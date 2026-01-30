@@ -402,6 +402,15 @@
       font-size: 0.75rem;
       color: var(--muted-foreground);
     }
+
+    .more-section {
+      margin-top: 2rem;
+    }
+
+    .more-toggle {
+      display: block;
+      margin: 2rem auto 0;
+    }
   </style>
 </head>
 <body>
@@ -467,6 +476,24 @@
           <article class="video-card video-card-horizontal">
             <div class="video-thumbnail video-thumbnail-16-9">
               <iframe 
+                src="https://www.youtube.com/embed/PaoF-qnI2HE" 
+                title="GitHub Code Search vs Sourcegraph - Quick Comparison 2026"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+              </iframe>
+            </div>
+            <div class="video-info">
+              <span class="video-category">Deep Dives / Demos</span>
+              <h3 class="video-card-title">GitHub Code Search vs Sourcegraph - Quick Comparison 2026</h3>
+            </div>
+          </article>
+
+          <!-- Horizontal Video Card 2 -->
+          <article class="video-card video-card-horizontal">
+            <div class="video-thumbnail video-thumbnail-16-9">
+              <iframe 
                 src="https://www.youtube.com/embed/yeNZ-hIicgI" 
                 title="Product Deep Dive: Feature Walkthrough"
                 frameborder="0" 
@@ -481,8 +508,8 @@
             </div>
           </article>
 
-          <!-- Horizontal Video Card 2 -->
-          <article class="video-card video-card-horizontal">
+          <!-- Small Video Card 1 -->
+          <article class="video-card video-card-small">
             <div class="video-thumbnail video-thumbnail-16-9">
               <iframe 
                 src="https://www.youtube.com/embed/u8GkvQAnM_o" 
@@ -499,7 +526,7 @@
             </div>
           </article>
 
-          <!-- Small Video Card 1 -->
+          <!-- Small Video Card 2 -->
           <article class="video-card video-card-small">
             <div class="video-thumbnail video-thumbnail-16-9">
               <iframe 
@@ -517,7 +544,7 @@
             </div>
           </article>
 
-          <!-- Small Video Card 2 -->
+          <!-- Small Video Card 3 -->
           <article class="video-card video-card-small">
             <div class="video-thumbnail video-thumbnail-16-9">
               <iframe 
@@ -534,25 +561,34 @@
               <h3 class="video-card-title">Using "oracle" with Amp</h3>
             </div>
           </article>
-
-          <!-- Small Video Card 3 -->
-          <article class="video-card video-card-small">
-            <div class="video-thumbnail video-thumbnail-16-9">
-              <iframe 
-                src="https://www.youtube.com/embed/NNEegjonjMs" 
-                title="Meet Sourcegraph Deep Search"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-              </iframe>
-            </div>
-            <div class="video-info">
-              <span class="video-category">Deep Dives / Demos</span>
-              <h3 class="video-card-title">Meet Sourcegraph Deep Search</h3>
-            </div>
-          </article>
         </div>
+        
+        <!-- More Videos Section -->
+        <div class="more-section" id="more-videos" style="display: none;">
+          <div class="video-grid">
+            <!-- Archived videos appear here -->
+            <article class="video-card video-card-small">
+              <div class="video-thumbnail video-thumbnail-16-9">
+                <iframe 
+                  src="https://www.youtube.com/embed/NNEegjonjMs" 
+                  title="Meet Sourcegraph Deep Search"
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                </iframe>
+              </div>
+              <div class="video-info">
+                <span class="video-category">Deep Dives / Demos</span>
+                <h3 class="video-card-title">Meet Sourcegraph Deep Search</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+        
+        <button class="btn btn-outline more-toggle" onclick="toggleMore()" style="margin-top: 2rem;">
+          More
+        </button>
       </div>
     </section>
   </main>
@@ -580,5 +616,19 @@
       <p class="copyright">© 2026 Justin Dorfman. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    function toggleMore() {
+      const moreSection = document.getElementById('more-videos');
+      const button = document.querySelector('.more-toggle');
+      if (moreSection.style.display === 'none') {
+        moreSection.style.display = 'block';
+        button.textContent = 'Less';
+      } else {
+        moreSection.style.display = 'none';
+        button.textContent = 'More';
+      }
+    }
+  </script>
 </body>
 </html>
