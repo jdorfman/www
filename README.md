@@ -46,6 +46,10 @@ Automatically adds a new YouTube video to the portfolio with proper rotation.
 
 **Skill location:** `.cursor/skills/add-video/SKILL.md`
 
+## Deployment
+
+This site is deployed on [Cloudflare Pages](https://pages.cloudflare.com/). The `wrangler.jsonc` file configures the deployment settings for Cloudflare's Wrangler CLI.
+
 ## Local Development
 
 ```bash
@@ -57,7 +61,7 @@ npx live-server
 ```
 ├── index.html                      # Main portfolio page
 ├── man.html                        # Man page style resume
-├── CNAME                           # Custom domain configuration
+├── wrangler.jsonc                  # Cloudflare Pages deployment config
 ├── AGENTS.md                       # AI agent instructions
 └── .cursor/
     └── skills/
