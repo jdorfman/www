@@ -2,6 +2,17 @@
 
 Personal portfolio website showcasing videos, projects, and professional work.
 
+## Table of Contents
+
+- [Cursor AI Skills](#cursor-ai-skills)
+  - [`/add-video`](#add-video---add-a-new-youtube-video)
+  - [`/resume`](#resume---regenerate-the-resume-pdf)
+  - [`/git`](#git---stage-commit-push--open-a-pr)
+- [Resume](#resume)
+- [Deployment](#deployment)
+- [Local Development](#local-development)
+- [File Structure](#file-structure)
+
 ## Cursor AI Skills
 
 This repository includes custom Cursor AI skills to automate common tasks.
@@ -63,6 +74,23 @@ Checks whether `resume.pdf` is stale, then regenerates it from `resume.html`.
 
 **Skill location:** `.cursor/skills/resume/SKILL.md`
 
+### `/git` - Stage, Commit, Push & Open a PR
+
+Automates the full git workflow in one command.
+
+**Usage:**
+```
+/git
+```
+
+**What it does:**
+1. Stages all changes
+2. Generates a commit message based on the diff
+3. Pushes to the remote branch
+4. Opens a pull request
+
+**Skill location:** `~/.cursor/skills/git/SKILL.md` (global skill)
+
 ## Resume
 
 The resume is static HTML with no build process. To update:
@@ -99,4 +127,9 @@ npx live-server
         │   └── SKILL.md            # Video addition automation skill
         └── resume/
             └── SKILL.md            # Resume PDF generation skill
+
+# Global Cursor skills (not in this repo)
+~/.cursor/skills/
+└── git/
+    └── SKILL.md                    # Git workflow automation skill (/git)
 ```
