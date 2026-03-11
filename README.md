@@ -46,6 +46,33 @@ Automatically adds a new YouTube video to the portfolio with proper rotation.
 
 **Skill location:** `.cursor/skills/add-video/SKILL.md`
 
+### `/resume` - Regenerate the Resume PDF
+
+Checks whether `resume.pdf` is stale, then regenerates it from `resume.html`.
+
+**Usage:**
+```
+/resume
+```
+
+**What it does:**
+1. Compares `resume.html` and `resume.pdf` timestamps
+2. Rebuilds `resume.pdf` from the HTML using headless Chrome
+3. Reuses the existing local server when available, or starts a temporary one
+4. Verifies the generated PDF file
+
+**Skill location:** `.cursor/skills/resume/SKILL.md`
+
+## Resume
+
+The resume is static HTML with no build process. To update:
+
+- **Content:** Edit [resume.html](resume.html) directly (experience, skills, summary, etc.)
+- **"Last updated" date:** Change the text at the bottom of the page
+- **Duration auto-calculation:** Elements with `data-start-date="YYYY-MM"` and `data-start-text="Month Year"` automatically show "Month Year - Present (X years Y months)" at runtime
+- **PDF:** Run `./scripts/generate-resume-pdf.sh` or use `/resume` to regenerate `resume.pdf`
+- **man.html:** A separate man-page style resume; update independently if you want it in sync
+
 ## Deployment
 
 This site is deployed on [Cloudflare Pages](https://pages.cloudflare.com/). The `wrangler.jsonc` file configures the deployment settings for Cloudflare's Wrangler CLI.
@@ -60,11 +87,16 @@ npx live-server
 
 ```
 ├── index.html                      # Main portfolio page
+├── resume.html                     # Resume page
 ├── man.html                        # Man page style resume
+├── scripts/
+│   └── generate-resume-pdf.sh      # Generates resume.pdf from resume.html
 ├── wrangler.jsonc                  # Cloudflare Pages deployment config
 ├── AGENTS.md                       # AI agent instructions
 └── .cursor/
     └── skills/
-        └── add-video/
-            └── SKILL.md            # Video addition automation skill
+        ├── add-video/
+        │   └── SKILL.md            # Video addition automation skill
+        └── resume/
+            └── SKILL.md            # Resume PDF generation skill
 ```
