@@ -22,7 +22,7 @@
       --muted: #1e1e22;
       --muted-foreground: #8b8b8b;
       --border: #2a2a30;
-      --accent: #4ecdc4;
+      --accent: #9DCBFF;
       --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       --font-mono: ui-monospace, 'SF Mono', Menlo, Monaco, 'Cascadia Mono', monospace;
       --radius: 0.5rem;
@@ -296,6 +296,14 @@
       overflow: hidden;
     }
 
+    .video-thumbnail iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
     .video-thumbnail-16-9 {
       aspect-ratio: 16 / 9;
     }
@@ -411,6 +419,92 @@
       display: block;
       margin: 2rem auto 0;
     }
+
+    /* Shorts Carousel */
+    .shorts-carousel {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .shorts-carousel-viewport {
+      overflow: hidden;
+    }
+
+    .shorts-carousel-track {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 100%;
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .shorts-slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .shorts-slide .video-thumbnail {
+      flex: none;
+      width: 100%;
+    }
+
+    .shorts-carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.75rem 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .shorts-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted-foreground);
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      line-height: 1;
+    }
+
+    .shorts-arrow:hover {
+      border-color: var(--muted-foreground);
+      color: var(--foreground);
+      background-color: var(--muted);
+    }
+
+    .shorts-dots {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .shorts-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      border: none;
+      background-color: var(--border);
+      cursor: pointer;
+      padding: 0;
+      transition: background-color 0.2s ease;
+    }
+
+    .shorts-dot:hover {
+      background-color: var(--muted-foreground);
+    }
+
+    .shorts-dot.active {
+      background-color: var(--accent);
+    }
   </style>
 </head>
 <body>
@@ -454,23 +548,99 @@
       <div class="work-inner">
         <h2 class="work-title">Featured Work</h2>
         <div class="video-grid">
-          <!-- Vertical Video Card -->
-          <article class="video-card video-card-vertical">
-            <div class="video-thumbnail video-thumbnail-9-16">
-              <iframe 
-                src="https://www.youtube.com/embed/C6jUbQo92Ig" 
-                title="Quick Tips Series"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-              </iframe>
+          <!-- Shorts Carousel -->
+          <div class="shorts-carousel video-card video-card-vertical" tabindex="0" aria-label="YouTube Shorts gallery">
+            <div class="shorts-carousel-viewport">
+              <div class="shorts-carousel-track">
+                <article class="shorts-slide">
+                  <div class="video-thumbnail video-thumbnail-9-16">
+                    <iframe
+                      src="https://www.youtube.com/embed/bHIBfzMspt4"
+                      title="Free Sourcegraph MCP server for open source repos"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen>
+                    </iframe>
+                  </div>
+                  <div class="video-info">
+                    <span class="video-category">Shorts / Social</span>
+                    <h3 class="video-card-title">Free Sourcegraph MCP server for open source repos</h3>
+                  </div>
+                </article>
+                <article class="shorts-slide">
+                  <div class="video-thumbnail video-thumbnail-9-16">
+                    <iframe
+                      data-src="https://www.youtube.com/embed/rmiQkoAMoag"
+                      title="GitHub Copilot + MCP Server: Search C++ Repositories for Vulnerabilities in VS Code"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen>
+                    </iframe>
+                  </div>
+                  <div class="video-info">
+                    <span class="video-category">Shorts / Social</span>
+                    <h3 class="video-card-title">GitHub Copilot + MCP Server: Search C++ Repositories for Vulnerabilities in VS Code</h3>
+                  </div>
+                </article>
+                <article class="shorts-slide">
+                  <div class="video-thumbnail video-thumbnail-9-16">
+                    <iframe
+                      data-src="https://www.youtube.com/embed/7flz-d-V6AY"
+                      title="Connect Claude Code to Sourcegraph's MCP Server"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen>
+                    </iframe>
+                  </div>
+                  <div class="video-info">
+                    <span class="video-category">Shorts / Social</span>
+                    <h3 class="video-card-title">Connect Claude Code to Sourcegraph's MCP Server</h3>
+                  </div>
+                </article>
+                <article class="shorts-slide">
+                  <div class="video-thumbnail video-thumbnail-9-16">
+                    <iframe
+                      data-src="https://www.youtube.com/embed/C6jUbQo92Ig"
+                      title="Using Sourcegraph's MCP server with the Amp coding agent"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen>
+                    </iframe>
+                  </div>
+                  <div class="video-info">
+                    <span class="video-category">Shorts / Social</span>
+                    <h3 class="video-card-title">Using Sourcegraph's MCP server with the Amp coding agent</h3>
+                  </div>
+                </article>
+                <article class="shorts-slide">
+                  <div class="video-thumbnail video-thumbnail-9-16">
+                    <iframe
+                      data-src="https://www.youtube.com/embed/PY234vXSkvM"
+                      title="Ask Questions About Your Codebase in Slack"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen>
+                    </iframe>
+                  </div>
+                  <div class="video-info">
+                    <span class="video-category">Shorts / Social</span>
+                    <h3 class="video-card-title">Ask Questions About Your Codebase in Slack</h3>
+                  </div>
+                </article>
+              </div>
             </div>
-            <div class="video-info">
-              <span class="video-category">Shorts / Social</span>
-              <h3 class="video-card-title">using Sourcegraph's MCP server with the Amp coding agent</h3>
+            <div class="shorts-carousel-controls">
+              <button class="shorts-arrow shorts-arrow-prev" aria-label="Previous short">&#8249;</button>
+              <div class="shorts-dots">
+                <button class="shorts-dot active" aria-label="Short 1" aria-current="true"></button>
+                <button class="shorts-dot" aria-label="Short 2"></button>
+                <button class="shorts-dot" aria-label="Short 3"></button>
+                <button class="shorts-dot" aria-label="Short 4"></button>
+                <button class="shorts-dot" aria-label="Short 5"></button>
+              </div>
+              <button class="shorts-arrow shorts-arrow-next" aria-label="Next short">&#8250;</button>
             </div>
-          </article>
+          </div>
 
           <!-- Horizontal Video Card 1 -->
           <article class="video-card video-card-horizontal">
@@ -693,6 +863,47 @@
         button.textContent = 'More';
       }
     }
+
+    (function initShortsCarousel() {
+      const carousel = document.querySelector('.shorts-carousel');
+      const track = carousel.querySelector('.shorts-carousel-track');
+      const slides = track.querySelectorAll('.shorts-slide');
+      const dots = carousel.querySelectorAll('.shorts-dot');
+      const prevBtn = carousel.querySelector('.shorts-arrow-prev');
+      const nextBtn = carousel.querySelector('.shorts-arrow-next');
+      let current = 0;
+
+      function goTo(index) {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+
+        const iframe = slides[index].querySelector('iframe');
+        if (iframe.dataset.src && !iframe.src) {
+          iframe.src = iframe.dataset.src;
+        }
+
+        track.style.transform = 'translateX(-' + (index * 100) + '%)';
+
+        dots[current].classList.remove('active');
+        dots[current].removeAttribute('aria-current');
+        dots[index].classList.add('active');
+        dots[index].setAttribute('aria-current', 'true');
+
+        current = index;
+      }
+
+      prevBtn.addEventListener('click', function() { goTo(current - 1); });
+      nextBtn.addEventListener('click', function() { goTo(current + 1); });
+
+      dots.forEach(function(dot, i) {
+        dot.addEventListener('click', function() { goTo(i); });
+      });
+
+      carousel.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(current - 1); }
+        if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1); }
+      });
+    })();
   </script>
 </body>
 </html>
