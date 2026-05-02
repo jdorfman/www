@@ -4,3 +4,7 @@ _site
 .DS_Store
 node_modules/
 .tmp/
+
+# Editor / local tooling
+.cursor/
+.entire/
