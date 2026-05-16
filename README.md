@@ -33,11 +33,16 @@ Automatically adds a new YouTube video to the portfolio with proper rotation.
 ```
 
 **What it does:**
-1. Extracts the video ID from any YouTube URL format
-2. Fetches the video title automatically via YouTube's oEmbed API
-3. Places the new video as Horizontal Card 1 (featured position)
-4. Cascades all existing videos down one position
-5. Moves the oldest video (Small Card 3) to the "More" section
+1. Runs `node scripts/add-video.mjs` with your URL
+2. Extracts the video ID and fetches the title via YouTube's oEmbed API
+3. Prepends the video to `data/videos.json` (newest first)
+4. Regenerates the video section in `index.html` (Horizontal Card 1 featured; oldest archived to More)
+
+**Manual CLI (same as the agent runs):**
+```bash
+node scripts/add-video.mjs "https://www.youtube.com/watch?v=abc123"
+node scripts/render-videos.mjs   # re-render only, after editing data/videos.json
+```
 
 **Optional overrides:**
 ```
@@ -115,9 +120,14 @@ npx live-server
 
 ```
 ├── index.html                      # Main portfolio page
+├── data/
+│   └── videos.json                 # Long-form videos (newest first); source of truth
 ├── resume.html                     # Resume page
 ├── man.html                        # Man page style resume
 ├── scripts/
+│   ├── add-video.mjs               # Add video + render index.html
+│   ├── render-videos.mjs           # Regenerate video HTML from videos.json
+│   ├── migrate-videos-to-json.mjs  # One-time HTML → JSON migration
 │   └── generate-resume-pdf.sh      # Generates resume.pdf from resume.html
 ├── wrangler.jsonc                  # Cloudflare Pages deployment config
 ├── AGENTS.md                       # AI agent instructions
