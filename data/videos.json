@@ -1,5 +1,10 @@
 [
   {
+    "id": "DuJKS0-sS8U",
+    "title": "Connecting goose AI agent to Sourcegraph Deep Search via MCP",
+    "category": "Deep Dives / Demos"
+  },
+  {
     "id": "1NjIyrpg93o",
     "title": "Find gigabytes of hidden junk on your Mac with the mole CLI",
     "category": "Deep Dives / Demos"
