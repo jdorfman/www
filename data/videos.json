@@ -1,0 +1,67 @@
+[
+  {
+    "id": "DuJKS0-sS8U",
+    "title": "Connecting goose AI agent to Sourcegraph Deep Search via MCP",
+    "category": "Deep Dives / Demos"
+  },
+  {
+    "id": "1NjIyrpg93o",
+    "title": "Find gigabytes of hidden junk on your Mac with the mole CLI",
+    "category": "Deep Dives / Demos"
+  },
+  {
+    "id": "g8BwfSed-8w",
+    "title": "Sourcegraph Deep Search Updates (April 2026)",
+    "category": "Deep Dives / Demos"
+  },
+  {
+    "id": "ho4g5NQ5sXk",
+    "title": "Find reusable code with Sourcegraph Deep Search",
+    "category": "Deep Dives / Demos"
+  },
+  {
+    "id": "hztOVXnoIm4",
+    "title": "How to Setup Sourcegraph's MCP Server with Windsurf",
+    "category": "Deep Dives / Demos"
+  },
+  {
+    "id": "Xj-2rg3WDh4",
+    "title": "Monitoring Critical Code Changes from AI Agents",
+    "category": "Deep Dives / Demos"
+  },
+  {
+    "id": "_OyUNs258mE",
+    "title": "Why GitHub Code Search Fails at Enterprise Scale",
+    "category": "Deep Dives / Demos"
+  },
+  {
+    "id": "PaoF-qnI2HE",
+    "title": "GitHub Code Search vs Sourcegraph - Quick Comparison 2026",
+    "category": "Deep Dives / Demos"
+  },
+  {
+    "id": "yeNZ-hIicgI",
+    "title": "Sourcegraph Deep Search for Slack: Query Your Codebase with Natural Language",
+    "category": "Deep Dives / Demos"
+  },
+  {
+    "id": "u8GkvQAnM_o",
+    "title": "Using Claude Code with Sourcegraph's MCP server",
+    "category": "Deep Dives / Demos"
+  },
+  {
+    "id": "aGNUR8b2gFo",
+    "title": "Getting started with Amp's TypeScript SDK",
+    "category": "Deep Dives / Demos"
+  },
+  {
+    "id": "xu3X6G7m-1Q",
+    "title": "Using \"oracle\" with Amp",
+    "category": "Deep Dives / Demos"
+  },
+  {
+    "id": "NNEegjonjMs",
+    "title": "Meet Sourcegraph Deep Search",
+    "category": "Deep Dives / Demos"
+  }
+]
