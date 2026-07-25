@@ -8,7 +8,7 @@ export const VIDEOS_JSON = path.join(ROOT, 'data', 'videos.json');
 export const INDEX_HTML = path.join(ROOT, 'index.html');
 export const START_MARKER = '<!-- VIDEOS:START -->';
 export const END_MARKER = '<!-- VIDEOS:END -->';
-export const DEFAULT_CATEGORY = 'Deep Dives / Demos';
+export const DEFAULT_CATEGORY = 'Demos';
 
 const IFRAME_ALLOW =
   'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';

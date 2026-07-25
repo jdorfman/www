@@ -15,7 +15,7 @@ node scripts/add-video.mjs "<URL>" ["Custom Title"] ["Category Name"]
 
 - URL: any YouTube format (`watch?v=`, `youtu.be/`, `embed/`)
 - Title: fetched from YouTube oEmbed unless overridden
-- Category: defaults to `Deep Dives / Demos` unless overridden
+- Category: defaults to `Demos` unless overridden
 
 ## On success
 
