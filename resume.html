@@ -14,8 +14,9 @@
   <meta name="twitter:site" content="@jdorfman">
   <meta name="twitter:creator" content="@jdorfman">
   <style>
-    /* CSS Variables - Dark mode by default */
+    /* CSS Variables - Dark mode only */
     :root {
+      color-scheme: dark;
       --background: #151518;
       --foreground: #f0f0f0;
       --card: #1e1e22;
@@ -26,19 +27,6 @@
       --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       --font-mono: ui-monospace, 'SF Mono', Menlo, Monaco, 'Cascadia Mono', monospace;
       --radius: 0.5rem;
-    }
-
-    /* Light mode via system preference */
-    @media (prefers-color-scheme: light) {
-      :root {
-        --background: #ffffff;
-        --foreground: #151518;
-        --card: #f5f5f5;
-        --muted: #f5f5f5;
-        --muted-foreground: #6b6b6b;
-        --border: #e0e0e0;
-        --accent: #9ecbff;
-      }
     }
 
     /* Reset and Base Styles */
@@ -80,12 +68,6 @@
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
-    }
-
-    @media (prefers-color-scheme: light) {
-      .nav {
-        background-color: rgba(255, 255, 255, 0.8);
-      }
     }
 
     .nav-inner {

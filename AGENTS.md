@@ -26,7 +26,7 @@
 ### General
 - Keep code simple and maintainable
 - Focus on accessibility (semantic HTML, color contrast)
-- Support light/dark mode and system preferences
+- Dark mode only (do not add light-mode / prefers-color-scheme overrides)
 
 ### Local server
 Always use `npx live-server` to serve the site locally

@@ -14,8 +14,9 @@
   <meta name="twitter:site" content="@jdorfman">
   <meta name="twitter:creator" content="@jdorfman">
   <style>
-    /* CSS Variables - Dark mode by default */
+    /* CSS Variables - Dark mode only */
     :root {
+      color-scheme: dark;
       --background: #151518;
       --foreground: #f0f0f0;
       --card: #1e1e22;
@@ -26,19 +27,6 @@
       --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       --font-mono: ui-monospace, 'SF Mono', Menlo, Monaco, 'Cascadia Mono', monospace;
       --radius: 0.5rem;
-    }
-
-    /* Light mode via system preference */
-    @media (prefers-color-scheme: light) {
-      :root {
-        --background: #ffffff;
-        --foreground: #151518;
-        --card: #f5f5f5;
-        --muted: #f5f5f5;
-        --muted-foreground: #6b6b6b;
-        --border: #e0e0e0;
-        --accent: #3ba99c;
-      }
     }
 
     /* Reset and Base Styles */
@@ -75,12 +63,6 @@
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
-    }
-
-    @media (prefers-color-scheme: light) {
-      .nav {
-        background-color: rgba(255, 255, 255, 0.8);
-      }
     }
 
     .nav-inner {
@@ -526,8 +508,8 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-inner">
-        <h1 class="hero-title">Senior Developer Advocate & Video Lead</h1>
-        <p class="hero-subtitle">Showing devs exactly how products work through technical video demos and storytelling</p>
+        <h1 class="hero-title">Developer tools, explained.</h1>
+        <p class="hero-subtitle">Demos and writing that make products click for those who'll actually use them.</p>
         <div class="hero-buttons">
           <a href="/resume.html" class="btn btn-outline">
             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -555,8 +537,8 @@
                 <article class="shorts-slide">
                   <div class="video-thumbnail video-thumbnail-9-16">
                     <iframe
-                      src="https://www.youtube.com/embed/bHIBfzMspt4"
-                      title="Free Sourcegraph MCP server for open source repos"
+                      src="https://www.youtube.com/embed/PY234vXSkvM"
+                      title="Ask Questions About Your Codebase in Slack"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowfullscreen>
@@ -564,7 +546,7 @@
                   </div>
                   <div class="video-info">
                     <span class="video-category">Shorts / Social</span>
-                    <h3 class="video-card-title">Free Sourcegraph MCP server for open source repos</h3>
+                    <h3 class="video-card-title">Ask Questions About Your Codebase in Slack</h3>
                   </div>
                 </article>
                 <article class="shorts-slide">
@@ -615,8 +597,8 @@
                 <article class="shorts-slide">
                   <div class="video-thumbnail video-thumbnail-9-16">
                     <iframe
-                      data-src="https://www.youtube.com/embed/PY234vXSkvM"
-                      title="Ask Questions About Your Codebase in Slack"
+                      data-src="https://www.youtube.com/embed/bHIBfzMspt4"
+                      title="Free Sourcegraph MCP server for open source repos"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowfullscreen>
@@ -624,7 +606,7 @@
                   </div>
                   <div class="video-info">
                     <span class="video-category">Shorts / Social</span>
-                    <h3 class="video-card-title">Ask Questions About Your Codebase in Slack</h3>
+                    <h3 class="video-card-title">Free Sourcegraph MCP server for open source repos</h3>
                   </div>
                 </article>
               </div>
@@ -647,6 +629,23 @@
           <article class="video-card video-card-horizontal">
             <div class="video-thumbnail video-thumbnail-16-9">
               <iframe 
+                src="https://www.youtube.com/embed/VR74iU4mpg0" 
+                title="Sourcegraph Changelog: Code Finder and Compare Page (July 2026)"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+              </iframe>
+            </div>
+            <div class="video-info">
+              <span class="video-category">Deep Dives / Demos</span>
+              <h3 class="video-card-title">Sourcegraph Changelog: Code Finder and Compare Page (July 2026)</h3>
+            </div>
+          </article>
+          <!-- Horizontal Video Card 2 -->
+          <article class="video-card video-card-horizontal">
+            <div class="video-thumbnail video-thumbnail-16-9">
+              <iframe 
                 src="https://www.youtube.com/embed/8g8q8pRPCms" 
                 title="Agentic Batch Changes Beta for migrations, security patching, and dependency updates"
                 frameborder="0" 
@@ -660,8 +659,8 @@
               <h3 class="video-card-title">Agentic Batch Changes Beta for migrations, security patching, and dependency updates</h3>
             </div>
           </article>
-          <!-- Horizontal Video Card 2 -->
-          <article class="video-card video-card-horizontal">
+          <!-- Small Video Card 1 -->
+          <article class="video-card video-card-small">
             <div class="video-thumbnail video-thumbnail-16-9">
               <iframe 
                 src="https://www.youtube.com/embed/79Yj-_juLY4" 
@@ -677,7 +676,7 @@
               <h3 class="video-card-title">Make GitHub Copilot Smarter Across All Your Repositories with Deep Search MCP Server</h3>
             </div>
           </article>
-          <!-- Small Video Card 1 -->
+          <!-- Small Video Card 2 -->
           <article class="video-card video-card-small">
             <div class="video-thumbnail video-thumbnail-16-9">
               <iframe 
@@ -694,7 +693,7 @@
               <h3 class="video-card-title">Connecting goose AI agent to Sourcegraph Deep Search via MCP</h3>
             </div>
           </article>
-          <!-- Small Video Card 2 -->
+          <!-- Small Video Card 3 -->
           <article class="video-card video-card-small">
             <div class="video-thumbnail video-thumbnail-16-9">
               <iframe 
@@ -711,29 +710,28 @@
               <h3 class="video-card-title">Find gigabytes of hidden junk on your Mac with the mole CLI</h3>
             </div>
           </article>
-          <!-- Small Video Card 3 -->
-          <article class="video-card video-card-small">
-            <div class="video-thumbnail video-thumbnail-16-9">
-              <iframe 
-                src="https://www.youtube.com/embed/g8BwfSed-8w" 
-                title="Sourcegraph Deep Search Updates (April 2026)"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-              </iframe>
-            </div>
-            <div class="video-info">
-              <span class="video-category">Deep Dives / Demos</span>
-              <h3 class="video-card-title">Sourcegraph Deep Search Updates (April 2026)</h3>
-            </div>
-          </article>
         </div>
 
         <!-- More Videos Section -->
         <div class="more-section" id="more-videos" style="display: none;">
           <div class="video-grid">
             <!-- Archived videos appear here -->
+            <article class="video-card video-card-small">
+              <div class="video-thumbnail video-thumbnail-16-9">
+                <iframe 
+                  src="https://www.youtube.com/embed/g8BwfSed-8w" 
+                  title="Sourcegraph Deep Search Updates (April 2026)"
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                </iframe>
+              </div>
+              <div class="video-info">
+                <span class="video-category">Deep Dives / Demos</span>
+                <h3 class="video-card-title">Sourcegraph Deep Search Updates (April 2026)</h3>
+              </div>
+            </article>
             <article class="video-card video-card-small">
               <div class="video-thumbnail video-thumbnail-16-9">
                 <iframe 
