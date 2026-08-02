@@ -36,5 +36,14 @@ Always use `npx live-server` to serve the site locally (`/start-local-server` sk
 - **Source of truth:** `data/videos.json` (newest-first array of `{ id, title, category }`)
 - **Add a video:** `node scripts/add-video.mjs "<youtube-url>" ["Title"] ["Category"]` — or user command `/add-video <URL>`
 - **Re-render only:** `node scripts/render-videos.mjs` after editing `videos.json`
-- **Do not** edit the generated block between `<!-- VIDEOS:START -->` and `<!-- VIDEOS:END -->` in `index.html` by hand
+- **Do not** edit the generated blocks between `<!-- VIDEOS:START -->` / `<!-- VIDEOS:END -->` or `<!-- MORE_VIDEOS:START -->` / `<!-- MORE_VIDEOS:END -->` in `index.html` by hand
 - Shorts carousel remains hand-edited in `index.html` (`/add-short` skill)
+
+## Portfolio articles
+
+- **Source of truth:** `data/articles.json` (newest-first array of `{ slug, url, title, category, image, publishedAt? }`)
+- **Add an article:** `node scripts/add-article.mjs "<url>" ["Title"] ["Category"]` — or user command `/add-article <URL>`
+- **Re-render only:** `node scripts/render-articles.mjs` after editing `articles.json`
+- **OG images** saved to `assets/articles/`; script requires `og:image` (no placeholder)
+- **Duplicate URL** updates metadata/image in place without changing list position
+- **Do not** edit the generated blocks between `<!-- ARTICLES:START -->` / `<!-- ARTICLES:END -->` or `<!-- MORE_ARTICLES:START -->` / `<!-- MORE_ARTICLES:END -->` in `index.html` by hand

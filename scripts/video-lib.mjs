@@ -8,6 +8,8 @@ export const VIDEOS_JSON = path.join(ROOT, 'data', 'videos.json');
 export const INDEX_HTML = path.join(ROOT, 'index.html');
 export const START_MARKER = '<!-- VIDEOS:START -->';
 export const END_MARKER = '<!-- VIDEOS:END -->';
+export const MORE_START_MARKER = '<!-- MORE_VIDEOS:START -->';
+export const MORE_END_MARKER = '<!-- MORE_VIDEOS:END -->';
 export const DEFAULT_CATEGORY = 'Demos';
 
 const IFRAME_ALLOW =
@@ -81,9 +83,8 @@ ${innerPad}</div>
 ${pad}</article>`;
 }
 
-export function renderVideosHtml(videos) {
+export function renderFeaturedVideosHtml(videos) {
   const featured = videos.slice(0, 5);
-  const archived = videos.slice(5);
   const lines = [];
 
   const featuredComments = [
@@ -101,14 +102,16 @@ export function renderVideosHtml(videos) {
     );
   }
 
-  lines.push('        </div>');
-  lines.push('');
-  lines.push('        <!-- More Videos Section -->');
-  lines.push(
-    '        <div class="more-section" id="more-videos" style="display: none;">'
-  );
-  lines.push('          <div class="video-grid">');
-  lines.push('            <!-- Archived videos appear here -->');
+  return lines.join('\n');
+}
+
+export function renderMoreVideosHtml(videos) {
+  const archived = videos.slice(5);
+  const lines = [
+    '        <div class="more-section" id="more-videos" style="display: none;">',
+    '          <div class="video-grid">',
+    '            <!-- Archived videos appear here -->',
+  ];
 
   for (const video of archived) {
     lines.push(renderCard(video, 'small', null, 12));
@@ -120,22 +123,36 @@ export function renderVideosHtml(videos) {
   return lines.join('\n');
 }
 
-export function renderVideosSection() {
-  const videos = readVideos();
-  return `${START_MARKER}\n${renderVideosHtml(videos)}\n          ${END_MARKER}`;
+function replaceMarkedSection(html, startMarker, endMarker, content) {
+  const startIdx = html.indexOf(startMarker);
+  const endIdx = html.indexOf(endMarker);
+
+  if (startIdx === -1 || endIdx === -1) {
+    throw new Error(
+      `Markers not found in index.html. Expected ${startMarker} and ${endMarker}`
+    );
+  }
+
+  const before = html.slice(0, startIdx + startMarker.length);
+  const after = html.slice(endIdx);
+  const body = content ? `\n${content}\n          ` : '\n          ';
+  return before + body + after;
 }
 
 export function updateIndexHtml() {
-  const html = fs.readFileSync(INDEX_HTML, 'utf8');
-  const startIdx = html.indexOf(START_MARKER);
-  const endIdx = html.indexOf(END_MARKER);
-
-  if (startIdx === -1 || endIdx === -1) {
-    throw new Error(`Markers not found in index.html. Expected ${START_MARKER} and ${END_MARKER}`);
-  }
-
-  const before = html.slice(0, startIdx);
-  const after = html.slice(endIdx + END_MARKER.length);
-  const section = renderVideosSection();
-  fs.writeFileSync(INDEX_HTML, before + section + after);
+  const videos = readVideos();
+  let html = fs.readFileSync(INDEX_HTML, 'utf8');
+  html = replaceMarkedSection(
+    html,
+    START_MARKER,
+    END_MARKER,
+    renderFeaturedVideosHtml(videos)
+  );
+  html = replaceMarkedSection(
+    html,
+    MORE_START_MARKER,
+    MORE_END_MARKER,
+    renderMoreVideosHtml(videos)
+  );
+  fs.writeFileSync(INDEX_HTML, html);
 }

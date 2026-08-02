@@ -223,7 +223,75 @@
     .work-title {
       font-size: clamp(1.5rem, 3vw, 1.875rem);
       font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    .work-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
       margin-bottom: 3rem;
+    }
+
+    .work-filter {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .work-filter-pill {
+      padding: 0.375rem 0.875rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      border-radius: 9999px;
+      border: 1px solid var(--border);
+      background-color: transparent;
+      color: var(--muted-foreground);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .work-filter-pill:hover {
+      color: var(--foreground);
+      border-color: var(--muted-foreground);
+    }
+
+    .work-filter-pill.active {
+      color: var(--foreground);
+      border-color: var(--accent);
+      background-color: rgba(157, 203, 255, 0.12);
+    }
+
+    .work-panel {
+      display: contents;
+    }
+
+    .work-panel[hidden] {
+      display: none;
+    }
+
+    .work-more[hidden] {
+      display: none;
+    }
+
+    .work-card-link {
+      display: block;
+      color: inherit;
+    }
+
+    .video-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-date {
+      display: block;
+      margin-top: 0.125rem;
+      font-size: 0.6875rem;
+      color: var(--muted-foreground);
     }
 
     .video-grid {
@@ -528,7 +596,13 @@
     <!-- Featured Work Section -->
     <section id="work" class="work">
       <div class="work-inner">
-        <h2 class="work-title">Featured Work</h2>
+        <div class="work-header">
+          <h2 class="work-title">Featured Work</h2>
+          <div class="work-filter" role="tablist" aria-label="Filter featured work by medium">
+            <button class="work-filter-pill active" role="tab" aria-selected="true" data-medium="videos" type="button">Videos</button>
+            <button class="work-filter-pill" role="tab" aria-selected="false" data-medium="articles" type="button">Articles</button>
+          </div>
+        </div>
         <div class="video-grid">
           <!-- Shorts Carousel -->
           <div class="shorts-carousel video-card video-card-vertical" tabindex="0" aria-label="YouTube Shorts gallery">
@@ -624,6 +698,7 @@
             </div>
           </div>
 
+          <div id="work-panel-videos" class="work-panel" data-medium="videos">
           <!-- VIDEOS:START -->
           <!-- Horizontal Video Card 1 -->
           <article class="video-card video-card-horizontal">
@@ -710,9 +785,29 @@
               <h3 class="video-card-title">Connecting goose AI agent to Sourcegraph Deep Search via MCP</h3>
             </div>
           </article>
+          <!-- VIDEOS:END -->
+          </div>
+
+          <div id="work-panel-articles" class="work-panel" data-medium="articles" hidden>
+          <!-- ARTICLES:START -->
+          <!-- Horizontal Article Card 1 -->
+          <article class="video-card video-card-horizontal">
+            <a href="https://sourcegraph.com/blog/compliance-first-ai-proving-agent-provenance" target="_blank" rel="noopener noreferrer" class="work-card-link">
+              <div class="video-thumbnail video-thumbnail-16-9">
+                <img src="assets/articles/compliance-first-ai-proving-agent-provenance.png" alt="Compliance-first AI: proving agent provenance for regulated engineering teams" loading="lazy" width="640" height="360">
+              </div>
+              <div class="video-info">
+                <span class="video-category">Sourcegraph</span>
+                <h3 class="video-card-title">Compliance-first AI: proving agent provenance for regulated engineering teams</h3>
+              </div>
+            </a>
+          </article>
+          <!-- ARTICLES:END -->
+          </div>
         </div>
 
-        <!-- More Videos Section -->
+        <div id="work-more-videos" class="work-more" data-medium="videos">
+        <!-- MORE_VIDEOS:START -->
         <div class="more-section" id="more-videos" style="display: none;">
           <div class="video-grid">
             <!-- Archived videos appear here -->
@@ -910,11 +1005,24 @@
             </article>
           </div>
         </div>
-          <!-- VIDEOS:END -->
-        
-        <button class="btn btn-outline more-toggle" onclick="toggleMore()" style="margin-top: 2rem;">
+          <!-- MORE_VIDEOS:END -->
+        <button class="btn btn-outline more-toggle" data-more="more-videos" type="button" style="margin-top: 2rem;">
           More
         </button>
+        </div>
+
+        <div id="work-more-articles" class="work-more" data-medium="articles" hidden>
+        <!-- MORE_ARTICLES:START -->
+        <div class="more-section" id="more-articles" style="display: none;">
+          <div class="video-grid">
+            <!-- Archived articles appear here -->
+          </div>
+        </div>
+          <!-- MORE_ARTICLES:END -->
+        <button class="btn btn-outline more-toggle" data-more="more-articles" type="button" style="margin-top: 2rem;">
+          More
+        </button>
+        </div>
       </div>
     </section>
   </main>
@@ -944,9 +1052,17 @@
   </footer>
 
   <script>
-    function toggleMore() {
-      const moreSection = document.getElementById('more-videos');
-      const button = document.querySelector('.more-toggle');
+    function collapseMoreSections() {
+      document.querySelectorAll('.more-section').forEach(function(section) {
+        section.style.display = 'none';
+      });
+      document.querySelectorAll('.more-toggle').forEach(function(button) {
+        button.textContent = 'More';
+      });
+    }
+
+    function toggleMore(sectionId, button) {
+      const moreSection = document.getElementById(sectionId);
       if (moreSection.style.display === 'none') {
         moreSection.style.display = 'block';
         button.textContent = 'Less';
@@ -955,6 +1071,42 @@
         button.textContent = 'More';
       }
     }
+
+    function initWorkFilter() {
+      const pills = document.querySelectorAll('.work-filter-pill');
+      const panels = document.querySelectorAll('.work-panel');
+      const moreSections = document.querySelectorAll('.work-more');
+
+      pills.forEach(function(pill) {
+        pill.addEventListener('click', function() {
+          const medium = pill.dataset.medium;
+
+          pills.forEach(function(item) {
+            const isActive = item === pill;
+            item.classList.toggle('active', isActive);
+            item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          });
+
+          panels.forEach(function(panel) {
+            panel.hidden = panel.dataset.medium !== medium;
+          });
+
+          moreSections.forEach(function(section) {
+            section.hidden = section.dataset.medium !== medium;
+          });
+
+          collapseMoreSections();
+        });
+      });
+
+      document.querySelectorAll('.more-toggle').forEach(function(button) {
+        button.addEventListener('click', function() {
+          toggleMore(button.dataset.more, button);
+        });
+      });
+    }
+
+    initWorkFilter();
 
     (function initShortsCarousel() {
       const carousel = document.querySelector('.shorts-carousel');

@@ -6,6 +6,7 @@ Personal portfolio website showcasing videos, projects, and professional work.
 
 - [Cursor AI Skills](#cursor-ai-skills)
   - [`/add-video`](#add-video---add-a-new-youtube-video)
+  - [`/add-article`](#add-article---add-a-new-external-article)
   - [`/resume`](#resume---regenerate-the-resume-pdf)
   - [`/git`](#git---stage-commit-push--open-a-pr)
 - [Resume](#resume)
@@ -61,6 +62,51 @@ node scripts/render-videos.mjs   # re-render only, after editing data/videos.jso
 | More Section | ← Previous Small Card 3 (archived) |
 
 **Skill location:** `.cursor/skills/add-video/SKILL.md`
+
+### `/add-article` - Add a New External Article
+
+Adds a blog post or article with OG thumbnail, linking out to the original URL.
+
+**Usage:**
+```
+/add-article <Article URL>
+```
+
+**Example:**
+```
+/add-article https://sourcegraph.com/blog/compliance-first-ai-proving-agent-provenance
+```
+
+**What it does:**
+1. Runs `node scripts/add-article.mjs` with your URL
+2. Fetches `og:title`, `og:image`, `og:site_name`, and publication date when available
+3. Downloads the OG image to `assets/articles/`
+4. Prepends the article to `data/articles.json` (newest first), or updates in place if the URL already exists
+5. Regenerates the articles section in `index.html`
+
+**Manual CLI (same as the agent runs):**
+```bash
+node scripts/add-article.mjs "https://sourcegraph.com/blog/compliance-first-ai-proving-agent-provenance"
+node scripts/render-articles.mjs   # re-render only, after editing data/articles.json
+```
+
+**Optional overrides:**
+```
+/add-article URL "Custom Title"
+/add-article URL "Custom Title" "Category Name"
+```
+
+**Article rotation order:**
+| Position | Action |
+|----------|--------|
+| Horizontal Card 1 | ← New article goes here |
+| Horizontal Card 2 | ← Previous Horizontal Card 1 |
+| Small Card 1 | ← Previous Horizontal Card 2 (changes to small) |
+| Small Card 2 | ← Previous Small Card 1 |
+| Small Card 3 | ← Previous Small Card 2 |
+| More Section | ← Previous Small Card 3 (archived) |
+
+**Skill location:** `.cursor/skills/add-article/SKILL.md`
 
 ### `/resume` - Regenerate the Resume PDF
 
@@ -121,12 +167,17 @@ npx live-server
 ```
 ├── index.html                      # Main portfolio page
 ├── data/
-│   └── videos.json                 # Long-form videos (newest first); source of truth
+│   ├── videos.json                 # Long-form videos (newest first); source of truth
+│   └── articles.json               # External articles (newest first); source of truth
+├── assets/
+│   └── articles/                   # Downloaded OG images for article cards
 ├── resume.html                     # Resume page
 ├── man.html                        # Man page style resume
 ├── scripts/
 │   ├── add-video.mjs               # Add video + render index.html
 │   ├── render-videos.mjs           # Regenerate video HTML from videos.json
+│   ├── add-article.mjs             # Add article + download OG image + render index.html
+│   ├── render-articles.mjs         # Regenerate article HTML from articles.json
 │   ├── migrate-videos-to-json.mjs  # One-time HTML → JSON migration
 │   └── generate-resume-pdf.sh      # Generates resume.pdf from resume.html
 ├── wrangler.jsonc                  # Cloudflare Pages deployment config
@@ -135,6 +186,8 @@ npx live-server
     └── skills/
         ├── add-video/
         │   └── SKILL.md            # Video addition automation skill
+        ├── add-article/
+        │   └── SKILL.md            # Article addition automation skill
         └── resume/
             └── SKILL.md            # Resume PDF generation skill
 
