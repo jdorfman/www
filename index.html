@@ -308,6 +308,10 @@
       .video-grid {
         grid-template-columns: repeat(3, 1fr);
       }
+
+      .video-grid--articles .video-card-horizontal {
+        grid-column: 1 / -1;
+      }
     }
 
     .video-card {
@@ -607,7 +611,7 @@
             <button class="work-filter-pill" role="tab" aria-selected="false" data-medium="articles" type="button">Articles</button>
           </div>
         </div>
-        <div class="video-grid">
+        <div id="work-grid" class="video-grid">
           <div id="work-panel-videos" class="work-panel" data-medium="videos">
           <!-- Shorts Carousel -->
           <div id="work-shorts" class="shorts-carousel video-card video-card-vertical" tabindex="0" aria-label="YouTube Shorts gallery">
@@ -1128,6 +1132,7 @@
       const pills = document.querySelectorAll('.work-filter-pill');
       const panels = document.querySelectorAll('.work-panel');
       const moreSections = document.querySelectorAll('.work-more');
+      const grid = document.getElementById('work-grid');
 
       pills.forEach(function(pill) {
         pill.addEventListener('click', function() {
@@ -1146,6 +1151,10 @@
           moreSections.forEach(function(section) {
             section.hidden = section.dataset.medium !== medium;
           });
+
+          if (grid) {
+            grid.classList.toggle('video-grid--articles', medium === 'articles');
+          }
 
           collapseMoreSections();
         });
