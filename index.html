@@ -605,7 +605,7 @@
         </div>
         <div class="video-grid">
           <!-- Shorts Carousel -->
-          <div class="shorts-carousel video-card video-card-vertical" tabindex="0" aria-label="YouTube Shorts gallery">
+          <div id="work-shorts" class="shorts-carousel video-card video-card-vertical" tabindex="0" aria-label="YouTube Shorts gallery">
             <div class="shorts-carousel-viewport">
               <div class="shorts-carousel-track">
                 <article class="shorts-slide">
@@ -1124,6 +1124,7 @@
       const pills = document.querySelectorAll('.work-filter-pill');
       const panels = document.querySelectorAll('.work-panel');
       const moreSections = document.querySelectorAll('.work-more');
+      const shorts = document.getElementById('work-shorts');
 
       pills.forEach(function(pill) {
         pill.addEventListener('click', function() {
@@ -1142,6 +1143,10 @@
           moreSections.forEach(function(section) {
             section.hidden = section.dataset.medium !== medium;
           });
+
+          if (shorts) {
+            shorts.hidden = medium !== 'videos';
+          }
 
           collapseMoreSections();
         });
