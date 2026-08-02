@@ -268,7 +268,7 @@ export function renderMoreArticlesHtml(articles) {
   const archived = articles.slice(5);
   const lines = [
     '        <div class="more-section" id="more-articles" style="display: none;">',
-    '          <div class="video-grid">',
+    '          <div class="video-grid video-grid--articles">',
     '            <!-- Archived articles appear here -->',
   ];
 

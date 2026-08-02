@@ -309,8 +309,13 @@
         grid-template-columns: repeat(3, 1fr);
       }
 
-      .video-grid--articles .video-card-horizontal {
-        grid-column: 1 / -1;
+      .video-grid--articles {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .video-grid--articles .video-card-horizontal,
+      .video-grid--articles .video-card-small {
+        grid-column: span 1;
       }
     }
 
