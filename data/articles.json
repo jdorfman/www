@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "compliance-first-ai-proving-agent-provenance",
+    "url": "https://sourcegraph.com/blog/compliance-first-ai-proving-agent-provenance",
+    "title": "Compliance-first AI: proving agent provenance for regulated engineering teams",
+    "category": "Sourcegraph",
+    "image": "assets/articles/compliance-first-ai-proving-agent-provenance.png"
+  },
+  {
+    "slug": "detection-in-one-repo-isnt-a-security-posture",
+    "url": "https://sourcegraph.com/blog/detection-in-one-repo-isnt-a-security-posture",
+    "title": "Detection in one repo isn't a security posture",
+    "category": "Sourcegraph",
+    "image": "assets/articles/detection-in-one-repo-isnt-a-security-posture.jpg"
+  },
+  {
+    "slug": "dependency-prefix-supply-chain-risk",
+    "url": "https://sourcegraph.com/blog/dependency-prefix-supply-chain-risk",
+    "title": "Dependency prefixes are a supply chain risk: let's fix them",
+    "category": "Sourcegraph",
+    "image": "assets/articles/dependency-prefix-supply-chain-risk.png"
+  },
+  {
+    "slug": "the-future-of-scip",
+    "url": "https://sourcegraph.com/blog/the-future-of-scip",
+    "title": "The future of SCIP",
+    "category": "Sourcegraph",
+    "image": "assets/articles/the-future-of-scip.jpg"
+  },
+  {
+    "slug": "no-more-secrets",
+    "url": "https://sourcegraph.com/blog/no-more-secrets",
+    "title": "No secrets! Quickly find sensitive files in your GitHub repo",
+    "category": "Sourcegraph",
+    "image": "assets/articles/no-more-secrets.jpg",
+    "archived": true
+  }
+]
