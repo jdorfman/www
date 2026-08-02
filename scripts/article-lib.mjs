@@ -243,8 +243,17 @@ ${innerPad}</a>
 ${pad}</article>`;
 }
 
+function partitionArticles(articles) {
+  const active = articles.filter((article) => !article.archived);
+  const archived = articles.filter((article) => article.archived);
+  return {
+    featured: active.slice(0, 5),
+    more: active.slice(5).concat(archived),
+  };
+}
+
 export function renderFeaturedArticlesHtml(articles) {
-  const featured = articles.slice(0, 5);
+  const { featured } = partitionArticles(articles);
   const lines = [];
   const featuredComments = [
     'Horizontal Article Card 1',
@@ -265,7 +274,7 @@ export function renderFeaturedArticlesHtml(articles) {
 }
 
 export function renderMoreArticlesHtml(articles) {
-  const archived = articles.slice(5);
+  const { more: archived } = partitionArticles(articles);
   const lines = [
     '        <div class="more-section" id="more-articles" style="display: none;">',
     '          <div class="video-grid video-grid--articles">',

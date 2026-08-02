@@ -1,5 +1,12 @@
 [
   {
+    "slug": "compliance-first-ai-proving-agent-provenance",
+    "url": "https://sourcegraph.com/blog/compliance-first-ai-proving-agent-provenance",
+    "title": "Compliance-first AI: proving agent provenance for regulated engineering teams",
+    "category": "Sourcegraph",
+    "image": "assets/articles/compliance-first-ai-proving-agent-provenance.png"
+  },
+  {
     "slug": "detection-in-one-repo-isnt-a-security-posture",
     "url": "https://sourcegraph.com/blog/detection-in-one-repo-isnt-a-security-posture",
     "title": "Detection in one repo isn't a security posture",
@@ -25,13 +32,7 @@
     "url": "https://sourcegraph.com/blog/no-more-secrets",
     "title": "No secrets! Quickly find sensitive files in your GitHub repo",
     "category": "Sourcegraph",
-    "image": "assets/articles/no-more-secrets.jpg"
-  },
-  {
-    "slug": "compliance-first-ai-proving-agent-provenance",
-    "url": "https://sourcegraph.com/blog/compliance-first-ai-proving-agent-provenance",
-    "title": "Compliance-first AI: proving agent provenance for regulated engineering teams",
-    "category": "Sourcegraph",
-    "image": "assets/articles/compliance-first-ai-proving-agent-provenance.png"
+    "image": "assets/articles/no-more-secrets.jpg",
+    "archived": true
   }
 ]
