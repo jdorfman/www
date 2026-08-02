@@ -72,28 +72,37 @@ export function findArticleIndex(articles, url) {
 }
 
 function parseMetaContent(html, property) {
+  const escapedProperty = property.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const patterns = [
     new RegExp(
-      `<meta[^>]+property=["']${property}["'][^>]+content=["']([^"']+)["']`,
+      `<meta[^>]+property=["']${escapedProperty}["'][^>]+content="([^"]*)"`,
       'i'
     ),
     new RegExp(
-      `<meta[^>]+content=["']([^"']+)["'][^>]+property=["']${property}["']`,
+      `<meta[^>]+content="([^"]*)"[^>]+property=["']${escapedProperty}["']`,
       'i'
     ),
     new RegExp(
-      `<meta[^>]+name=["']${property}["'][^>]+content=["']([^"']+)["']`,
+      `<meta[^>]+property=["']${escapedProperty}["'][^>]+content='([^']*)'`,
       'i'
     ),
     new RegExp(
-      `<meta[^>]+content=["']([^"']+)["'][^>]+name=["']${property}["']`,
+      `<meta[^>]+content='([^']*)'[^>]+property=["']${escapedProperty}["']`,
+      'i'
+    ),
+    new RegExp(
+      `<meta[^>]+name=["']${escapedProperty}["'][^>]+content="([^"]*)"`,
+      'i'
+    ),
+    new RegExp(
+      `<meta[^>]+content="([^"]*)"[^>]+name=["']${escapedProperty}["']`,
       'i'
     ),
   ];
 
   for (const pattern of patterns) {
     const match = html.match(pattern);
-    if (match) return match[1].trim();
+    if (match && match[1]) return match[1].trim();
   }
 
   return null;
