@@ -1,7 +1,7 @@
 # Repository Memory
 
 ## Build/Test Commands
-- Preview site locally: Not configured (standard web files only)
+- Preview site locally: `npx --yes live-server --port=8080 --host=127.0.0.1 --no-browser` — or user command `/start-local-server`
 - Validation: Check HTML validity with W3C validator
 
 ## Code Style Guidelines
@@ -29,7 +29,7 @@
 - Dark mode only (do not add light-mode / prefers-color-scheme overrides)
 
 ### Local server
-Always use `npx live-server` to serve the site locally
+Always use `npx live-server` to serve the site locally (`/start-local-server` skill)
 
 ## Portfolio videos
 
