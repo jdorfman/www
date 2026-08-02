@@ -276,6 +276,10 @@
       display: none;
     }
 
+    #work-shorts[hidden] {
+      display: none !important;
+    }
+
     .work-card-link {
       display: block;
       color: inherit;
@@ -604,6 +608,7 @@
           </div>
         </div>
         <div class="video-grid">
+          <div id="work-panel-videos" class="work-panel" data-medium="videos">
           <!-- Shorts Carousel -->
           <div id="work-shorts" class="shorts-carousel video-card video-card-vertical" tabindex="0" aria-label="YouTube Shorts gallery">
             <div class="shorts-carousel-viewport">
@@ -698,7 +703,6 @@
             </div>
           </div>
 
-          <div id="work-panel-videos" class="work-panel" data-medium="videos">
           <!-- VIDEOS:START -->
           <!-- Horizontal Video Card 1 -->
           <article class="video-card video-card-horizontal">
@@ -1124,7 +1128,6 @@
       const pills = document.querySelectorAll('.work-filter-pill');
       const panels = document.querySelectorAll('.work-panel');
       const moreSections = document.querySelectorAll('.work-more');
-      const shorts = document.getElementById('work-shorts');
 
       pills.forEach(function(pill) {
         pill.addEventListener('click', function() {
@@ -1143,10 +1146,6 @@
           moreSections.forEach(function(section) {
             section.hidden = section.dataset.medium !== medium;
           });
-
-          if (shorts) {
-            shorts.hidden = medium !== 'videos';
-          }
 
           collapseMoreSections();
         });
