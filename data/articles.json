@@ -34,5 +34,13 @@
     "category": "Sourcegraph",
     "image": "assets/articles/no-more-secrets.jpg",
     "archived": true
+  },
+  {
+    "slug": "migrating-monaco-codemirror",
+    "url": "https://sourcegraph.com/blog/migrating-monaco-codemirror",
+    "title": "Migrating from Monaco Editor to CodeMirror",
+    "category": "Sourcegraph",
+    "image": "assets/articles/migrating-monaco-codemirror.jpg",
+    "archived": true
   }
 ]
