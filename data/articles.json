@@ -1,5 +1,12 @@
 [
   {
+    "slug": "claude-code-file-picker-symbol-ranking",
+    "url": "https://sourcegraph.com/blog/claude-code-file-picker-symbol-ranking",
+    "title": "Filenames are the wrong index for Claude Code @ mentions",
+    "category": "Sourcegraph",
+    "image": "assets/articles/claude-code-file-picker-symbol-ranking.png"
+  },
+  {
     "slug": "compliance-first-ai-proving-agent-provenance",
     "url": "https://sourcegraph.com/blog/compliance-first-ai-proving-agent-provenance",
     "title": "Compliance-first AI: proving agent provenance for regulated engineering teams",
