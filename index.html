@@ -276,10 +276,6 @@
       display: none;
     }
 
-    #work-shorts[hidden] {
-      display: none !important;
-    }
-
     .work-card-link {
       display: block;
       color: inherit;
@@ -373,47 +369,6 @@
 
     .video-thumbnail-9-16 {
       aspect-ratio: 9 / 16;
-    }
-
-    .video-ratio-label {
-      font-family: var(--font-mono);
-      font-size: 0.875rem;
-      color: var(--muted-foreground);
-      opacity: 0.5;
-    }
-
-    .video-play-overlay {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: rgba(21, 21, 24, 0.5);
-      opacity: 0;
-      transition: opacity 0.2s ease;
-    }
-
-    .video-card:hover .video-play-overlay {
-      opacity: 1;
-    }
-
-    .video-play-button {
-      width: 4rem;
-      height: 4rem;
-      border-radius: 50%;
-      background-color: rgba(240, 240, 240, 0.1);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(240, 240, 240, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .video-play-icon {
-      width: 1.5rem;
-      height: 1.5rem;
-      fill: var(--foreground);
     }
 
     .video-info {
@@ -716,13 +671,12 @@
           <!-- Horizontal Video Card 1 -->
           <article class="video-card video-card-horizontal">
             <div class="video-thumbnail video-thumbnail-16-9">
-              <iframe 
-                src="https://www.youtube.com/embed/0q8UoN8D7og" 
+              <iframe
+                src="https://www.youtube.com/embed/0q8UoN8D7og"
                 title="Will AI replace developers? An open source veteran says this"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
               </iframe>
             </div>
             <div class="video-info">
@@ -733,13 +687,12 @@
           <!-- Horizontal Video Card 2 -->
           <article class="video-card video-card-horizontal">
             <div class="video-thumbnail video-thumbnail-16-9">
-              <iframe 
-                src="https://www.youtube.com/embed/Dh-7dZuS89M" 
+              <iframe
+                src="https://www.youtube.com/embed/Dh-7dZuS89M"
                 title="Complete code search results with the Search Jobs API"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
               </iframe>
             </div>
             <div class="video-info">
@@ -750,13 +703,12 @@
           <!-- Small Video Card 1 -->
           <article class="video-card video-card-small">
             <div class="video-thumbnail video-thumbnail-16-9">
-              <iframe 
-                src="https://www.youtube.com/embed/VR74iU4mpg0" 
+              <iframe
+                src="https://www.youtube.com/embed/VR74iU4mpg0"
                 title="Sourcegraph Changelog: Code Finder and Compare Page (July 2026)"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
               </iframe>
             </div>
             <div class="video-info">
@@ -767,13 +719,12 @@
           <!-- Small Video Card 2 -->
           <article class="video-card video-card-small">
             <div class="video-thumbnail video-thumbnail-16-9">
-              <iframe 
-                src="https://www.youtube.com/embed/8g8q8pRPCms" 
+              <iframe
+                src="https://www.youtube.com/embed/8g8q8pRPCms"
                 title="Agentic Batch Changes Beta for migrations, security patching, and dependency updates"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
               </iframe>
             </div>
             <div class="video-info">
@@ -784,13 +735,12 @@
           <!-- Small Video Card 3 -->
           <article class="video-card video-card-small">
             <div class="video-thumbnail video-thumbnail-16-9">
-              <iframe 
-                src="https://www.youtube.com/embed/79Yj-_juLY4" 
+              <iframe
+                src="https://www.youtube.com/embed/79Yj-_juLY4"
                 title="Make GitHub Copilot Smarter Across All Your Repositories with Deep Search MCP Server"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
               </iframe>
             </div>
             <div class="video-info">
@@ -862,13 +812,12 @@
             <!-- Archived videos appear here -->
             <article class="video-card video-card-small">
               <div class="video-thumbnail video-thumbnail-16-9">
-                <iframe 
-                  src="https://www.youtube.com/embed/DuJKS0-sS8U" 
+                <iframe
+                  src="https://www.youtube.com/embed/DuJKS0-sS8U"
                   title="Connecting goose AI agent to Sourcegraph Deep Search via MCP"
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
                 </iframe>
               </div>
               <div class="video-info">
@@ -878,13 +827,12 @@
             </article>
             <article class="video-card video-card-small">
               <div class="video-thumbnail video-thumbnail-16-9">
-                <iframe 
-                  src="https://www.youtube.com/embed/1NjIyrpg93o" 
+                <iframe
+                  src="https://www.youtube.com/embed/1NjIyrpg93o"
                   title="Find gigabytes of hidden junk on your Mac with the mole CLI"
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
                 </iframe>
               </div>
               <div class="video-info">
@@ -894,13 +842,12 @@
             </article>
             <article class="video-card video-card-small">
               <div class="video-thumbnail video-thumbnail-16-9">
-                <iframe 
-                  src="https://www.youtube.com/embed/g8BwfSed-8w" 
+                <iframe
+                  src="https://www.youtube.com/embed/g8BwfSed-8w"
                   title="Sourcegraph Deep Search Updates (April 2026)"
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
                 </iframe>
               </div>
               <div class="video-info">
@@ -910,13 +857,12 @@
             </article>
             <article class="video-card video-card-small">
               <div class="video-thumbnail video-thumbnail-16-9">
-                <iframe 
-                  src="https://www.youtube.com/embed/ho4g5NQ5sXk" 
+                <iframe
+                  src="https://www.youtube.com/embed/ho4g5NQ5sXk"
                   title="Find reusable code with Sourcegraph Deep Search"
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
                 </iframe>
               </div>
               <div class="video-info">
@@ -926,13 +872,12 @@
             </article>
             <article class="video-card video-card-small">
               <div class="video-thumbnail video-thumbnail-16-9">
-                <iframe 
-                  src="https://www.youtube.com/embed/hztOVXnoIm4" 
+                <iframe
+                  src="https://www.youtube.com/embed/hztOVXnoIm4"
                   title="How to Setup Sourcegraph's MCP Server with Windsurf"
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
                 </iframe>
               </div>
               <div class="video-info">
@@ -942,13 +887,12 @@
             </article>
             <article class="video-card video-card-small">
               <div class="video-thumbnail video-thumbnail-16-9">
-                <iframe 
-                  src="https://www.youtube.com/embed/Xj-2rg3WDh4" 
+                <iframe
+                  src="https://www.youtube.com/embed/Xj-2rg3WDh4"
                   title="Monitoring Critical Code Changes from AI Agents"
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
                 </iframe>
               </div>
               <div class="video-info">
@@ -958,13 +902,12 @@
             </article>
             <article class="video-card video-card-small">
               <div class="video-thumbnail video-thumbnail-16-9">
-                <iframe 
-                  src="https://www.youtube.com/embed/_OyUNs258mE" 
+                <iframe
+                  src="https://www.youtube.com/embed/_OyUNs258mE"
                   title="Why GitHub Code Search Fails at Enterprise Scale"
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
                 </iframe>
               </div>
               <div class="video-info">
@@ -974,13 +917,12 @@
             </article>
             <article class="video-card video-card-small">
               <div class="video-thumbnail video-thumbnail-16-9">
-                <iframe 
-                  src="https://www.youtube.com/embed/PaoF-qnI2HE" 
+                <iframe
+                  src="https://www.youtube.com/embed/PaoF-qnI2HE"
                   title="GitHub Code Search vs Sourcegraph - Quick Comparison 2026"
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
                 </iframe>
               </div>
               <div class="video-info">
@@ -990,13 +932,12 @@
             </article>
             <article class="video-card video-card-small">
               <div class="video-thumbnail video-thumbnail-16-9">
-                <iframe 
-                  src="https://www.youtube.com/embed/yeNZ-hIicgI" 
+                <iframe
+                  src="https://www.youtube.com/embed/yeNZ-hIicgI"
                   title="Sourcegraph Deep Search for Slack: Query Your Codebase with Natural Language"
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
                 </iframe>
               </div>
               <div class="video-info">
@@ -1006,13 +947,12 @@
             </article>
             <article class="video-card video-card-small">
               <div class="video-thumbnail video-thumbnail-16-9">
-                <iframe 
-                  src="https://www.youtube.com/embed/u8GkvQAnM_o" 
+                <iframe
+                  src="https://www.youtube.com/embed/u8GkvQAnM_o"
                   title="Using Claude Code with Sourcegraph's MCP server"
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
                 </iframe>
               </div>
               <div class="video-info">
@@ -1022,13 +962,12 @@
             </article>
             <article class="video-card video-card-small">
               <div class="video-thumbnail video-thumbnail-16-9">
-                <iframe 
-                  src="https://www.youtube.com/embed/aGNUR8b2gFo" 
+                <iframe
+                  src="https://www.youtube.com/embed/aGNUR8b2gFo"
                   title="Getting started with Amp's TypeScript SDK"
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
                 </iframe>
               </div>
               <div class="video-info">
@@ -1038,13 +977,12 @@
             </article>
             <article class="video-card video-card-small">
               <div class="video-thumbnail video-thumbnail-16-9">
-                <iframe 
-                  src="https://www.youtube.com/embed/xu3X6G7m-1Q" 
+                <iframe
+                  src="https://www.youtube.com/embed/xu3X6G7m-1Q"
                   title="Using &quot;oracle&quot; with Amp"
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
                 </iframe>
               </div>
               <div class="video-info">
@@ -1054,13 +992,12 @@
             </article>
             <article class="video-card video-card-small">
               <div class="video-thumbnail video-thumbnail-16-9">
-                <iframe 
-                  src="https://www.youtube.com/embed/NNEegjonjMs" 
+                <iframe
+                  src="https://www.youtube.com/embed/NNEegjonjMs"
                   title="Meet Sourcegraph Deep Search"
-                  frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowfullscreen
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen>
                 </iframe>
               </div>
               <div class="video-info">
@@ -1071,7 +1008,7 @@
           </div>
         </div>
           <!-- MORE_VIDEOS:END -->
-        <button class="btn btn-outline more-toggle" data-more="more-videos" type="button" style="margin-top: 2rem;">
+        <button class="btn btn-outline more-toggle" data-more="more-videos" type="button">
           More
         </button>
         </div>
@@ -1106,7 +1043,7 @@
           </div>
         </div>
           <!-- MORE_ARTICLES:END -->
-        <button class="btn btn-outline more-toggle" data-more="more-articles" type="button" style="margin-top: 2rem;">
+        <button class="btn btn-outline more-toggle" data-more="more-articles" type="button">
           More
         </button>
         </div>
