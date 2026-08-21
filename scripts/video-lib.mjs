@@ -67,13 +67,12 @@ function renderCard(video, size, comment, indent) {
 
   return `${commentLine}${pad}<article class="video-card ${cardClass}">
 ${innerPad}<div class="video-thumbnail video-thumbnail-16-9">
-${innerPad}  <iframe 
-${innerPad}    src="https://www.youtube.com/embed/${video.id}" 
+${innerPad}  <iframe
+${innerPad}    src="https://www.youtube.com/embed/${video.id}"
 ${innerPad}    title="${titleAttr}"
-${innerPad}    frameborder="0" 
-${innerPad}    allow="${IFRAME_ALLOW}" 
-${innerPad}    allowfullscreen
-${innerPad}    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+${innerPad}    frameborder="0"
+${innerPad}    allow="${IFRAME_ALLOW}"
+${innerPad}    allowfullscreen>
 ${innerPad}  </iframe>
 ${innerPad}</div>
 ${innerPad}<div class="video-info">

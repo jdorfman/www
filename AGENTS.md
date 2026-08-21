@@ -37,7 +37,7 @@ Always use `npx live-server` to serve the site locally (`/start-local-server` sk
 - **Add a video:** `node scripts/add-video.mjs "<youtube-url>" ["Title"] ["Category"]` — or user command `/add-video <URL>`
 - **Re-render only:** `node scripts/render-videos.mjs` after editing `videos.json`
 - **Do not** edit the generated blocks between `<!-- VIDEOS:START -->` / `<!-- VIDEOS:END -->` or `<!-- MORE_VIDEOS:START -->` / `<!-- MORE_VIDEOS:END -->` in `index.html` by hand
-- Shorts carousel remains hand-edited in `index.html` (`/add-short` skill)
+- Shorts carousel remains hand-edited in `index.html`
 
 ## Portfolio articles
 

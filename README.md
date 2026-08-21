@@ -178,7 +178,6 @@ npx live-server
 │   ├── render-videos.mjs           # Regenerate video HTML from videos.json
 │   ├── add-article.mjs             # Add article + download OG image + render index.html
 │   ├── render-articles.mjs         # Regenerate article HTML from articles.json
-│   ├── migrate-videos-to-json.mjs  # One-time HTML → JSON migration
 │   └── generate-resume-pdf.sh      # Generates resume.pdf from resume.html
 ├── wrangler.jsonc                  # Cloudflare Pages deployment config
 ├── AGENTS.md                       # AI agent instructions
