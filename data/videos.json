@@ -1,5 +1,10 @@
 [
   {
+    "id": "YEHd4satFHw",
+    "title": "Using Sourcegraph Deep Search mod plugin in Claude Code",
+    "category": "Demos"
+  },
+  {
     "id": "kY0_rRtJ8BM",
     "title": "Introducing Agentic Batch Changes: the frontier agent for code change at scale",
     "category": "Demos"
