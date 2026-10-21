@@ -1,5 +1,12 @@
 [
   {
+    "slug": "php2shell-patching-php-is-easy-finding-it-is-the-hard-part",
+    "url": "https://sourcegraph.com/blog/php2shell-patching-php-is-easy-finding-it-is-the-hard-part",
+    "title": "php2shell: patching PHP is easy, finding it is the hard part",
+    "category": "Sourcegraph",
+    "image": "assets/articles/php2shell-patching-php-is-easy-finding-it-is-the-hard-part.png"
+  },
+  {
     "slug": "claude-code-file-picker-symbol-ranking",
     "url": "https://sourcegraph.com/blog/claude-code-file-picker-symbol-ranking",
     "title": "Filenames are the wrong index for Claude Code @ mentions",
