@@ -1,5 +1,10 @@
 [
   {
+    "id": "a25w5gKZsjw",
+    "title": "GitLab Orbit vs. Sourcegraph MCP: which context layer finds more code your agent needs?",
+    "category": "Demos"
+  },
+  {
     "id": "YEHd4satFHw",
     "title": "Using Sourcegraph Deep Search mod plugin in Claude Code",
     "category": "Demos"
