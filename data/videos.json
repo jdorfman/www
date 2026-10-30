@@ -1,5 +1,10 @@
 [
   {
+    "id": "p0Fjrj09DSk",
+    "title": "The Sourcegraph changelog: what shipped in October 2026",
+    "category": "Demos"
+  },
+  {
     "id": "a25w5gKZsjw",
     "title": "GitLab Orbit vs. Sourcegraph MCP: which context layer finds more code your agent needs?",
     "category": "Demos"
