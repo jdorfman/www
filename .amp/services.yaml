@@ -1,0 +1,6 @@
+services:
+  site:
+    command: npx live-server --port="$PORT" --host=127.0.0.1 --no-browser
+    port: 8080
+    portal:
+      title: Portfolio site
